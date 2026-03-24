@@ -97,10 +97,14 @@ export default function ProblemDetail({ problem }: Props) {
   }, []);
   const onMouseUp = useCallback(() => { dragging.current = false; }, []);
 
-  // fitScale: 너비·높이 모두 맞춤 (전체 이미지 한 눈에)
+  // fitScale: 패딩(8px*2) 제외한 실제 가용 영역 기준으로 맞춤
+  const PAD = 8;
   const fitScale =
     naturalSize && containerSize.w > 0 && containerSize.h > 0
-      ? Math.min(containerSize.w / naturalSize.w, containerSize.h / naturalSize.h)
+      ? Math.min(
+          (containerSize.w - PAD * 2) / naturalSize.w,
+          (containerSize.h - PAD * 2) / naturalSize.h
+        )
       : null;
 
   const actualScale = fitScale !== null ? fitScale * relativeZoom : null;
@@ -139,8 +143,8 @@ export default function ProblemDetail({ problem }: Props) {
         {/* 뷰포트 — imgContainerRef 항상 DOM에 존재 */}
         <div
           ref={imgContainerRef}
-          className="flex-1 min-h-0 overflow-auto select-none"
-          style={{ cursor: 'grab' }}
+          className="flex-1 min-h-0 select-none"
+          style={{ cursor: 'grab', overflow: relativeZoom > 1 ? 'auto' : 'hidden' }}
           onMouseDown={onMouseDown}
           onMouseMove={onMouseMove}
           onMouseUp={onMouseUp}
