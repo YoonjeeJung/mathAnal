@@ -42,4 +42,5 @@ next-env.d.ts
 
 # raw data (processed into public/data/)
 /exam_paper_component_202603181403/
+/exam_paper_result_*/
 /exam_papers/
