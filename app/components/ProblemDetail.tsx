@@ -5,6 +5,7 @@ import { Problem } from '../types';
 import KatexText from './KatexText';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+const PAD = 12;
 
 interface Props {
   problem: Problem | null;
@@ -19,22 +20,23 @@ function SectionTag({ label }: { label: string }) {
 }
 
 export default function ProblemDetail({ problem }: Props) {
-  const imgContainerRef = useRef<HTMLDivElement>(null);
+  const viewportRef = useRef<HTMLDivElement>(null);
   const [containerSize, setContainerSize] = useState({ w: 0, h: 0 });
   const [naturalSize, setNaturalSize] = useState<{ w: number; h: number } | null>(null);
   const [relativeZoom, setRelativeZoom] = useState(1);
-  const imgDimsRef = useRef<({ w: number; h: number } | null)[]>([]);
+  const [pan, setPan] = useState({ x: 0, y: 0 });
 
+  const imgDimsRef = useRef<({ w: number; h: number } | null)[]>([]);
   const dragging = useRef(false);
-  const dragOrigin = useRef({ x: 0, y: 0, sl: 0, st: 0 });
+  const lastMouse = useRef({ x: 0, y: 0 });
 
   const imageSrcs = (problem?.images ?? []).map(
     (img) => `${BASE_PATH}/images/${img.replace('images/', '')}`
   );
 
-  // imgContainerRef는 항상 DOM에 존재 → [] 의존성 안전
+  // 뷰포트 크기 측정 — overflow: hidden이므로 크기 안정적
   useEffect(() => {
-    const el = imgContainerRef.current;
+    const el = viewportRef.current;
     if (!el) return;
     const obs = new ResizeObserver(() =>
       setContainerSize({ w: el.clientWidth, h: el.clientHeight })
@@ -44,25 +46,30 @@ export default function ProblemDetail({ problem }: Props) {
     return () => obs.disconnect();
   }, []);
 
-  // Ctrl+scroll / pinch zoom
+  // Ctrl+스크롤 줌 / 두 손가락 스크롤 패닝
   useEffect(() => {
-    const el = imgContainerRef.current;
+    const el = viewportRef.current;
     if (!el) return;
     const handler = (e: WheelEvent) => {
-      if (!e.ctrlKey && !e.metaKey) return;
       e.preventDefault();
-      const sensitivity = Math.abs(e.deltaY) < 10 ? 0.01 : 0.001;
-      const factor = Math.exp(-e.deltaY * sensitivity);
-      setRelativeZoom((prev) => Math.max(0.1, Math.min(10, prev * factor)));
+      if (e.ctrlKey || e.metaKey) {
+        const sensitivity = Math.abs(e.deltaY) < 10 ? 0.01 : 0.001;
+        const factor = Math.exp(-e.deltaY * sensitivity);
+        setRelativeZoom((prev) => Math.max(0.1, Math.min(10, prev * factor)));
+      } else {
+        // 두 손가락 스크롤 → 패닝
+        setPan((prev) => ({ x: prev.x - e.deltaX, y: prev.y - e.deltaY }));
+      }
     };
     el.addEventListener('wheel', handler, { passive: false });
     return () => el.removeEventListener('wheel', handler);
   }, []);
 
-  // Reset on problem change
+  // 문항 변경 시 초기화
   useEffect(() => {
     setNaturalSize(null);
     setRelativeZoom(1);
+    setPan({ x: 0, y: 0 });
     imgDimsRef.current = new Array(imageSrcs.length).fill(null);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [problem?.problem_id]);
@@ -81,24 +88,22 @@ export default function ProblemDetail({ problem }: Props) {
     []
   );
 
+  // 드래그 패닝
   const onMouseDown = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (e.button !== 0) return;
     dragging.current = true;
-    dragOrigin.current = {
-      x: e.clientX, y: e.clientY,
-      sl: imgContainerRef.current?.scrollLeft ?? 0,
-      st: imgContainerRef.current?.scrollTop ?? 0,
-    };
+    lastMouse.current = { x: e.clientX, y: e.clientY };
   }, []);
   const onMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (!dragging.current || !imgContainerRef.current) return;
-    imgContainerRef.current.scrollLeft = dragOrigin.current.sl - (e.clientX - dragOrigin.current.x);
-    imgContainerRef.current.scrollTop = dragOrigin.current.st - (e.clientY - dragOrigin.current.y);
+    if (!dragging.current) return;
+    const dx = e.clientX - lastMouse.current.x;
+    const dy = e.clientY - lastMouse.current.y;
+    lastMouse.current = { x: e.clientX, y: e.clientY };
+    setPan((prev) => ({ x: prev.x + dx, y: prev.y + dy }));
   }, []);
   const onMouseUp = useCallback(() => { dragging.current = false; }, []);
 
-  // fitScale: 패딩(8px*2) 제외한 실제 가용 영역 기준으로 맞춤
-  const PAD = 8;
+  // fitScale: 너비·높이 모두 맞춤 (패딩 제외)
   const fitScale =
     naturalSize && containerSize.w > 0 && containerSize.h > 0
       ? Math.min(
@@ -115,12 +120,12 @@ export default function ProblemDetail({ problem }: Props) {
   return (
     <div className="flex flex-col h-full overflow-hidden gap-3 p-3">
 
-      {/* 이미지 섹션 — 높이 45% 고정 */}
+      {/* 이미지 섹션 — 높이 45% 고정, overflow hidden으로 스크롤바 없음 */}
       <div
-        className="shrink-0 flex flex-col bg-gray-50 rounded-lg border border-gray-200 overflow-hidden"
+        className="shrink-0 flex flex-col bg-gray-50 rounded-lg border border-gray-200"
         style={{ height: '45%' }}
       >
-        {/* Zoom controls */}
+        {/* 줌 컨트롤 */}
         <div className="flex items-center gap-1 px-2 py-1 border-b border-gray-100 shrink-0">
           <button
             className="w-6 h-6 flex items-center justify-center rounded border border-gray-300 bg-white text-gray-600 hover:bg-gray-100 text-sm"
@@ -128,7 +133,7 @@ export default function ProblemDetail({ problem }: Props) {
           >−</button>
           <button
             className="text-xs text-gray-500 w-12 text-center hover:text-gray-700 tabular-nums"
-            onClick={() => setRelativeZoom(1)}
+            onClick={() => { setRelativeZoom(1); setPan({ x: 0, y: 0 }); }}
             title="클릭하면 100%로 초기화"
           >
             {fitScale !== null ? `${Math.round(relativeZoom * 100)}%` : '…'}
@@ -140,42 +145,53 @@ export default function ProblemDetail({ problem }: Props) {
           <span className="text-xs text-gray-400 ml-1">Ctrl+스크롤 · 드래그</span>
         </div>
 
-        {/* 뷰포트 — imgContainerRef 항상 DOM에 존재 */}
+        {/* 뷰포트 — overflow hidden, 스크롤 없음 */}
         <div
-          ref={imgContainerRef}
+          ref={viewportRef}
           className="flex-1 min-h-0 select-none"
-          style={{ cursor: 'grab', overflow: relativeZoom > 1 ? 'auto' : 'hidden' }}
+          style={{ overflow: 'hidden', cursor: 'grab', position: 'relative' }}
           onMouseDown={onMouseDown}
           onMouseMove={onMouseMove}
           onMouseUp={onMouseUp}
           onMouseLeave={onMouseUp}
         >
-          {/* min-width/height 100% + flex center → 이미지가 작으면 상하좌우 가운데, 크면 스크롤 */}
-          <div style={{ minWidth: '100%', minHeight: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxSizing: 'border-box', padding: 8 }}>
-            {!problem ? (
+          {!problem ? (
+            <div className="flex items-center justify-center h-full">
               <span className="text-gray-400 text-sm">문항을 선택하세요</span>
-            ) : imageSrcs.length === 0 ? (
+            </div>
+          ) : imageSrcs.length === 0 ? (
+            <div className="flex items-center justify-center h-full">
               <span className="text-gray-400 text-sm">이미지 없음</span>
-            ) : (
-              <div style={{ width: displayWidth ?? '100%', flexShrink: 0 }}>
-                {imageSrcs.map((src, i) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    key={src}
-                    src={src}
-                    alt={`문제 ${problem.problem_name} 이미지 ${i + 1}`}
-                    style={{ width: '100%', display: 'block', pointerEvents: 'none' }}
-                    onLoad={(e) => handleImageLoad(e, i)}
-                    draggable={false}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
+            </div>
+          ) : (
+            /* 절대 중앙 배치 + pan 오프셋 */
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: `translate(calc(-50% + ${pan.x}px), calc(-50% + ${pan.y}px))`,
+                width: displayWidth ?? '80%',
+                flexShrink: 0,
+              }}
+            >
+              {imageSrcs.map((src, i) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={src}
+                  src={src}
+                  alt={`문제 ${problem.problem_name} 이미지 ${i + 1}`}
+                  style={{ width: '100%', display: 'block', pointerEvents: 'none' }}
+                  onLoad={(e) => handleImageLoad(e, i)}
+                  draggable={false}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
-      {/* 텍스트 섹션 — 자체 스크롤, flex-1로 나머지 높이 차지 */}
+      {/* 텍스트 섹션 — 자체 스크롤 */}
       <div className="flex-1 min-h-0 bg-white rounded-lg border border-gray-200 overflow-y-auto p-4">
         {problem ? (
           <>
