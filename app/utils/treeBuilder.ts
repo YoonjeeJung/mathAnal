@@ -40,7 +40,8 @@ export function buildTreeForCurriculum(
 
   // Count problems per unit3 and per (unit3 + category)
   const unit3ProblemIds = new Map<number, Set<number>>();
-  const catProblemIds = new Map<number, Map<string, Set<number>>>();
+  // catProblemIds: uid3 → catId (number or -1 for __none__) → {name, problems}
+  const catProblemIds = new Map<number, Map<number, { name: string; problems: Set<number> }>>();
 
   for (const prob of problems) {
     for (const uc of prob.unit_candidates) {
@@ -49,17 +50,17 @@ export function buildTreeForCurriculum(
       unit3ProblemIds.get(uid)!.add(prob.problem_id);
 
       if (uc.valid_categories.length === 0) {
-        // "유형 없음" bucket
+        // "유형 없음" bucket — use catId -1
         if (!catProblemIds.has(uid)) catProblemIds.set(uid, new Map());
         const m = catProblemIds.get(uid)!;
-        if (!m.has('__none__')) m.set('__none__', new Set());
-        m.get('__none__')!.add(prob.problem_id);
+        if (!m.has(-1)) m.set(-1, { name: '__none__', problems: new Set() });
+        m.get(-1)!.problems.add(prob.problem_id);
       } else {
         for (const cat of uc.valid_categories) {
           if (!catProblemIds.has(uid)) catProblemIds.set(uid, new Map());
           const m = catProblemIds.get(uid)!;
-          if (!m.has(cat.category_name)) m.set(cat.category_name, new Set());
-          m.get(cat.category_name)!.add(prob.problem_id);
+          if (!m.has(cat.category_id)) m.set(cat.category_id, { name: cat.category_name, problems: new Set() });
+          m.get(cat.category_id)!.problems.add(prob.problem_id);
         }
       }
     }
@@ -94,65 +95,63 @@ export function buildTreeForCurriculum(
     }
   }
 
-  // Build TreeNode list
+  // Build TreeNode list — sort all levels by numeric ID, count distinct problem IDs
   const tree: TreeNode[] = [];
 
-  for (const u1 of unit1Map.values()) {
+  for (const u1 of [...unit1Map.entries()].sort(([a], [b]) => parseInt(a) - parseInt(b)).map(([, v]) => v)) {
     const u2Nodes: TreeNode[] = [];
-    let u1Count = 0;
+    const u1ProblemIds = new Set<number>();
 
-    for (const u2 of u1.unit2s.values()) {
+    for (const u2 of [...u1.unit2s.entries()].sort(([a], [b]) => parseInt(a) - parseInt(b)).map(([, v]) => v)) {
       const u3Nodes: TreeNode[] = [];
-      let u2Count = 0;
+      const u2ProblemIds = new Set<number>();
 
-      for (const u3 of u2.unit3s.values()) {
+      for (const u3 of [...u2.unit3s.entries()].sort(([a], [b]) => a - b).map(([, v]) => v)) {
         const uid3 = u3.uid3;
-        const u3Count = unit3ProblemIds.get(uid3)?.size ?? 0;
-        const catMap = catProblemIds.get(uid3) ?? new Map();
+        const u3ProbSet = unit3ProblemIds.get(uid3) ?? new Set();
+        u3ProbSet.forEach((id) => u2ProblemIds.add(id));
 
-        const catNodes: TreeNode[] = [];
-        const sortedCats = Array.from(catMap.entries()).sort(([a], [b]) => {
-          if (a === '__none__') return 1;
-          if (b === '__none__') return -1;
-          return a.localeCompare(b);
+        const catMap = catProblemIds.get(uid3) ?? new Map();
+        const sortedCats = [...catMap.entries()].sort(([a], [b]) => {
+          if (a === -1) return 1;
+          if (b === -1) return -1;
+          return a - b;
         });
-        for (const [catName, catSet] of sortedCats) {
-          catNodes.push({
-            id: catName === '__none__' ? `cat-none-${uid3}` : `cat-${uid3}-${catName}`,
-            label: catName === '__none__' ? '유형 없음' : catName,
-            count: catSet.size,
-            children: [],
-            type: 'category',
-            unit3Id: uid3,
-            categoryName: catName === '__none__' ? undefined : catName,
-          });
-        }
+
+        const catNodes: TreeNode[] = sortedCats.map(([catId, { name, problems }]) => ({
+          id: catId === -1 ? `cat-none-${uid3}` : `cat-${uid3}-${catId}`,
+          label: catId === -1 ? '유형 없음' : name,
+          count: problems.size,
+          children: [],
+          type: 'category' as const,
+          unit3Id: uid3,
+          categoryName: catId === -1 ? undefined : name,
+        }));
 
         u3Nodes.push({
           id: u3.id,
           label: u3.name,
-          count: u3Count,
+          count: u3ProbSet.size,
           children: catNodes,
           type: 'unit3',
           unit3Id: uid3,
         });
-        u2Count += u3Count;
       }
 
+      u2ProblemIds.forEach((id) => u1ProblemIds.add(id));
       u2Nodes.push({
         id: u2.id,
         label: u2.name,
-        count: u2Count,
+        count: u2ProblemIds.size,
         children: u3Nodes,
         type: 'unit2',
       });
-      u1Count += u2Count;
     }
 
     tree.push({
       id: u1.id,
       label: u1.name,
-      count: u1Count,
+      count: u1ProblemIds.size,
       children: u2Nodes,
       type: 'unit1',
     });

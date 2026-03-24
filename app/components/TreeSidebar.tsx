@@ -41,22 +41,24 @@ function TreeItem({
   return (
     <div>
       <div
-        className={`flex items-center gap-1 py-[3px] pr-2 cursor-pointer rounded text-sm hover:bg-gray-100 ${
+        className={`flex items-center gap-1 py-[3px] pr-2 rounded text-sm hover:bg-gray-100 ${
           isSelected ? 'bg-indigo-50 text-indigo-700 font-medium' : 'text-gray-700'
         }`}
         style={{ paddingLeft }}
-        onClick={() => {
-          if (hasChildren) setLocalOpen((v) => !v);
-          onSelect(node);
-        }}
       >
         {hasChildren && (
-          <span className="text-[10px] text-gray-400 w-3 shrink-0 leading-none">
+          <span
+            className="text-[10px] text-gray-400 w-3 shrink-0 leading-none cursor-pointer"
+            onClick={(e) => { e.stopPropagation(); setLocalOpen((v) => !v); }}
+          >
             {isOpen ? '▾' : '▸'}
           </span>
         )}
         {!hasChildren && <span className="w-3 shrink-0" />}
-        <span className={`flex-1 truncate ${isLeaf ? 'text-gray-500' : ''}`}>{node.label}</span>
+        <span
+          className={`flex-1 truncate cursor-pointer ${isLeaf ? 'text-gray-500' : ''}`}
+          onClick={() => onSelect(node)}
+        >{node.label}</span>
         <span className={`text-xs shrink-0 ${isLeaf ? 'text-gray-600' : 'text-gray-400'}`}>({node.count})</span>
       </div>
       {hasChildren && isOpen && (

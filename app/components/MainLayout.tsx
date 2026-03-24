@@ -53,11 +53,6 @@ export default function MainLayout({ problems, csvRaw, exams }: Props) {
   const [selectedNode, setSelectedNode] = useState<TreeNode | null>(null);
   const [selectedProblem, setSelectedProblem] = useState<Problem | null>(null);
 
-  const tree = useMemo(
-    () => buildTreeForCurriculum(selectedCurriculum, problems, csvRaw),
-    [selectedCurriculum, problems, csvRaw]
-  );
-
   const curriculumProblems = useMemo(() => {
     if (!selectedCurriculum) return problems;
     const unit3Ids = getUnit3IdsForCurriculum(selectedCurriculum, csvRaw);
@@ -70,6 +65,11 @@ export default function MainLayout({ problems, csvRaw, exams }: Props) {
     if (selectedExamIds.length === 0) return curriculumProblems;
     return curriculumProblems.filter((p) => selectedExamIds.includes(p.exam_id));
   }, [curriculumProblems, selectedExamIds]);
+
+  const tree = useMemo(
+    () => buildTreeForCurriculum(selectedCurriculum, examFilteredProblems, csvRaw),
+    [selectedCurriculum, examFilteredProblems, csvRaw]
+  );
 
   const filteredProblems = useMemo(
     () => filterProblems(examFilteredProblems, selectedNode),
