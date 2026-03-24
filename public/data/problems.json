@@ -26,13 +26,18 @@
     "solution": "첫째 식 $x^2-y^2=0$에서\n$$(x-y)(x+y)=0$$\n이므로 $x=y$ 또는 $x=-y$이다.\n\n1) $x=y$이면\n$$x^2+xy+3y^2=x^2+x^2+3x^2=5x^2=15$$\n따라서 $x^2=3$, 즉\n$$(x,y)=(-\\sqrt{3},-\\sqrt{3}),\\ (\\sqrt{3},\\sqrt{3})$$\n\n2) $x=-y$이면\n$$x^2+xy+3y^2=x^2-x^2+3x^2=3x^2=15$$\n따라서 $x^2=5$, 즉\n$$(x,y)=(-\\sqrt{5},\\sqrt{5}),\\ (\\sqrt{5},-\\sqrt{5})$$\n\n따라서 해는 ①, ②, ③, ⑤이고, 해가 아닌 것은 ④이다.",
     "answer": "④",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 문항의 문제 본문과 해설 HTML이 모두 없어 실제 풀이에 어떤 개념이 쓰였는지 구체적으로 확인할 수 없습니다. 따라서 우선 문항의 조건과 관련 개념을 파악하는 데 초점을 두는 이해 능력으로 판단했습니다. 같은 이유로 특정 세부 범주를 근거 있게 선택하지 않았습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "첫째 식을 인수분해하여 x=y 또는 x=-y의 두 경우로 나누는 과정이 핵심이다. 이후 각 경우를 둘째 식에 대입해 해를 추론하고, 보기와 대조하여 해가 아닌 것을 판단해야 한다. 단순 계산보다 식의 구조를 파악하고 경우를 나누어 결론을 이끌어내는 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 274,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 101,
+            "category_name": "두 이차방정식으로 이루어진 연립이차방정식"
+          }
+        ]
       }
     ]
   },
@@ -63,13 +68,18 @@
     "solution": "식 $x^2+y^2=9$는 원점 중심, 반지름 3인 원이다. \n직선 $x-2y=k$와 이 원이 만나지 않으려면, 원 위에서 $x-2y$가 가질 수 있는 값의 범위를 벗어나야 한다.\n\n원 위의 점 $(x,y)$에 대하여\n$$(x-2y)^2 \\le (1^2+(-2)^2)(x^2+y^2)=5\\cdot 9=45$$\n이므로\n$$-\\sqrt{45} \\le x-2y \\le \\sqrt{45}$$\n즉,\n$$-3\\sqrt{5} \\le x-2y \\le 3\\sqrt{5}$$\n이다.\n\n따라서 실수해가 존재하지 않으려면\n$$k>3\\sqrt{5}$$\n이어야 한다. \n그런데\n$$3\\sqrt{5}\\approx 6.708$$\n이므로 이를 넘는 최소 자연수는 $7$이다.\n\n따라서 정답은 ③이다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설 정보가 제공되지 않아 실제 풀이에 필요한 수학적 절차를 구체적으로 확인하기 어렵습니다. 따라서 주어진 정보의 범위를 파악하고 단원 후보와의 관련성을 신중히 판단하는 이해 능력이 가장 적절하다고 보았습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 연립방정식을 단순히 계산해 푸는 것보다, 식 x^2+y^2=9를 원으로 해석하고 x-2y의 가능한 범위를 추론하는 과정이 핵심이다. 주어진 조건에서 해가 존재하지 않는 경우를 판단하기 위해 부등식과 도형의 성질을 연결해 논리적으로 결론을 내려야 한다.",
     "unit_candidates": [
       {
         "unit_id": 274,
         "confidence_score": 0.9996107220649719,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 103,
+            "category_name": "연립이차방정식의 해의 조건"
+          }
+        ]
       }
     ]
   },
@@ -100,8 +110,8 @@
     "solution": "twinkle의 7개 문자는 모두 서로 다르다. t와 l 사이에 2개의 문자가 있으려면 두 문자의 위치 차는 3이어야 한다.\n가능한 위치쌍은\n\\((1,4),(2,5),(3,6),(4,7)\\)로 4가지.\n각 위치쌍마다 t, l의 자리 바꾸는 방법은 2가지이고, 나머지 5개 문자 w,i,n,k,e는 \\(5!\\)가지로 배열된다.\n따라서 경우의 수는\n\\[4 \\times 2 \\times 5! = 4 \\times 2 \\times 120 = 960\\]\n이다.",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 문제 본문과 해설 정보가 비어 있어 특정 계산 절차나 전략을 확인할 수 없다. 따라서 우선적으로 요구되는 것은 관련 수학 개념과 성질을 정확히 이해하고 해석하는 능력이라고 판단된다. 명시적으로 사용된 개념이 확인되지 않으므로 범위를 넓게 잡기보다 이해 중심으로 보는 것이 가장 타당하다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "문제의 조건을 t와 l의 위치 차가 3인 경우로 바꾸어 해석하고, 가능한 위치쌍을 체계적으로 나누어 세어야 한다. 이후 t, l의 배치와 나머지 문자들의 배열을 곱의 원리로 결합해야 하므로 단순 계산보다 해결 전략을 세우는 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 267,
@@ -152,17 +162,12 @@
     "answer": "11520",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "문제 해결에는 주어진 식의 조건을 해석하여 성립 조건이나 근의 개수를 논리적으로 판단하는 과정이 필요하다. 단순 계산보다 어떤 성질을 적용해야 하는지 선택하고 경우를 따져 결론에 이르는 추론이 핵심이다.",
+    "behavior_reason": "이 문항은 토너먼트 구조를 해석하여 3위 선수가 결승전에 진출하기 위한 배치 조건을 논리적으로 찾아내는 과정이 핵심이다. 단순 계산보다 1위와 2위의 위치가 3위 선수의 진출 가능성을 어떻게 결정하는지 추론해야 하므로 추론 능력이 가장 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 269,
         "confidence_score": 0.15477484464645386,
-        "valid_categories": [
-          {
-            "category_id": 63,
-            "category_name": "이차방정식의 근의 판별"
-          }
-        ]
+        "valid_categories": []
       },
       {
         "unit_id": 265,
@@ -214,12 +219,17 @@
     "answer": "④",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수의 그래프와 절댓값이 적용된 형태를 해석하고, 직선 y=1과 만나는 점의 개수를 조건에 맞게 추론해야 한다. 주기, 최댓값과 최솟값, 그래프의 개형을 종합하여 가능한 a, b를 판단하는 과정이 중심이므로 추론 능력이 핵심이다.",
+    "behavior_reason": "이 문항은 허근 \\(\\omega\\)가 만족하는 성질에서 \\(\\omega^6=1\\)을 이끌어 내고, 거듭제곱의 주기를 파악하여 합을 6개씩 묶어 판단해야 한다. 단순 계산보다 삼차방정식의 허근의 성질과 수열형 합의 구조를 연결해 추론하는 과정이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 273,
         "confidence_score": 0.9999998807907104,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 106,
+            "category_name": "방정식 x³=1, x³=-1의 허근의 성질"
+          }
+        ]
       }
     ]
   },
@@ -250,13 +260,18 @@
     "solution": "그래프에서 이차함수 $y=f(x)$는 위로 열린 포물선이고, $x$축과 만나는 점이 $x=-1,\\ 3$이다. 따라서\n$f(t)\\ge 0$인 것은 $t\\le -1$ 또는 $t\\ge 3$일 때이다.\n\n여기서 $t=3x-1$이므로\n\\[\n3x-1\\le -1 \\quad \\text{또는} \\quad 3x-1\\ge 3\n\\]\n즉,\n\\[\n3x\\le 0 \\Rightarrow x\\le 0,\n\\qquad\n3x\\ge 4 \\Rightarrow x\\ge \\frac{4}{3}\n\\]\n따라서 해는 $x\\le 0$ 또는 $x\\ge \\frac{4}{3}$이다.",
     "answer": "②",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수의 그래프를 해석하여 주기와 함수값의 범위를 파악하고, 직선 y=1과의 교점 개수를 조건에 맞게 따져야 한다. 단순 계산보다 그래프의 성질을 바탕으로 가능한 a, b를 논리적으로 좁혀 가는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
+    "behavior_area": "이해 능력",
+    "behavior_reason": "이 문제의 핵심은 주어진 포물선 그래프를 보고 함수값이 0 이상인 구간을 정확히 읽어내는 것이다. 또한 그 구간을 입력값 3x-1에 대응시켜 해를 구해야 하므로, 그래프와 부등식의 의미를 이해하는 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 277,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 121,
+            "category_name": "그래프를 이용한 부등식의 풀이"
+          }
+        ]
       }
     ]
   },
@@ -287,13 +302,18 @@
     "solution": "처음 원기둥의 반지름을 $r\\text{ cm}$라 하면, 지름과 높이가 같으므로 높이는 $2r\\text{ cm}$이다.\n\n반지름을 $1\\text{ cm}$ 늘리고 높이를 $2\\text{ cm}$ 줄인 원기둥의 부피가 $18\\pi\\text{ cm}^3$이므로\n$$\\pi (r+1)^2(2r-2)=18\\pi$$\n$$ (r+1)^2(r-1)=9 $$\n$r=2$를 대입하면\n$$ (2+1)^2(2-1)=9 $$\n이므로 $r=2$이다.\n\n처음 원기둥의 부피는\n$$\\pi r^2 \\cdot 2r=2\\pi r^3=2\\pi \\cdot 2^3=16\\pi$$\n따라서 처음 원기둥의 부피는 $16\\pi\\text{ cm}^3$이다.",
     "answer": "①",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적인 내용이 제공되지 않아 특정 계산 절차나 풀이 전략을 단정하기는 어렵습니다. 따라서 우선 주어진 개념과 조건의 의미를 파악하는 이해 능력이 중심이 된다고 판단했습니다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "원기둥의 지름, 반지름, 높이의 관계를 파악한 뒤 부피 공식을 이용해 식을 세워야 하는 문항이다. 단순 계산보다 주어진 상황을 미지수로 표현하고 조건에 맞는 방정식을 구성하여 해결하는 과정이 핵심이므로 문제 해결 능력이 가장 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 273,
         "confidence_score": 0.9999998807907104,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 99,
+            "category_name": "삼차방정식의 활용"
+          }
+        ]
       }
     ]
   },
@@ -325,12 +345,21 @@
     "answer": "①",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수 y=|2sin ax+b|의 그래프 성질을 파악하고, 직선 y=1과의 교점 개수가 10이 되도록 하는 a, b를 추론해야 한다. 주기와 최댓값·최솟값, 절댓값에 따른 그래프 변화를 종합하여 가능한 경우를 논리적으로 판별하는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
+    "behavior_reason": "이 문항은 내분점과 외분점의 뜻을 바탕으로 각 점의 위치를 수직선 위에서 추론하는 과정이 핵심이다. 단순 계산보다 비의 의미를 해석하고, 점이 어느 쪽 연장선 위에 놓이는지 판단하여 순서를 결정해야 하므로 추론 능력이 요구된다.",
     "unit_candidates": [
       {
         "unit_id": 280,
         "confidence_score": 0.999546229839325,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1897,
+            "category_name": "선분의 내분점"
+          },
+          {
+            "category_id": 1898,
+            "category_name": "선분의 외분점"
+          }
+        ]
       }
     ]
   },
@@ -362,7 +391,7 @@
     "answer": "④",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수의 그래프와 절댓값이 적용된 형태를 해석하여 직선 y=1과 만나는 점의 개수를 판단해야 한다. 단순 계산만으로 해결되지 않고, 주기와 최댓값·최솟값의 관계를 바탕으로 가능한 a, b를 추론하는 과정이 핵심이므로 추론 능력이 중심이 된다.",
+    "behavior_reason": "이 문제는 작은 수부터의 나열이 사전식 배열과 같다는 점을 바탕으로, 각 자리에서 가능한 경우의 수를 이용해 55번째 수가 어느 묶음에 속하는지 판단해야 한다. 단순한 계산보다 배열의 구조와 순서를 단계적으로 따져 가는 논리적 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 270,
@@ -419,7 +448,7 @@
     "answer": "②",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "입력된 JSON에는 문항 본문과 해설이 모두 비어 있어 실제 해결에 필요한 수학적 절차를 확인할 수 없다. 따라서 특정 계산이나 추론보다는, 제공 정보의 유무와 범위를 해석하는 수준에서 가장 보수적으로 이해 능력으로 판단하였다.",
+    "behavior_reason": "이 문제는 7가지 중에서 순서 없이 5가지를 고르는 상황이므로 순열이 아니라 조합임을 이해하는 것이 핵심이다. 계산은 비교적 간단하지만, 문제의 조건을 해석하여 알맞은 경우의 수 개념을 선택해야 하므로 이해 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 260,
@@ -476,12 +505,21 @@
     "answer": "③",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 절댓값을 포함한 사인함수의 그래프와 직선 y=1의 교점 개수 조건을 바탕으로 a, b의 가능한 값을 논리적으로 좁혀 가야 한다. 함수의 주기와 그래프의 모양, 최대·최소를 해석하여 경우를 나누고 최댓값과 최솟값을 결정하는 과정이 핵심이므로 추론 능력이 요구된다.",
+    "behavior_reason": "이 문항은 실수계수 방정식의 복소근이 켤레로 함께 나타난다는 성질을 바탕으로 나머지 근을 추론해야 한다. 이어서 삼차방정식의 근과 계수의 관계를 이용해 a, b를 찾아야 하므로 단순 계산보다 성질을 연결하는 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 273,
         "confidence_score": 0.9999997615814209,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 96,
+            "category_name": "삼차방정식의 근과 계수의 관계"
+          },
+          {
+            "category_id": 98,
+            "category_name": "삼차방정식의 켤레근"
+          }
+        ]
       }
     ]
   },
@@ -506,13 +544,22 @@
     "solution": "\\(|x-a|<3\\) 이므로 \\(a-3<x<a+3\\) 이다.\\n정수해의 최댓값이 5라는 것은 5는 해이지만 6은 해가 아니어야 한다는 뜻이다.\\n\\n먼저 5가 해이므로\\n\\[a-3<5<a+3\\]\\n즉,\\n\\[2<a<8\\]\\n\\n또 6은 해가 아니므로\\n\\[6\\not<a+3\\]\\n이어야 하므로\\n\\[6\\ge a+3\\]\\n즉,\\n\\[a\\le3\\]\\n\\n이를 합치면\\n\\[2<a\\le3\\]\\n따라서 \\(a\\)의 범위는 \\(2<a\\le3\\) 이다.",
     "answer": "2<a\\le3",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적 내용이 제공되지 않아 특정 계산 절차나 복합적인 추론 과정을 확인하기 어렵다. 따라서 현재 정보로는 관련 개념과 표현을 정확히 이해하는지가 가장 기본적으로 요구된다고 판단하여 이해 능력을 선택했다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 절댓값부등식을 단순히 푸는 것에서 끝나지 않고, '정수해의 최댓값이 5'라는 조건을 5는 해이고 6은 해가 아니라는 조건으로 바꾸어 해석해야 한다. 즉, 주어진 조건의 의미를 바탕으로 필요한 부등식을 세우고 범위를 좁혀 가는 추론 과정이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 276,
         "confidence_score": 0.9999998807907104,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 110,
+            "category_name": "A ＜ B ＜ C의 꼴의 연립부등식"
+          },
+          {
+            "category_id": 115,
+            "category_name": "|ax+b| ＜ c, |ax+b| ＞ c의 꼴의 부등식"
+          }
+        ]
       }
     ]
   },
@@ -537,13 +584,18 @@
     "solution": "\\(x+y=7\\), \\(x^2+y^2=29\\) 이므로\n\\[\n(x+y)^2=x^2+2xy+y^2\n\\]\n에서\n\\[\n49=29+2xy \\Rightarrow 2xy=20 \\Rightarrow xy=10\n\\]\n따라서 \\(x,y\\)는 이차방정식\n\\[\nt^2-7t+10=0\n\\]\n의 두 근이므로\n\\[\n(t-5)(t-2)=0\n\\]\n에서 \\((x,y)=(5,2)\\) 또는 \\((2,5)\\)이다.\n\n그러므로 \\(\\alpha+3\\beta\\)의 값은\n- \\((\\alpha,\\beta)=(5,2)\\)일 때: \\(5+3\\cdot2=11\\)\n- \\((\\alpha,\\beta)=(2,5)\\)일 때: \\(2+3\\cdot5=17\\)\n\n따라서 최댓값은 \\(17\\)이다.",
     "answer": "17",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설이 제공되지 않아 구체적인 풀이 과정은 확인할 수 없습니다. 다만 제시된 후보 단원이 연립이차방정식의 유형과 해의 조건을 다루고 있으므로, 핵심은 관련 개념과 구조를 이해하는 능력에 가깝다고 판단했습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 두 식에서 $(x+y)^2=x^2+2xy+y^2$를 이용해 $xy$를 추론하고, 다시 $x,y$를 한 이차방정식의 두 근으로 해석해야 한다. 단순 계산만으로 끝나는 문제가 아니라 식 사이의 관계를 파악하여 해를 구조적으로 찾아가는 과정이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 274,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 102,
+            "category_name": "x, y에 대한 대칭식인 연립이차방정식"
+          }
+        ]
       }
     ]
   },
@@ -574,13 +626,18 @@
     "solution": "둘째 부등식 $2x-4\\ge 1$을 풀면 $2x\\ge 5$, 따라서 $x\\ge \\frac{5}{2}$이다. 이를 첫째 부등식 $x>2$와 함께 만족해야 하므로 공통해는 $x\\ge \\frac{5}{2}$이다.",
     "answer": "③",
     "difficulty": 1,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수의 그래프에서 주기, 최댓값과 최솟값을 파악한 뒤 직선 y=1과의 교점 개수를 경우 나누어 추론해야 한다. 단순 계산보다 그래프의 성질을 해석하고 가능한 자연수 a, b의 조건을 논리적으로 좁혀 가는 과정이 핵심이므로 추론 능력이 중심이다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 각 일차부등식을 정확히 풀어 해의 범위를 계산하는 것이 핵심이다. 또한 구한 두 해의 공통부분을 찾아 연립부등식의 해를 결정해야 하므로 기본적인 계산 절차를 바르게 수행하는 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 276,
         "confidence_score": 0.9999997615814209,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 109,
+            "category_name": "연립일차부등식의 풀이"
+          }
+        ]
       }
     ]
   },
@@ -612,12 +669,21 @@
     "answer": "⑤",
     "difficulty": 4,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 절댓값 사인함수의 그래프와 직선 y=1의 교점 개수를 주기, 최댓값, 최솟값과 연결하여 경우를 나누어 판단해야 한다. 단순 계산보다 그래프의 성질을 해석하고 가능한 (a, b)를 논리적으로 추려내는 과정이 핵심이므로 추론 능력이 요구된다.",
+    "behavior_reason": "주어진 연립이차부등식을 인수분해한 뒤, ab<0이라는 조건에서 a, b의 부호와 근의 위치를 경우 나누어 판단해야 한다. 이후 공통해 구간에 포함되는 정수의 개수가 오직 2개가 되도록 a의 범위를 추론하여 최댓값을 결정하므로 추론 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 278,
         "confidence_score": 0.9999783039093018,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 134,
+            "category_name": "연립이차부등식의 풀이"
+          },
+          {
+            "category_id": 140,
+            "category_name": "정수인 해의 조건이 주어진 연립이차부등식"
+          }
+        ]
       }
     ]
   },
@@ -648,18 +714,36 @@
     "solution": "점 $P$를 $x$축 위의 점이라 하면 $P=(x,0)$로 둘 수 있다.\n\n그러면\n$AP^2=(x-1)^2+(0-4)^2=(x-1)^2+16$,\n$BP^2=(x-5)^2+(0-1)^2=(x-5)^2+1$.\n\n따라서\n\\[\nAP^2+BP^2=(x-1)^2+16+(x-5)^2+1\n=2x^2-12x+43\n=2(x-3)^2+25.\n\\]\n$2(x-3)^2 \\ge 0$ 이므로 최소값은 $25$이다.",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수의 그래프를 해석하여 주기와 최댓값, 최솟값을 파악하고 직선 y=1과 만나는 점의 개수 조건으로부터 a, b의 가능한 값을 추론해야 한다. 단순 계산보다 그래프의 성질을 이용해 경우를 나누고 조건을 만족하는 순서쌍을 찾아내는 과정이 핵심이므로 추론 능력이 중심이다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "점 P를 x축 위의 점으로 두어 좌표로 표현하고, 두 거리의 제곱합을 하나의 식으로 바꾸는 과정이 필요하다. 이후 이를 이차식의 최솟값 문제로 전환해 해결해야 하므로 여러 개념을 연결하는 문제 해결 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 279,
         "confidence_score": 0.7534970045089722,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 142,
+            "category_name": "두 점 사이의 거리"
+          },
+          {
+            "category_id": 146,
+            "category_name": "거리의 제곱의 합의 최솟값"
+          }
+        ]
       },
       {
         "unit_id": 272,
         "confidence_score": 0.24462462961673737,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 83,
+            "category_name": "이차함수의 최대 · 최소"
+          },
+          {
+            "category_id": 87,
+            "category_name": "완전제곱식을 이용한 이차식의 최대 · 최소"
+          }
+        ]
       }
     ]
   },
@@ -691,12 +775,17 @@
     "answer": "④",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "사인함수에 절댓값이 포함된 그래프의 주기, 최댓값과 최솟값, 그리고 직선 y=1과의 교점 개수를 종합하여 a, b의 조건을 찾아야 한다. 단순 계산보다 그래프의 성질을 해석하고 경우를 나누어 가능한 값을 논리적으로 판단하는 과정이 핵심이므로 추론 능력이 중심이다.",
+    "behavior_reason": "이 문제는 이차부등식이 모든 실수 x에 대하여 성립하는 조건을 떠올리고, 이를 계수와 판별식에 대한 조건으로 바꾸어 해석해야 한다. 또한 k>0, D≤0을 함께 만족시키는 정수 k의 범위를 논리적으로 결합하여 최소값을 찾아야 하므로 추론 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 277,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 128,
+            "category_name": "이차부등식이 항상 성립할 조건"
+          }
+        ]
       }
     ]
   },
@@ -727,13 +816,18 @@
     "solution": "두 점 사이의 거리는 거리공식을 이용한다.\n\\[\nAB=\\sqrt{(6-4)^2+(2-0)^2}=\\sqrt{2^2+2^2}=\\sqrt{8}=2\\sqrt{2}\n\\]\n따라서 정답은 \\(2\\sqrt{2}\\)이므로 ②이다.",
     "answer": "②",
     "difficulty": 1,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "입력된 JSON에서 문항과 해설의 HTML 정보가 모두 비어 있어 실제 풀이에 필요한 계산이나 추론 과정을 구체적으로 확인할 수 없습니다. 따라서 현재로서는 특정 개념이 실제로 사용되었는지를 신중하게 판별하는 이해가 가장 중요합니다. 제공된 정보만으로 명확히 확인되지 않는 범주는 선택하지 않는 것이 타당합니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "좌표평면에서 두 점 사이의 거리 공식을 알고 좌표를 대입해 계산하면 바로 해결되는 문항이다. 핵심은 공식을 정확히 적용하고 제곱근을 간단히 정리하는 계산 과정에 있다.",
     "unit_candidates": [
       {
         "unit_id": 279,
         "confidence_score": 0.9999914169311523,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 142,
+            "category_name": "두 점 사이의 거리"
+          }
+        ]
       }
     ]
   },
@@ -758,13 +852,22 @@
     "solution": "평행사변형의 두 대각선은 서로를 이등분하므로, 대각선 $AC$와 $BD$의 중점이 같다.\n\n$B(-2,-3)$, $D(7,9)$이므로 $BD$의 중점은\n$$\\left(\\frac{-2+7}{2},\\frac{-3+9}{2}\\right)=\\left(\\frac{5}{2},3\\right)$$\n\n$A(-1,a)$, $C(b,1)$이므로 $AC$의 중점은\n$$\\left(\\frac{-1+b}{2},\\frac{a+1}{2}\\right)$$\n\n중점이 같으므로\n$$\\frac{-1+b}{2}=\\frac{5}{2},\\qquad \\frac{a+1}{2}=3$$\n따라서\n$$b=6,\\qquad a=5$$\n\n그러므로\n$$a+b=5+6=11$$",
     "answer": "11",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설 정보가 비어 있어 특정 계산 절차나 복합적인 추론 과정을 직접 확인하기는 어렵다. 따라서 현재 제공된 정보만으로는 문제와 관련된 개념 및 조건을 파악하는 이해 능력이 가장 핵심이라고 판단했다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문제는 평행사변형의 대각선이 서로를 이등분한다는 성질을 떠올리고, 이를 좌표평면에서 중점이 같다는 식으로 바꾸어 해석해야 한다. 단순 계산보다는 도형의 성질을 좌표 조건으로 연결해 식을 세우는 추론 과정이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 280,
         "confidence_score": 0.9999991655349731,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 152,
+            "category_name": "사각형에서 중점의 활용"
+          },
+          {
+            "category_id": 1898,
+            "category_name": "선분의 외분점"
+          }
+        ]
       }
     ]
   },
@@ -795,13 +898,22 @@
     "solution": "직각삼각형을 좌표평면에 놓아 \n\\(B=(0,0),\\ A=(0,6),\\ C=(9,0)\\)라 하자. \n그러면 \\(AC\\)의 방정식은\n\\[\ny=6-\\frac{2}{3}x\n\\]\n이다.\n\n점 \\(P=(x,y)\\)가 \\(AC\\) 위에 있을 때, 삼각형 \\(ABP\\)의 넓이는 밑변 \\(AB=6\\), 높이는 점 \\(P\\)에서 직선 \\(AB\\)까지의 거리이므로 \\(x\\)이다.\n따라서\n\\[\n\\frac12 \\cdot 6 \\cdot x=9\n\\]\n\\[\n3x=9 \\Rightarrow x=3\n\\]\n이다.\n\n또 \\(P\\)는 \\(AC\\) 위에 있으므로\n\\[\ny=6-\\frac23\\cdot 3=4\n\\]\n따라서 \\(P=(3,4)\\).\n\n그러므로\n\\[\nBP^2=3^2+4^2=9+16=25\n\\]\n이다.",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 절댓값이 포함된 사인함수의 그래프 성질을 바탕으로 직선 y=1과의 교점 개수를 경우에 따라 추론해야 한다. 주기, 최댓값과 최솟값, b의 값에 따른 그래프의 위치를 종합하여 가능한 a, b를 판단하는 과정이 핵심이다. 따라서 단순 계산보다 그래프 해석과 조건에 따른 논리적 추론이 중심이 된다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "도형을 좌표평면에 적절히 배치한 뒤, 넓이 조건을 좌표와 직선의 방정식으로 바꾸어 점 P의 좌표를 찾아야 한다. 이후 구한 좌표를 이용해 거리의 제곱을 계산하므로, 여러 개념을 연결해 해결 전략을 세우는 것이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 283,
         "confidence_score": 0.6170162558555603,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 167,
+            "category_name": "점과 직선 사이의 거리"
+          },
+          {
+            "category_id": 169,
+            "category_name": "세 꼭짓점의 좌표가 주어진 삼각형의 넓이"
+          }
+        ]
       },
       {
         "unit_id": 282,
@@ -811,12 +923,26 @@
       {
         "unit_id": 281,
         "confidence_score": 0.12149769812822342,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 156,
+            "category_name": "두 점을 지나는 직선의 방정식"
+          }
+        ]
       },
       {
         "unit_id": 279,
         "confidence_score": 0.03944453224539757,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 142,
+            "category_name": "두 점 사이의 거리"
+          },
+          {
+            "category_id": 147,
+            "category_name": "좌표를 이용한 도형의 성질"
+          }
+        ]
       },
       {
         "unit_id": 280,
@@ -853,7 +979,7 @@
     "answer": "①",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "여러 이차부등식의 해를 구한 뒤 그 공통부분과 조건을 비교하여 결론을 판단해야 한다. 단순 계산만으로 해결되기보다 해의 범위를 논리적으로 연결하고 경우를 나누어 생각하는 과정이 중요하므로 추론 능력이 핵심이다.",
+    "behavior_reason": "이 문항은 주어진 연쇄부등식을 두 개의 부등식으로 나누어 해석하고, 그 공통조건을 추론해야 해결할 수 있다. 또한 8 이상 9 미만인 정수의 제곱은 존재하지 않는다는 성질을 이용해 해의 존재 여부를 판단해야 하므로 추론 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 278,
@@ -894,13 +1020,22 @@
     "solution": "원래 식을 $x^2+bx+c$라 하자.\n민아는 $x$의 계수만 잘못 보았으므로 상수항은 맞다. \n$$(x-3)(x+8)=x^2+5x-24$$\n이므로 원래 식의 상수항은 $c=-24$이다.\n\n예나는 상수항만 잘못 보았으므로 $x$의 계수는 맞다. \n$$(x-10)(x+12)=x^2+2x-120$$\n이므로 원래 식의 $x$의 계수는 $b=2$이다.\n\n따라서 원래 식은\n$$x^2+2x-24$$\n이고, 이를 인수분해하면\n$$x^2+2x-24=(x-4)(x+6)$$\n이다.",
     "answer": "①",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설 정보가 비어 있어 실제로 어떤 계산 절차나 풀이 전략이 요구되는지 확인할 수 없습니다. 따라서 주어진 후보 단원의 관련성을 근거 있게 판단하는 데 초점을 두어 이해 능력으로 분류했습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 두 잘못된 인수분해 결과에서 각각 무엇이 맞고 무엇이 틀렸는지를 구분하여 원래 식의 계수와 상수항을 추론해야 한다. 이후 추론한 이차식을 다시 인수분해해 정답을 결정하므로, 조건을 연결해 결론을 이끌어 내는 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 436,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1362,
+            "category_name": "x²+(a+b)x+ab 꼴의 인수분해"
+          },
+          {
+            "category_id": 1367,
+            "category_name": "계수 또는 상수항을 잘못 보고 인수분해한 경우"
+          }
+        ]
       }
     ]
   },
@@ -931,13 +1066,18 @@
     "solution": "각 선택지를 확인하면,\n① $3>2$ 이므로 $\\sqrt{3}>\\sqrt{2}$는 참이다.\n② $11>4\\sqrt{30}$인지 보자. 양변이 양수이므로 제곱하면 $121>16\\cdot 30=480$이어야 하는데 거짓이다. 따라서 원래 부등식도 거짓이다.\n③ $\\sqrt{3}>1$ 이므로 $1+\\sqrt{3}>2$는 참이다.\n④ $\\sqrt{3}>\\sqrt{2}$ 이므로 부호를 바꾸어 빼면 $1-\\sqrt{3}<1-\\sqrt{2}$는 참이다.\n⑤ $\\sqrt{11}<\\sqrt{13}$ 이므로 $\\sqrt{2}+\\sqrt{11}<\\sqrt{2}+\\sqrt{13}$는 참이다.\n따라서 옳지 않은 것은 ②이다.",
     "answer": "②",
     "difficulty": 1,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "이 문항은 유리수, 무리수, 실수의 개념과 성질을 정확히 구분해 파악하는 이해가 핵심인 유형으로 보는 것이 적절합니다. 복잡한 계산보다는 수의 뜻과 분류 기준을 이해하여 판단하는 과정이 중심입니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "각 보기의 부등식이 참인지 거짓인지 제곱근의 성질과 부등식의 변형을 바탕으로 하나씩 논리적으로 판단해야 한다. 특히 양변이 양수일 때 제곱하여 비교하거나, 같은 수를 더하거나 빼도 대소 관계가 유지됨을 이용해 옳지 않은 보기를 추론하는 과정이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 430,
         "confidence_score": 0.9979379773139954,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1316,
+            "category_name": "두 실수의 대소 관계"
+          }
+        ]
       }
     ]
   },
@@ -968,13 +1108,18 @@
     "solution": "잘못 전개한 식은\n\\[(4x+a)(3x+5)=12x^2+(20+3a)x+5a\\]\n이다. 이것이 \\(12x^2+17x-5\\)와 같으므로\n\\[20+3a=17,\\quad 5a=-5\\]\n에서 \\(a=-1\\)이다.\n\n따라서 옳게 전개한 식은\n\\[(4x-1)(5x+3)=20x^2+12x-5x-3=20x^2+7x-3\\]\n이다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설이 제공되지 않아 구체적인 계산 절차나 문제 해결 전략을 확인하기 어렵습니다. 따라서 주어진 단원 후보만 놓고 보면, 특정 공식을 적용하는 능력보다 관련 개념을 이해하고 있는지를 중심으로 판단하는 것이 가장 보수적입니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 잘못 전개한 식을 구한 뒤 계수를 비교하여 상수 a를 찾고, 다시 올바른 식을 전개하는 과정이 핵심이다. 다항식의 전개와 동류항 정리, 간단한 값 계산이 중심이므로 계산 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 434,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1345,
+            "category_name": "(ax+b)(cx+d)의 전개"
+          }
+        ]
       }
     ]
   },
@@ -1007,13 +1152,22 @@
     "solution": "17은 4^2=16과 5^2=25 사이이므로 ㉠=4, ㉡=5이다. 또 4.12^2=16.9744<17<17.0569=4.13^2 이므로 4.12<√17<4.13, 따라서 소수점 아래 둘째 자리의 수는 2이다. 즉 ㉢=1은 적절하지 않다. 참고로 4.123^2=16.999129<17<17.0007376=4.124^2 이므로 ㉣=3은 맞고, √17은 순환하지 않는 무한소수이므로 ㉤은 무리수도 맞다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "입력된 JSON에는 문항 내용과 해설 내용이 모두 null로 제공되어 있어 구체적인 계산 과정이나 추론 과정을 확인할 수 없다. 따라서 특정 해결 전략의 사용 여부보다 관련 수학 개념을 이해하는 수준으로 판단하는 것이 가장 타당하다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 √17의 값을 직접 구하는 것이 아니라, 여러 수의 제곱값을 비교하여 어느 구간에 있는지 단계적으로 판단해야 한다. 특히 소수점 아래 각 자리의 숫자를 부등식으로 좁혀 가며 추론하는 과정이 핵심이다. 또한 순환하지 않는 무한소수임을 근거로 무리수임을 판단하는 추론도 필요하다.",
     "unit_candidates": [
       {
         "unit_id": 430,
         "confidence_score": 0.9999992847442627,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1311,
+            "category_name": "유리수와 무리수의 구별"
+          },
+          {
+            "category_id": 1318,
+            "category_name": "수직선에 대응하는 점 찾기"
+          }
+        ]
       }
     ]
   },
@@ -1044,8 +1198,8 @@
     "solution": "$x=\\sqrt{n}$이라 두면 $n$이 한 자리 자연수이므로 $1\\le n\\le 9$, 따라서 $1\\le x\\le 3$이다.\n\n주어진 부등식은\n\\[\n\\frac{x+6}{x-6}\\le -2\n\\]\n이고, 이항하면\n\\[\n\\frac{x+6}{x-6}+2\\le 0\n\\]\n\\[\n\\frac{x+6+2x-12}{x-6}\\le 0\n\\]\n\\[\n\\frac{3x-6}{x-6}=\\frac{3(x-2)}{x-6}\\le 0\n\\]\n이다.\n\n그런데 $1\\le x\\le 3$이므로 항상 $x-6<0$이다. 따라서 전체 분수가 $0$ 이하가 되려면 분자 $x-2\\ge 0$이어야 한다.\n즉,\n\\[\nx\\ge 2 \\quad\\Rightarrow\\quad \\sqrt{n}\\ge 2 \\quad\\Rightarrow\\quad n\\ge 4\n\\]\n\n한 자리 자연수 중 가능한 값은\n\\[\n4,5,6,7,8,9\n\\]\n로 모두 $6$개이다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설 정보가 비어 있어 구체적인 풀이 절차를 확인하기는 어렵다. 다만 후보 단원들이 이차방정식의 해와 관련된 개념에 모여 있어, 핵심은 관련 개념을 이해하고 적용하는 데 있다고 판단했다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 주어진 식을 단순 계산하는 것보다 sqrt{n}을 새로운 문자로 두고, 가능한 범위를 먼저 파악한 뒤 분수식의 부호를 판단하는 과정이 핵심이다. 특히 1≤x≤3에서 x-6<0임을 이용해 분자의 부호 조건으로 바꾸어 해를 추론해야 하므로 추론 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 438,
@@ -1101,13 +1255,18 @@
     "solution": "$(x-2)(x+4)-4x=x^2+2x-8-4x=x^2-2x-8$이다.\n이를 $x$의 계수가 1인 두 일차식의 곱으로 인수분해하면\n$$(x-4)(x+2)$$\n이므로 두 일차식의 합은\n$$(x-4)+(x+2)=2x-2$$\n이다.",
     "answer": "②",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항의 발문과 해설 정보가 제공되지 않아 구체적으로 어떤 계산이나 추론이 요구되는지 확인하기 어렵습니다. 따라서 현재로서는 제시된 단원 개념을 이해하고 있는지를 중심으로 판단하는 것이 가장 타당하므로 이해 능력으로 보았습니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "주어진 식을 전개하여 이차식으로 정리한 뒤, 인수분해 공식을 적용해 두 일차식으로 나타내는 계산이 핵심이다. 이후 두 식을 더하는 과정도 직접적인 대수 계산으로 해결된다.",
     "unit_candidates": [
       {
         "unit_id": 436,
         "confidence_score": 0.9999417066574097,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1362,
+            "category_name": "x²+(a+b)x+ab 꼴의 인수분해"
+          }
+        ]
       }
     ]
   },
@@ -1139,12 +1298,21 @@
     "answer": "⑤",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수의 그래프와 절댓값이 적용된 함수의 형태를 해석한 뒤, 직선과 만나는 점의 개수로부터 자연수 a, b의 조건을 추론해야 한다. 단순 계산만으로는 해결되지 않고 주기, 그래프의 높이 변화, 교점 개수의 관계를 종합적으로 판단해야 하므로 추론 능력이 핵심이다.",
+    "behavior_reason": "이 문항은 식의 값을 바로 계산하는 것이 아니라, 정수가 되기 위한 조건을 분석하여 가능한 최소값을 판단해야 한다. 특히 값이 1인 경우는 자연수 조건에 맞지 않음을 따지고, 다음 경우인 2를 추론하여 해결하므로 추론 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 429,
         "confidence_score": 0.7746380567550659,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1305,
+            "category_name": "루트 (A+x)가 자연수가 되도록 하는 자연수 x의 값 구하기"
+          },
+          {
+            "category_id": 1306,
+            "category_name": "루트 (A-x)가 정수 또는 자연수가 되도록 하는 자연수 x의 값 구하기"
+          }
+        ]
       },
       {
         "unit_id": 436,
@@ -1180,13 +1348,26 @@
     "solution": "각 선택지를 계산하면 된다.\n① \\(\\sqrt{10^2}-\\sqrt{100}=\\sqrt{100}-10=10-10=0\\neq 20\\)\n② \\(\\sqrt{25}+\\sqrt{(-2)^2}=5+2=7\\neq 3\\)\n③ \\(\\sqrt{\\frac{64}{100}}\\times(-\\sqrt{5})^2=\\frac{8}{10}\\times 5=4\\neq 2\\)\n④ 이미지 식은 \\(\\sqrt{(-1)^2}\\times(-\\sqrt{11})^2=11\\) 이다. \n\\(\\sqrt{(-1)^2}=1\\), \\((-\\sqrt{11})^2=11\\) 이므로 \\(1\\times 11=11\\). 옳다.\n⑤ \\(\\sqrt{(-3)^2}\\times\\left(-\\sqrt{\\frac{81}{121}}\\right)=3\\times\\left(-\\frac{9}{11}\\right)=-\\frac{27}{11}\\neq -11\\)\n따라서 옳은 것은 ④이다.",
     "answer": "④",
     "difficulty": 1,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "함수 y=|2sin(ax)+b|의 그래프와 직선 y=1의 교점 개수를 주기와 그래프의 높이 변화와 연결하여 가능한 a, b를 추론해야 한다. 단순 계산보다 그래프의 성질을 해석하고 조건을 만족하는 경우를 논리적으로 좁혀 가는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 각 보기의 식에서 제곱근의 성질을 적용하여 값을 정확히 계산하는 것이 핵심이다. 특히 \\(\\sqrt{a^2}\\), \\((-\\sqrt{a})^2\\) 같은 표현을 바르게 처리해 각 등식의 참·거짓을 판별해야 하므로 계산 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 429,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1296,
+            "category_name": "제곱근 구하기"
+          },
+          {
+            "category_id": 1298,
+            "category_name": "제곱근의 성질 (1)"
+          },
+          {
+            "category_id": 1299,
+            "category_name": "제곱근의 성질을 이용한 계산"
+          }
+        ]
       }
     ]
   },
@@ -1212,17 +1393,12 @@
     "answer": "-55",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 식의 겉모양만 계산하는 것이 아니라, 식 안의 공통된 구조를 파악해 어떤 인수분해 방법을 써야 하는지 판단하는 과정이 핵심이다. 따라서 식을 적절히 변형하고 공통부분을 하나의 대상으로 보아 해석하는 추론 능력이 중요하다.",
+    "behavior_reason": "각 단계의 이동을 부호가 있는 제곱수의 합으로 나타내고, 이를 두 항씩 묶어 규칙을 찾아야 한다. 또 묶인 값들이 등차수열을 이룸을 파악해 합을 구해야 하므로, 단순 계산보다 수의 패턴과 관계를 추론하는 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 437,
         "confidence_score": 0.7671743631362915,
-        "valid_categories": [
-          {
-            "category_id": 1369,
-            "category_name": "공통부분이 있는 식의 인수분해"
-          }
-        ]
+        "valid_categories": []
       },
       {
         "unit_id": 443,
@@ -1242,7 +1418,12 @@
       {
         "unit_id": 430,
         "confidence_score": 0.021763062104582787,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1315,
+            "category_name": "실수와 수직선"
+          }
+        ]
       }
     ]
   },
@@ -1273,13 +1454,34 @@
     "solution": "각 식의 좌변을 간단히 계산해 확인한다.\n\n① \\(\\sqrt{2}(\\sqrt{3}-\\sqrt{2})=\\sqrt{6}-2\\) 이다. 제시된 우변은 \\(-\\sqrt{2}+\\sqrt{6}=\\sqrt{6}-\\sqrt{2}\\) 이므로 서로 다르다.\n\n② \\(\\left(\\sqrt{3}-\\frac{5}{\\sqrt{3}}\\right)=\\frac{3-5}{\\sqrt{3}}=-\\frac{2}{\\sqrt{3}}\\),\n\\[\\left(-\\frac{2}{\\sqrt{3}}\\right)\\div\\frac{\\sqrt{5}}{\\sqrt{3}}=\\left(-\\frac{2}{\\sqrt{3}}\\right)\\cdot\\frac{\\sqrt{3}}{\\sqrt{5}}=-\\frac{2}{\\sqrt{5}}=-\\frac{2\\sqrt{5}}{5}\\]\n맞다.\n\n③ \\(\\sqrt{2}(\\sqrt{5}-\\sqrt{10})+\\sqrt{20}=\\sqrt{10}-\\sqrt{20}+\\sqrt{20}=\\sqrt{10}\\)\n맞다.\n\n④ \\(\\sqrt{12}=2\\sqrt{3}\\) 이므로\n\\[\\frac{\\sqrt{12}-3}{\\sqrt{3}}+\\sqrt{3}(1+\\sqrt{2})=\\frac{2\\sqrt{3}-3}{\\sqrt{3}}+\\sqrt{3}+\\sqrt{6}=2-\\sqrt{3}+\\sqrt{3}+\\sqrt{6}=2+\\sqrt{6}\\]\n맞다.\n\n⑤ \\(\\sqrt{18}=3\\sqrt{2},\\ \\sqrt{12}=2\\sqrt{3},\\ \\sqrt{50}=5\\sqrt{2}\\) 이므로\n\\[\\sqrt{18}(\\sqrt{3}+\\sqrt{2})=3\\sqrt{6}+6\\]\n또,\n\\[\\frac{\\sqrt{12}-\\sqrt{50}}{\\sqrt{2}}=\\frac{2\\sqrt{3}-5\\sqrt{2}}{\\sqrt{2}}=\\sqrt{6}-5\\]\n따라서\n\\[(3\\sqrt{6}+6)-(\\sqrt{6}-5)=2\\sqrt{6}+11=11+2\\sqrt{6}\\]\n맞다.\n\n따라서 옳지 않은 것은 ①이다.",
     "answer": "①",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수의 그래프와 직선의 교점 개수가 10이 되도록 하는 자연수 a, b의 조건을 논리적으로 따져야 한다. 사인함수의 주기, 최댓값과 최솟값, 절댓값에 따른 그래프 변화를 종합해 가능한 경우를 나누고 결론을 도출해야 하므로 추론 능력이 핵심이다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 각 보기의 좌변을 근호의 성질, 분배법칙, 분모의 유리화를 이용해 정확히 간단히 계산해야 판단할 수 있다. 참·거짓의 판별이 복잡한 추론보다 계산 결과의 정확성에 달려 있으므로 계산 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 432,
         "confidence_score": 0.9999977350234985,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1328,
+            "category_name": "제곱근의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1329,
+            "category_name": "루트 (a²b)=a (루트 b)를 이용한 제곱근의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1330,
+            "category_name": "분모에 제곱근이 있는 경우의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1332,
+            "category_name": "근호를 포함한 식의 분배법칙"
+          },
+          {
+            "category_id": 1334,
+            "category_name": "근호를 포함한 복잡한 식의 계산"
+          }
+        ]
       }
     ]
   },
@@ -1310,8 +1512,8 @@
     "solution": "$2^8-1=256-1=255$이다.\n\n$255$를 소인수분해하면\n$$255=3\\times 5\\times 17$$\n이다.\n\n$10$과 $20$ 사이의 자연수는 $11,12,\\dots,19$이고, 이 중 $255$의 약수는\n$$15,\\ 17$$\n이다.\n\n따라서 모두 더하면\n$$15+17=32$$\n이다.",
     "answer": "④",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제시된 JSON에서는 문제 본문과 해설이 모두 비어 있어 적용된 개념과 풀이 과정을 구체적으로 확인하기 어렵습니다. 따라서 주어진 정보를 해석하고 관련 여부를 판단하는 수준의 이해가 우선 요구된다고 보아 '이해 능력'으로 판단했습니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 2^8-1의 값을 계산하고, 이를 소인수분해하여 10과 20 사이의 약수를 찾아 합하는 과정이 핵심이다. 문제 해결에 필요한 주된 활동이 수의 계산과 약수 판별이므로 계산 능력이 가장 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 437,
@@ -1347,13 +1549,26 @@
     "solution": "정사각형들의 넓이가 차례로 2배이므로 한 변의 길이는 \u0012\\sqrt{2}\u0012배씩 커진다.\n\n정사각형 A의 한 변의 길이:\n\\[\n\\sqrt{20}=2\\sqrt{5}\n\\]\n정사각형 B의 한 변의 길이:\n\\[\n\\sqrt{40}=2\\sqrt{10}\n\\]\n정사각형 C의 한 변의 길이:\n\\[\n\\sqrt{80}=4\\sqrt{5}\n\\]\n정사각형 D의 한 변의 길이:\n\\[\n\\sqrt{160}=4\\sqrt{10}\n\\]\n\n서로 붙어 있는 변의 길이는 각각 작은 정사각형의 한 변이므로, 전체 둘레는\n\\[\n4(A+B+C+D)-2(A와B의공통변+B와C의공통변+C와D의공통변)\n\\]\n즉\n\\[\n4(a+b+c+d)-2(a+b+c)\n\\]\n이다.\n\n여기서\n\\[\na=2\\sqrt5,\\quad b=2\\sqrt{10},\\quad c=4\\sqrt5,\\quad d=4\\sqrt{10}\n\\]\n이므로\n\\[\n4(a+b+c+d)-2(a+b+c)\n=2a+2b+2c+4d\n\\]\n\\[\n=2(2\\sqrt5)+2(2\\sqrt{10})+2(4\\sqrt5)+4(4\\sqrt{10})\n\\]\n\\[\n=4\\sqrt5+4\\sqrt{10}+8\\sqrt5+16\\sqrt{10}\n=12\\sqrt5+20\\sqrt{10}\n\\]\n따라서 정답은 ④이다.",
     "answer": "④",
     "difficulty": 3,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 HTML이 제공되지 않아 구체적인 계산 과정이나 추론 구조를 확인할 수는 없습니다. 다만 제시된 후보 단원이 제곱근 식의 성질과 변형에 관한 내용이므로, 우선 관련 개념을 정확히 이해하는 능력이 중심이라고 판단했습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "정사각형의 넓이가 2배씩 커질 때 한 변의 길이가 어떻게 변하는지 추론해야 한다. 또한 서로 맞닿는 공통변은 둘레에서 제외된다는 점을 파악하여 전체 둘레 식을 세워야 하므로 추론 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 432,
         "confidence_score": 0.9999998807907104,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1328,
+            "category_name": "제곱근의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1329,
+            "category_name": "루트 (a²b)=a (루트 b)를 이용한 제곱근의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1336,
+            "category_name": "제곱근의 사칙연산의 도형에의 활용"
+          }
+        ]
       }
     ]
   },
@@ -1384,18 +1599,32 @@
     "solution": "세 수의 크기를 비교하면\n\\[4+\\sqrt{3}\\approx 5.732,\\quad 6,\\quad 7-\\sqrt{3}\\approx 5.268\\]\n이므로 가장 작은 수는\n\\[m=7-\\sqrt{3}\\]\n가장 큰 수는\n\\[M=6\\]\n이다.\n\n따라서\n\\[(M-m)(M+m)=M^2-m^2=6^2-(7-\\sqrt{3})^2\\]\n\\[=36-(49-14\\sqrt{3}+3)=36-(52-14\\sqrt{3})\\]\n\\[=-16+14\\sqrt{3}\\]\n이므로 정답은 ④이다.",
     "answer": "④",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설이 제공되지 않아 어떤 계산 절차나 해결 전략이 실제로 사용되었는지 확인할 수 없다. 따라서 제시된 후보 단원과 범주의 의미를 해석하고 문제와의 관련성을 판단하는 이해 능력이 가장 중심이라고 보았다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 세 수의 대소를 비교하여 최솟값과 최댓값을 정한 뒤, 곱셈 공식을 이용해 식의 값을 계산하는 것이 핵심이다. 특히 (7-√3)^2 계산과 (M-m)(M+m)=M^2-m^2의 활용처럼 정확한 수 계산이 중요하므로 계산 능력이 가장 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 437,
         "confidence_score": 0.8931155204772949,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1372,
+            "category_name": "인수분해 공식을 이용한 수의 계산"
+          }
+        ]
       },
       {
         "unit_id": 435,
         "confidence_score": 0.10666744410991669,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1350,
+            "category_name": "곱셈 공식을 이용한 수의 계산"
+          },
+          {
+            "category_id": 1351,
+            "category_name": "곱셈 공식을 이용한 근호를 포함한 식의 계산"
+          }
+        ]
       }
     ]
   },
@@ -1427,12 +1656,21 @@
     "answer": "④",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적인 내용이 제공되지 않아 특정 계산 절차나 추론 과정을 확인하기 어렵습니다. 따라서 주어진 단원 정보만을 기준으로 보면 개념을 이해하고 있는지를 중심으로 판단하는 것이 가장 타당합니다.",
+    "behavior_reason": "이 문항은 양의 제곱근과 음의 제곱근의 뜻, 그리고 \\(\\sqrt{a^2}=|a|\\)의 성질을 이해해야 해결할 수 있다. 계산 자체는 간단하지만 제곱근의 의미와 부호를 정확히 구별하는 개념 이해가 핵심이므로 이해 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 429,
         "confidence_score": 0.9999997615814209,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1296,
+            "category_name": "제곱근 구하기"
+          },
+          {
+            "category_id": 1300,
+            "category_name": "제곱근의 성질 (2)"
+          }
+        ]
       }
     ]
   },
@@ -1463,13 +1701,30 @@
     "solution": "\\(\\sqrt{2}(\\sqrt{6}-\\sqrt{3})=\\sqrt{12}-\\sqrt{6}=2\\sqrt{3}-\\sqrt{6}\\) 이고,\n\\[\\sqrt{7}\\left(\\sqrt{21}+\\frac{\\sqrt{3}}{\\sqrt{14}}\\right)=\\sqrt{147}+\\frac{\\sqrt{21}}{\\sqrt{14}}=7\\sqrt{3}+\\sqrt{\\frac{3}{2}}=7\\sqrt{3}+\\frac{\\sqrt{6}}{2}\\]\n따라서 전체 식은\n\\[(2\\sqrt{3}-\\sqrt{6})+(7\\sqrt{3}+\\frac{\\sqrt{6}}{2})=9\\sqrt{3}-\\frac{\\sqrt{6}}{2}\\]\n이므로 정답은 \\(②\\)이다.",
     "answer": "②",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "입력 JSON에는 문제 본문과 해설이 비어 있어 구체적인 계산 절차나 추론 과정을 확인할 수 없습니다. 따라서 명확히 확인 가능한 것은 제곱근 관련 단원의 맥락뿐이며, 우선 관련 개념과 성질을 이해하는 능력이 중심이라고 판단했습니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 근호를 포함한 식에 분배법칙을 적용하고, 제곱근을 간단히 한 뒤 같은 근호끼리 정리하여 값을 구하는 계산이 핵심이다. 또한 분모에 근호가 있는 항을 알맞게 정리해야 하므로 정확한 계산 절차를 수행하는 능력이 필요하다.",
     "unit_candidates": [
       {
         "unit_id": 432,
         "confidence_score": 0.9999997615814209,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1328,
+            "category_name": "제곱근의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1329,
+            "category_name": "루트 (a²b)=a (루트 b)를 이용한 제곱근의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1330,
+            "category_name": "분모에 제곱근이 있는 경우의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1332,
+            "category_name": "근호를 포함한 식의 분배법칙"
+          }
+        ]
       }
     ]
   },
@@ -1501,12 +1756,33 @@
     "answer": "⑤",
     "difficulty": 2,
     "behavior_area": "계산 능력",
-    "behavior_reason": "제공된 단원 후보가 제곱근의 덧셈·뺄셈, 분배법칙, 분모의 유리화처럼 근호를 포함한 식의 계산 기능에 집중되어 있습니다. 따라서 이 문항은 주어진 식을 정확히 변형하고 계산하는 능력을 중심으로 평가하는 것으로 보는 것이 가장 타당합니다.",
+    "behavior_reason": "이 문항은 각 선택지의 제곱근 식을 직접 계산하여 참과 거짓을 판별하는 문제이므로 계산 능력이 핵심이다. 제곱근의 간단한 꼴로의 변형, 분모의 유리화, 같은 근호끼리의 덧셈과 뺄셈, 분배법칙을 정확히 적용해야 한다.",
     "unit_candidates": [
       {
         "unit_id": 432,
         "confidence_score": 0.9999983310699463,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1328,
+            "category_name": "제곱근의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1329,
+            "category_name": "루트 (a²b)=a (루트 b)를 이용한 제곱근의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1330,
+            "category_name": "분모에 제곱근이 있는 경우의 덧셈과 뺄셈"
+          },
+          {
+            "category_id": 1332,
+            "category_name": "근호를 포함한 식의 분배법칙"
+          },
+          {
+            "category_id": 1334,
+            "category_name": "근호를 포함한 복잡한 식의 계산"
+          }
+        ]
       }
     ]
   },
@@ -1537,13 +1813,30 @@
     "solution": "조건 $ab<0$와 $a-b<0\\,(\\Leftrightarrow a<b)$를 함께 보면, $a$와 $b$는 부호가 반대이면서 $a<b$이므로 $a<0$, $b>0$이다.\n\n따라서\n$\\sqrt{a^2}=|a|=-a$,\n$(\\sqrt{b})^2=b$,\n$\\sqrt{(9a)^2}=|9a|=-9a$ 이므로 앞의 $-$까지 포함하면 $-\\sqrt{(9a)^2}=9a$.\n또한 $11a-2b<0$ 이므로\n$\\sqrt{(11a-2b)^2}=|11a-2b|=-(11a-2b)=-11a+2b$.\n\n식을 정리하면\n$$\n\\sqrt{a^2}-(\\sqrt{b})^2-\\sqrt{(9a)^2}+\\sqrt{(11a-2b)^2}\n= -a-b+9a+(-11a+2b)\n= -3a+b.\n$$\n따라서 정답은 ①이다.",
     "answer": "①",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "입력된 JSON에는 문제 본문과 해설이 모두 없어, 구체적인 계산 과정이나 추론 과정을 확인할 수 없습니다. 따라서 특정 풀이 기술보다 관련 개념을 이해하고 있는지가 가장 핵심적으로 요구된다고 판단했습니다. 확인 가능한 정보만으로는 세부 행동 요소를 더 좁혀 판단하기 어렵습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 조건인 ab<0, a-b<0에서 먼저 a<0, b>0를 추론해야 하고, 이를 바탕으로 각 근호식의 부호를 판단해 식을 간단히 해야 한다. 단순한 계산보다 조건 해석과 부호 결정이 핵심이므로 추론 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 429,
         "confidence_score": 0.9999897480010986,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1298,
+            "category_name": "제곱근의 성질 (1)"
+          },
+          {
+            "category_id": 1300,
+            "category_name": "제곱근의 성질 (2)"
+          },
+          {
+            "category_id": 1301,
+            "category_name": "루트 a²의 꼴을 포함한 식 간단히 하기"
+          },
+          {
+            "category_id": 1302,
+            "category_name": "루트 (a-b)²의 꼴을 포함한 식 간단히 하기"
+          }
+        ]
       }
     ]
   },
@@ -1575,12 +1868,29 @@
     "answer": "⑤",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설 정보가 비어 있어 구체적인 계산 절차나 추론 과정을 특정하기는 어렵다. 다만 제공된 후보 단원이 모두 제곱근의 뜻과 성질에 관한 내용이므로, 관련 개념을 이해하고 적용할 수 있는지가 핵심이라고 보아 이해 능력으로 판단했다.",
+    "behavior_reason": "이 문항은 제곱근, 양의 제곱근, 그리고 ± 기호가 각각 무엇을 뜻하는지 정확히 이해해야 풀 수 있다. 계산은 간단하지만 표현의 의미를 구분하여 같은 값인지 다른 값인지를 판단하는 것이 핵심이므로 이해 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 429,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1295,
+            "category_name": "제곱근의 뜻과 표현"
+          },
+          {
+            "category_id": 1296,
+            "category_name": "제곱근 구하기"
+          },
+          {
+            "category_id": 1297,
+            "category_name": "근호를 사용하지 않고 제곱근 나타내기"
+          },
+          {
+            "category_id": 1298,
+            "category_name": "제곱근의 성질 (1)"
+          }
+        ]
       }
     ]
   },
@@ -1611,13 +1921,18 @@
     "solution": "두 다항식을 더하면\n\\[\nx^2-10ax+b+(2ax+b)=x^2-8ax+2b\n\\]\n이다.\n\n이 식이 완전제곱식이 되려면\n\\[\nx^2-8ax+2b=(x-c)^2=x^2-2cx+c^2\n\\]\n꼴이어야 한다.\n\n계수를 비교하면\n\\[\n-2c=-8a \\Rightarrow c=4a\n\\]\n이므로\n\\[\n2b=c^2=(4a)^2=16a^2\n\\]\n따라서\n\\[\nb=8a^2\n\\]\n이다.\n\n이때 \\(a,b\\)는 100 이하의 자연수이므로\n\\[\n8a^2\\le 100 \\Rightarrow a^2\\le 12.5\n\\]\n따라서 가능한 \\(a\\)는\n\\[\na=1,2,3\n\\]\n뿐이다.\n\n각각의 \\(b\\)는\n\\[\n(1,8),\\ (2,32),\\ (3,72)\n\\]\n로 모두 3개이다.\n\n따라서 정답은 ②이다.",
     "answer": "②",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 내용이 모두 비어 있어 구체적인 풀이 과정이나 계산 절차를 확인할 수 없습니다. 따라서 특정 계산이나 추론 기술을 단정하기보다, 관련 개념을 이해하고 있는지가 가장 기본적으로 대응되는 행동 영역이라고 판단했습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 다항식의 합이 완전제곱식이 되기 위한 형태를 떠올리고, 계수 비교를 통해 a와 b의 관계를 추론해야 한다. 또한 자연수 범위 조건을 이용해 가능한 a의 값을 판단하고 순서쌍의 개수를 결정해야 하므로 단순 계산보다 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 436,
         "confidence_score": 0.9999998807907104,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1359,
+            "category_name": "완전제곱식이 되도록 하는 미지수의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -1649,12 +1964,17 @@
     "answer": "①",
     "difficulty": 2,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문항의 실제 문제 내용과 공식 풀이가 비어 있어, 주어진 정보만으로는 어떤 수학적 절차가 쓰였는지를 계산적으로 확정하기 어렵다. 따라서 우선 가능한 단원과 개념의 관련성을 해석하는 이해가 핵심이라고 판단하여 행동 영역을 이해 능력으로 선택했다.",
+    "behavior_reason": "이 문항은 무리수의 정수 부분과 소수 부분의 뜻을 정확히 이해하는지가 핵심이다. 먼저 5-2√5의 값이 0과 1 사이임을 파악하여 a와 b를 정한 뒤, 이를 식에 대입해 계산한다. 단순 계산보다 개념을 올바르게 해석하는 이해가 더 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 433,
         "confidence_score": 0.986549437046051,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1339,
+            "category_name": "무리수의 정수 부분과 소수 부분"
+          }
+        ]
       },
       {
         "unit_id": 437,
@@ -1690,13 +2010,18 @@
     "solution": "각 식을 전개하여 □의 값을 구하면 된다.\n① $(x-4y)^2=x^2-8xy+16y^2$ 이므로 □$=8$\n② $(x+1)(x+7)=x^2+8x+7$ 이므로 □$=7$\n③ $(8-3x)(2x+1)=16x+8-6x^2-3x=-6x^2+13x+8$ 이므로 □$=13$\n④ $(3x+2y)(x+2y)=3x^2+6xy+2xy+4y^2=3x^2+8xy+4y^2$ 이므로 □$=8$\n⑤ $(-x+3y)(8x+y)=-8x^2-xy+24xy+3y^2=-8x^2+23xy+3y^2$ 이므로 □$=23$\n따라서 가장 큰 수는 $23$이므로 정답은 ⑤이다.",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항의 문제 본문과 해설 HTML이 모두 비어 있어 구체적인 풀이 과정은 확인할 수 없다. 따라서 특정 계산 절차나 추론 단계를 단정하기보다, 주어진 내용을 해석하는 기본적인 이해를 중심으로 보는 것이 가장 타당하다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "각 식을 전개하여 빈칸의 값을 계산한 뒤, 그중 가장 큰 값을 찾는 문제이다. 다항식의 곱셈과 동류항 정리를 정확하게 수행하는 계산이 핵심이므로 계산 능력이 가장 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 434,
         "confidence_score": 0.9999957084655762,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1340,
+            "category_name": "(다항식)×(다항식)의 전개"
+          }
+        ]
       }
     ]
   },
@@ -1727,13 +2052,18 @@
     "solution": "이차식 \n\\[\nx^2-x-n\n\\]\n이 계수가 모두 정수인 두 일차식의 곱으로 인수분해되려면\n\\[\n(x+a)(x+b)=x^2+(a+b)x+ab\n\\]\n에서 정수 \\(a,b\\)가 있어야 한다.\n\n비교하면\n\\[\na+b=-1,\\quad ab=-n\n\\]\n이다. \n\\(a+b=-1\\)이므로 \\(b=-1-a\\). 이를 대입하면\n\\[\nab=a(-1-a)=-a(a+1)=-n\n\\]\n따라서\n\\[\nn=a(a+1)\n\\]\n이어야 한다.\n\n즉, \\(1\\le n\\le 50\\) 중에서 연속한 두 정수의 곱인 수를 세면 된다.\n\n\\[\n1\\cdot2=2,\n\\quad 2\\cdot3=6,\n\\quad 3\\cdot4=12,\n\\quad 4\\cdot5=20,\n\\quad 5\\cdot6=30,\n\\quad 6\\cdot7=42,\n\\quad 7\\cdot8=56>50\n\\]\n\n따라서 해당하는 \\(n\\)은\n\\[\n2,6,12,20,30,42\n\\]\n총 \\(6\\)개이다.",
     "answer": "②",
     "difficulty": 3,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 problem_html과 해설 정보가 비어 있어 구체적인 계산 절차나 추론 과정을 확인할 수 없다. 따라서 특정 공식의 직접 적용 여부를 판단하기보다, 문제 해결에 앞선 개념 이해 수준으로 보수적으로 판단하여 이해 능력을 선택하였다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 이차식을 정수 계수의 두 일차식의 곱으로 놓고 계수를 비교하여 가능한 조건을 추론해야 한다. 또한 얻은 조건을 바탕으로 1부터 50까지의 수 중 해당하는 값을 찾아 개수를 세는 과정이 필요하므로 핵심 행동 영역은 추론 능력이다.",
     "unit_candidates": [
       {
         "unit_id": 436,
         "confidence_score": 0.9943504929542542,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1362,
+            "category_name": "x²+(a+b)x+ab 꼴의 인수분해"
+          }
+        ]
       }
     ]
   },
@@ -1764,13 +2094,22 @@
     "solution": "제곱근표에서\n- \\(\\sqrt{22.4}\\approx 4.733\\)\n- \\(\\sqrt{1.70}\\approx 1.304\\) 이다.\n\n먼저\n\\[\n0.224=22.4\\times 0.01\n\\]\n이므로\n\\[\na=\\sqrt{0.224}=\\sqrt{22.4}\\times \\sqrt{0.01}\\approx 4.733\\times 0.1=0.4733\n\\]\n\n또\n\\[\n170=1.70\\times 100\n\\]\n이므로\n\\[\nb=\\sqrt{170}=\\sqrt{1.70}\\times \\sqrt{100}\\approx 1.304\\times 10=13.04\n\\]\n\n따라서\n\\[\na+b\\approx 0.4733+13.04=13.5133\n\\]\n이므로 정답은 \\(③\\)이다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 JSON에서 문항의 문제 본문과 해설이 비어 있어 구체적인 계산이나 추론 과정을 확인할 수 없습니다. 따라서 특정 풀이 기술보다는 관련 개념을 이해하고 있는지의 관점에서만 가장 보수적으로 판단하는 것이 적절합니다. 명시적으로 사용된 개념을 확인할 수 없으므로 행동 영역은 이해 능력으로 선택합니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 제곱근표에서 값을 읽어 오고, 제곱근의 성질을 이용해 소수점 위치를 조정한 뒤 합을 계산하는 과정이 핵심이다. 복잡한 추론보다는 표의 값과 계산 규칙을 정확하게 적용하는 능력이 직접적으로 요구된다.",
     "unit_candidates": [
       {
         "unit_id": 433,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1338,
+            "category_name": "제곱근표에 없는 제곱근의 값 구하기"
+          },
+          {
+            "category_id": 1530,
+            "category_name": "제곱근표를 이용하여 제곱근의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -1801,13 +2140,22 @@
     "solution": "각 문장을 판단하면 다음과 같다.\n\nㄱ. 거짓. 유리수 0과 무리수를 곱하면 0이 되어 유리수가 될 수 있다. 따라서 항상 무리수인 것은 아니다.\nㄴ. 참. 유리수와 무리수를 모두 합한 수의 범위를 실수라고 한다.\nㄷ. 거짓. 무한소수 중에는 순환소수도 있는데, 순환소수는 유리수이다. 따라서 모두 무리수는 아니다.\nㄹ. 참. 서로 다른 두 실수 사이에는 무리수가 무한히 많이 존재하므로, $\\sqrt{3}$과 $\\pi$ 사이에도 무리수가 무한히 많다.\n\n따라서 옳은 것은 ㄴ, ㄹ이므로 정답은 ③이다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설 정보가 제공되지 않아 구체적인 계산 과정이나 추론 단계를 확인할 수 없습니다. 따라서 현재 정보만으로는 특정 개념의 이해 여부를 중심으로 판단하는 것이 가장 타당합니다. 제시된 단원 후보도 실수의 기본 개념 이해에 관한 내용들로 구성되어 있습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "각 진술의 참·거짓을 정의와 성질에 근거하여 판단해야 하므로 추론 능력이 핵심이다. 특히 ㄱ에서는 반례를 들어 명제가 항상 성립하지 않음을 보이고, ㄷ과 ㄹ에서도 수의 분류와 사이에 존재하는 수의 성질을 논리적으로 판단해야 한다.",
     "unit_candidates": [
       {
         "unit_id": 430,
         "confidence_score": 0.999998927116394,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1311,
+            "category_name": "유리수와 무리수의 구별"
+          },
+          {
+            "category_id": 1313,
+            "category_name": "실수의 분류"
+          }
+        ]
       }
     ]
   },
@@ -1838,13 +2186,22 @@
     "solution": "$(3x+2)(4x-a)=12x^2-3ax+8x-2a=12x^2+(8-3a)x-2a$ 이다.\n따라서 $x$의 계수는 $8-3a$, 상수항은 $-2a$.\n문제에서 이 둘이 같다고 했으므로\n$8-3a=-2a$\n$\\Rightarrow 8=a$\n따라서 $a=8$이다.",
     "answer": "④",
     "difficulty": 1,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적인 내용이 제공되지 않아 특정 계산 절차나 추론 과정을 확인할 수 없습니다. 제공된 정보만으로는 어떤 개념이 직접 사용되었는지 판단하기 어려우므로, 우선 개념의 이해 여부를 중심으로 분류했습니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 두 다항식의 곱을 정확히 전개하고 동류항을 정리한 뒤, x의 계수와 상수항을 비교하여 일차방정식을 푸는 계산이 핵심이다. 새로운 전략을 세우기보다는 전개와 정리, 방정식 계산을 정확하게 수행하는 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 434,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1340,
+            "category_name": "(다항식)×(다항식)의 전개"
+          },
+          {
+            "category_id": 1341,
+            "category_name": "계수 구하기"
+          }
+        ]
       }
     ]
   },
@@ -1876,12 +2233,21 @@
     "answer": "⑤",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설 정보가 비어 있어 구체적인 풀이 과정과 사용 개념을 확인할 수 없다. 따라서 특정 계산이나 추론 절차를 단정하기보다, 제시된 후보 단원이 통계 개념의 이해를 중심으로 한다는 점에서 가장 보수적으로 이해 능력으로 판단한다.",
+    "behavior_reason": "이 문항은 표준편차를 계산하는 절차를 실제로 수행하기보다, 평균·편차·분산·표준편차의 개념과 그 순서를 이해하고 있는지를 묻는다. 각 단계가 무엇을 의미하는지 알고 있어야 올바른 순서를 배열할 수 있으므로 이해 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1517,
+            "category_name": "편차"
+          },
+          {
+            "category_id": 1518,
+            "category_name": "분산과 표준편차"
+          }
+        ]
       }
     ]
   },
@@ -1912,13 +2278,22 @@
     "solution": "\\(\\tan B=\\dfrac{\\sqrt5}{2}\\) 이므로 직각삼각형에서 \\(\\angle B\\)에 대해\n밑변:높이 = \\(2:\\sqrt5\\) 로 둘 수 있다.\n\n그러면 빗변은\n\\[\n\\sqrt{2^2+(\\sqrt5)^2}=\\sqrt{4+5}=3\n\\]\n이므로\n\\[\n\\sin B=\\frac{\\sqrt5}{3},\\quad \\cos B=\\frac{2}{3}\n\\]\n\n이제\n\\[\n\\frac{1+\\sin B\\times \\tan B}{\\cos B}\n=\\frac{1+\\left(\\frac{\\sqrt5}{3}\\right)\\left(\\frac{\\sqrt5}{2}\\right)}{\\frac{2}{3}}\n=\\frac{1+\\frac{5}{6}}{\\frac{2}{3}}\n=\\frac{\\frac{11}{6}}{\\frac{2}{3}}\n=\\frac{11}{6}\\cdot\\frac{3}{2}\n=\\frac{11}{4}\n\\]\n따라서 정답은 \\(\\boxed{②}\\)이다.",
     "answer": "②",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 함수 y=|2\\sin ax+b|의 그래프 성질을 바탕으로 직선 y=1과의 교점 개수를 분석해야 한다. 주기, 최댓값과 최솟값, 절댓값에 따른 그래프 변화를 종합하여 가능한 a, b를 추론하는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
+    "behavior_area": "이해 능력",
+    "behavior_reason": "주어진 tan B의 값을 직각삼각형의 변의 비로 해석하고, 이를 바탕으로 다른 삼각비를 구하는 개념 이해가 핵심이다. 또한 피타고라스 정리를 이용해 빗변을 구한 뒤 sin B와 cos B를 구해 식에 적용해야 하므로 삼각비의 뜻과 관계를 정확히 이해해야 한다.",
     "unit_candidates": [
       {
         "unit_id": 446,
         "confidence_score": 0.9999984502792358,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1442,
+            "category_name": "삼각비의 값"
+          },
+          {
+            "category_id": 1444,
+            "category_name": "한 삼각비의 값을 알 때, 다른 삼각비의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -1949,13 +2324,22 @@
     "solution": "자유의 여신상의 꼭대기를 A, 에펠탑의 꼭대기를 B라 하자. 두 모형의 밑변 사이의 거리는 10 m이다.\n\nA에서 에펠탑의 바닥을 내려다본 각이 53°이므로, 자유의 여신상 높이를 $h_A$라 하면\n$\\tan 53^\\circ=\\dfrac{h_A}{10}$\n따라서\n$h_A=10\\times 1.3270=13.27$ (m)\n\n또 A에서 B를 올려다본 각이 36°이므로, 에펠탑이 자유의 여신상보다 더 높은 부분을 $x$라 하면\n$\\tan 36^\\circ=\\dfrac{x}{10}$\n따라서\n$x=10\\times 0.7265=7.265$ (m)\n\n그러므로 에펠탑의 높이\n$=h_A+x=13.27+7.265=20.535$ (m)\n\n소수점 아래 둘째 자리에서 반올림하면 $20.5$ m이다.",
     "answer": "①",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설 HTML이 비어 있어 세부 풀이 과정을 특정하기는 어렵다. 다만 제시된 후보 범주가 모두 삼각비와 삼각형의 관계를 해석하는 내용이므로, 핵심은 각과 변의 대응 관계를 파악하는 이해 능력으로 보는 것이 가장 타당하다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "이 문제는 실생활 상황을 직각삼각형으로 해석하고, 각의 크기와 거리 정보를 이용해 높이를 단계적으로 구해야 한다. 먼저 자유의 여신상 높이를 구한 뒤, 에펠탑이 더 높은 부분을 구해 합하는 과정이 필요하므로 단순 계산보다 문제 상황을 수학적으로 조직하는 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 448,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1460,
+            "category_name": "직각삼각형의 변의 길이 구하기"
+          },
+          {
+            "category_id": 1462,
+            "category_name": "실생활에서의 직각삼각형의 변의 길이"
+          }
+        ]
       }
     ]
   },
@@ -1981,12 +2365,21 @@
     "answer": "\\frac{\\sqrt{14}}{8}",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수 그래프의 주기, 최댓값과 최솟값, 절댓값의 효과를 바탕으로 직선 y=1과의 교점 개수를 논리적으로 따져야 한다. 단순 계산만으로는 해결되지 않고, 조건을 해석하여 가능한 a, b의 경우를 추려내는 추론 과정이 핵심이다.",
+    "behavior_reason": "직각삼각형에서 A와 B의 여각 관계를 이용해 \\(\\tan A\\)를 \\(\\tan B\\)로 바꾸고, 주어진 식을 \\(\\sin B\\)로 정리해야 한다. 이어서 \\(\\tan B\\)의 값으로부터 변의 비를 추론해 \\(\\sin B\\)를 구하므로, 삼각비 사이의 관계를 논리적으로 연결하는 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 446,
         "confidence_score": 0.9997040629386902,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1442,
+            "category_name": "삼각비의 값"
+          },
+          {
+            "category_id": 1444,
+            "category_name": "한 삼각비의 값을 알 때, 다른 삼각비의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -2012,12 +2405,17 @@
     "answer": "\\frac{5\\sqrt2}{8}",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 함수 y=|2sin(ax)+b|의 그래프와 직선 y=1의 교점 개수를 조건으로 두고, 주기와 그래프의 형태를 분석하여 a, b의 가능한 값을 추론해야 한다. 단순 계산보다 사인함수의 성질과 절댓값에 따른 그래프 변화를 해석해 경우를 나누는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
+    "behavior_reason": "직각삼각형에서 A+B=90°임을 이용해 sin A=cos B라는 관계를 먼저 추론해야 합니다. 또 주어진 tan B로부터 삼각비 사이의 관계를 이용해 cos B를 구해 최종값을 얻으므로, 단순 계산보다 관계를 연결하는 추론이 핵심입니다.",
     "unit_candidates": [
       {
         "unit_id": 446,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1444,
+            "category_name": "한 삼각비의 값을 알 때, 다른 삼각비의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -2049,12 +2447,16 @@
     "answer": "③",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문제를 해결하려면 분산과 표준편차의 뜻을 정확히 이해하고, 주어진 자료나 조건을 그 개념에 맞게 해석할 수 있어야 한다. 단순한 수치 계산보다 통계량이 무엇을 의미하는지 파악하는 과정이 핵심이다.",
+    "behavior_reason": "이 문항은 대표값과 산포도의 정의와 성질을 정확히 이해하고 있는지 확인하는 문제이다. 편차, 분산, 표준편차의 뜻과 중앙값·최빈값의 개념을 바르게 해석해야 각 진술의 참거짓을 판단할 수 있으므로 계산보다 개념 이해가 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 1.0,
         "valid_categories": [
+          {
+            "category_id": 1517,
+            "category_name": "편차"
+          },
           {
             "category_id": 1518,
             "category_name": "분산과 표준편차"
@@ -2090,13 +2492,22 @@
     "solution": "점 $E$는 반지름이 1인 사분원 위에 있고, 수선의 발 $B$의 $x$좌표가 $\\frac12$이므로\n$E\\left(\\frac12,a\\right)$이다. 사분원의 방정식은 $x^2+y^2=1$이므로\n\\[\n\\left(\\frac12\\right)^2+a^2=1 \\Rightarrow a^2=\\frac34 \\Rightarrow a=\\frac{\\sqrt3}{2}.\n\\]\n따라서 ①은 옳다.\n\n또한 직선 $OC$는 $O, E, C$를 지나고, 그림에서 $C$의 $x$좌표는 1이므로 직선의 기울기는\n\\[\n\\frac{a}{1/2}=\\frac{\\sqrt3/2}{1/2}=\\sqrt3\n\\]\n이다. 따라서 $C=(1,b)$에서 $b=\\sqrt3$이므로 ②도 옳다.\n\n$E\\left(\\frac12,\\frac{\\sqrt3}{2}\\right)$이므로\n\\[\n\\cos \\angle EOB = \\frac12\n\\]\n이어서 $\\angle EOB=60^\\circ$. 따라서 ③은 옳다.\n\n또\n\\[\n\\frac{\\overline{BE}}{\\overline{OB}}=\\frac{\\sqrt3/2}{1/2}=\\sqrt3,\n\\]\n하지만\n\\[\n\\tan30^\\circ=\\frac1{\\sqrt3}.\n\\]\n서로 다르므로 ④는 옳지 않다.\n\n마지막으로 $C=(1,\\sqrt3)$이므로\n\\[\n\\overline{OC}=\\sqrt{1^2+(\\sqrt3)^2}=2,\n\\quad \\frac{\\overline{OA}}{\\overline{OC}}=\\frac12=\\sin30^\\circ.\n\\]\n따라서 ⑤는 옳다.",
     "answer": "④",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 문제 본문과 해설이 없어 구체적 풀이 과정을 특정하기는 어렵습니다. 다만 후보 단원이 삼각비의 뜻, 특수한 각의 값, 값의 성질 이해에 집중되어 있으므로 핵심 행동 영역은 개념과 관계를 해석하는 이해 능력으로 판단했습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 사분원의 조건과 좌표 정보를 바탕으로 점의 좌표, 각의 크기, 선분의 비를 차례로 연결해 판단해야 한다. 각 선택지의 참거짓을 단순 계산이 아니라 삼각비의 성질과 도형의 관계를 근거로 따져야 하므로 추론 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 447,
         "confidence_score": 0.9999959468841553,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1449,
+            "category_name": "30º, 45º, 60º의 삼각비의 값"
+          },
+          {
+            "category_id": 1450,
+            "category_name": "특수한 각의 삼각비의 값을 이용하여 각의 크기 구하기"
+          }
+        ]
       }
     ]
   },
@@ -2128,15 +2539,23 @@
     "answer": "③",
     "difficulty": 2,
     "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 문제 본문은 비어 있지만, 후보 단원은 평균·분산·표준편차의 개념과 성질을 이해하는 내용에 집중되어 있다. 따라서 핵심은 단순 계산보다 통계량의 의미와 관계를 파악하는 이해 능력에 있다고 보는 것이 타당하다.",
+    "behavior_reason": "이 문항은 평균, 편차, 분산의 뜻을 이해하고 이를 실제 자료 해석에 적용하는지가 핵심이다. 계산도 필요하지만, 최종적으로 분산의 크기를 비교하여 어느 회사의 당류 함량이 더 고른지 판단해야 하므로 이해 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 1.0,
         "valid_categories": [
           {
+            "category_id": 1517,
+            "category_name": "편차"
+          },
+          {
             "category_id": 1518,
             "category_name": "분산과 표준편차"
+          },
+          {
+            "category_id": 1520,
+            "category_name": "자료의 이해"
           }
         ]
       }
@@ -2169,13 +2588,18 @@
     "solution": "그림에서 $\\angle B=90^\\circ$, 빗변 $AC=4$, 높이 $BC=\\sqrt{7}$이므로\n$$AB=\\sqrt{AC^2-BC^2}=\\sqrt{16-7}=3$$\n이다.\n\n따라서\n- $\\sin C=\\dfrac{AB}{AC}=\\dfrac{3}{4}$\n- $\\cos A=\\dfrac{AB}{AC}=\\dfrac{3}{4}$\n- $\\sin A=\\dfrac{BC}{AC}=\\dfrac{\\sqrt7}{4}$\n- $\\cos C=\\dfrac{BC}{AC}=\\dfrac{\\sqrt7}{4}$\n- $\\tan A=\\dfrac{BC}{AB}=\\dfrac{\\sqrt7}{3}$\n\n그러므로 $\\tan A=\\dfrac{3}{\\sqrt7}$라고 한 ③이 옳지 않다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "사인함수의 그래프와 절댓값, 그리고 직선 y=1의 위치 관계를 해석하여 교점의 개수가 10개가 되도록 하는 a, b를 추론해야 한다. 주기와 최댓값·최솟값을 바탕으로 가능한 경우를 나누어 판단해야 하므로 단순 계산보다 그래프의 성질을 이용한 추론이 핵심이다.",
+    "behavior_area": "이해 능력",
+    "behavior_reason": "이 문제는 직각삼각형에서 sin, cos, tan이 각각 어떤 두 변의 비를 뜻하는지 정확히 이해해야 해결할 수 있다. 또한 주어진 두 변의 길이로 나머지 한 변을 구한 뒤, 각 A와 C에 대한 삼각비를 올바르게 대응시키는 이해가 필요하다.",
     "unit_candidates": [
       {
         "unit_id": 446,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1442,
+            "category_name": "삼각비의 값"
+          }
+        ]
       }
     ]
   },
@@ -2207,22 +2631,22 @@
     "answer": "②",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 조건에서 삼각비 사이의 관계를 파악하고 필요한 값을 논리적으로 이끌어내는 과정이 핵심이다. 단순한 계산보다 조건을 해석해 알맞은 관계를 세우는 능력이 더 중요하므로 추론 능력이 중심이 된다.",
+    "behavior_reason": "이 문제는 이차함수의 꼭짓점과 x절편을 구한 뒤, 점들의 위치 관계를 바탕으로 각의 탄젠트를 해석해야 한다. 특히 BC가 x축과 평행하다는 사실에서 tan α를 직선 BA의 기울기와 연결하는 추론이 핵심이므로 추론 능력이 가장 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 446,
         "confidence_score": 0.8872320055961609,
-        "valid_categories": [
-          {
-            "category_id": 1442,
-            "category_name": "삼각비의 값"
-          }
-        ]
+        "valid_categories": []
       },
       {
         "unit_id": 447,
         "confidence_score": 0.08514506369829178,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1452,
+            "category_name": "직선의 기울기와 삼각비"
+          }
+        ]
       },
       {
         "unit_id": 454,
@@ -2252,13 +2676,22 @@
     "solution": "반지름이 1인 사분원에서 각이 $35^\\circ$인 점 $A$의 좌표는 $(\\cos35^\\circ,\\sin35^\\circ)$이다. 그림에서 $A$의 좌표가 $(0.8192,\\,0.5736)$이므로\n$\\sin35^\\circ=0.5736$, $\\cos35^\\circ=0.8192$이다.\n또한 직선 $OC$가 $x$축과 이루는 각이 $35^\\circ$이고, 그림에서 $C=(1,0.7002)$이므로 기울기\n$\\tan35^\\circ=\\dfrac{0.7002}{1}=0.7002$이다.\n따라서\n$\\sin35^\\circ=0.5736$, $\\cos35^\\circ=0.8192$, $\\tan35^\\circ=0.7002$.",
     "answer": "sin35°=0.5736, cos35°=0.8192, tan35°=0.7002",
     "difficulty": 1,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수와 절댓값이 포함된 그래프의 주기, 최댓값과 최솟값을 파악한 뒤 직선 y=1과 만나는 점의 개수를 조건에 맞게 추론해야 한다. 단순 계산보다 그래프의 성질을 해석하고 가능한 자연수 a, b의 경우를 논리적으로 좁혀 가는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_area": "이해 능력",
+    "behavior_reason": "이 문항은 사분원에서 점의 좌표가 각각 cos, sin의 값이 된다는 뜻을 이해하고, 직선의 기울기가 tan과 연결된다는 성질을 해석해야 한다. 단순 계산보다 그림의 정보를 삼각비의 의미로 읽어내는 과정이 핵심이므로 이해 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 447,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1452,
+            "category_name": "직선의 기울기와 삼각비"
+          },
+          {
+            "category_id": 1453,
+            "category_name": "사분원을 이용하여 삼각비의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -2289,13 +2722,18 @@
     "solution": "점 $D$는 $\\overline{AB}$ 위, 점 $C$는 $\\overline{AE}$ 위에 있으므로 두 삼각형 $ABC$, $ADE$는 꼭짓점 $A$의 끼인각이 같다. 따라서\n\\[\nP=\\frac12 \\overline{AB}\\cdot \\overline{AC}\\sin A,\n\\qquad\nQ=\\frac12 \\overline{AD}\\cdot \\overline{AE}\\sin A\n\\]\n이므로\n\\[\n\\frac{P}{Q}=\\frac{\\overline{AB}\\cdot \\overline{AC}}{\\overline{AD}\\cdot \\overline{AE}}\n=\\frac{\\overline{AB}}{\\overline{AD}}\\cdot\\frac{\\overline{AC}}{\\overline{AE}}.\n\\]\n\n주어진 비에서\n\\[\n\\frac{\\overline{AD}}{\\overline{DB}}=\\frac13 \\Rightarrow \\overline{AB}=\\overline{AD}+\\overline{DB}=4\\overline{AD}\n\\Rightarrow \\frac{\\overline{AB}}{\\overline{AD}}=4.\n\\]\n또,\n\\[\n\\frac{\\overline{AC}}{\\overline{CE}}=\\frac23 \\Rightarrow \\overline{AE}=\\overline{AC}+\\overline{CE}=\\frac52\\overline{AC}\n\\Rightarrow \\frac{\\overline{AC}}{\\overline{AE}}=\\frac25.\n\\]\n따라서\n\\[\n\\frac{P}{Q}=4\\cdot \\frac25=\\frac85.\n\\]",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "도형의 넓이를 사인과 연결해 해석하려면 주어진 변과 각의 관계를 정확히 이해해야 합니다. 또한 도형의 종류에 따라 어떤 넓이 공식을 적용할 수 있는지 파악하는 과정이 핵심이므로 이해 능력이 가장 중요합니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "두 삼각형의 끼인각이 같다는 사실을 이용해 넓이의 비를 변의 곱의 비로 바꾸어야 한다. 또 주어진 선분의 비에서 전체 변의 비를 추론하여 최종적인 넓이의 비를 구해야 하므로, 관계를 연결해 결론을 도출하는 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 449,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1468,
+            "category_name": "삼각형의 넓이 - 예각이 주어진 경우"
+          }
+        ]
       }
     ]
   },
@@ -2327,12 +2765,29 @@
     "answer": "④",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 문항 본문과 해설이 비어 있어 특정 계산 절차나 추론 과정을 확인하기 어렵습니다. 따라서 현재 정보만으로는 개념이나 자료를 해석하는 수준의 이해 능력을 중심으로 판단하는 것이 가장 타당합니다.",
+    "behavior_reason": "이 문항은 산점도를 읽어 두 변량의 상관관계와 각 점의 의미를 정확히 해석하는 것이 핵심이다. 출근 시간대 승차 인원과 퇴근 시간대 하차 인원의 대소 비교, 특정 기준 이상 여부를 그래프에서 파악해야 하므로 개념과 표현에 대한 이해가 중요하다. 복잡한 계산보다 산점도 해석이 중심이므로 이해 능력이 가장 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 457,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1523,
+            "category_name": "산점도와 상관관계의 뜻"
+          },
+          {
+            "category_id": 1524,
+            "category_name": "산점도와 상관관계"
+          },
+          {
+            "category_id": 1525,
+            "category_name": "산점도의 이해 (1)"
+          },
+          {
+            "category_id": 1526,
+            "category_name": "산점도의 이해 (2)"
+          }
+        ]
       }
     ]
   },
@@ -2364,12 +2819,17 @@
     "answer": "②",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "제시된 문항과 해설 정보가 없어 실제로 어떤 계산이나 추론이 요구되는지 확인할 수 없다. 따라서 구체적 해결 절차보다는 관련 개념의 이해 여부를 중심으로 판단하는 것이 가장 보수적이다.",
+    "behavior_reason": "이 문항은 자료에서 최빈값이 무엇을 의미하는지 이해하고, 각 값의 나타난 횟수를 비교하여 가장 많이 나온 값을 찾는 문제이다. 복잡한 계산보다 최빈값의 정의를 정확히 알고 적용하는 것이 핵심이므로 이해 능력이 가장 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 455,
         "confidence_score": 0.9999995231628418,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1514,
+            "category_name": "최빈값"
+          }
+        ]
       }
     ]
   },
@@ -2400,13 +2860,30 @@
     "solution": "각 선택지를 확인하면,\n① \\(\\sin90^\\circ=1,\\ \\cos0^\\circ=1,\\ \\tan45^\\circ=1\\)이므로 옳다.\n\n② 예각 \\(A\\)가 커지면 \\(\\sin A\\)와 \\(\\tan A\\)는 모두 커지므로 \\(\\sin A\\tan A\\)도 커진다.\n\n③ 예각 \\(A\\)에 대해 \\(0<\\sin A<1,\\ 0<\\cos A<1\\)이므로 옳다.\n\n④ \\(\\sin90^\\circ=\\cos0^\\circ=1\\)이므로\n\\[\n\\sqrt{(\\sin A+1)^2}-\\sqrt{(\\sin A-1)^2}\n=|\\sin A+1|-|\\sin A-1|.\n\\]\n예각에서는 \\(0<\\sin A<1\\)이므로\n\\[\n|\\sin A+1|=\\sin A+1,\\quad |\\sin A-1|=1-\\sin A\n\\]\n따라서\n\\[\n(\\sin A+1)-(1-\\sin A)=2\\sin A\n\\]\n이므로 옳다.\n\n⑤ \\(\\angle C=90^\\circ\\)이면 빗변은 \\(AB\\)이고, 그 길이가 1이다. \\(\\angle B\\)를 기준으로 하면\n\\[\n\\sin B=\\frac{AC}{AB}=AC,\\quad \\cos B=\\frac{BC}{AB}=BC\n\\]\n이므로 제시된 \\(\\sin B=BC,\\ \\cos B=AC\\)는 반대로 쓴 것이다.\n\n따라서 옳지 않은 것은 ⑤이다.",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 함수 y=|2sin(ax)+b|의 그래프와 직선 y=1의 교점 개수를 바탕으로 가능한 a, b를 추론해야 한다. 주기, 최댓값과 최솟값, 절댓값에 따른 그래프의 형태를 종합적으로 해석하여 조건을 만족하는 경우를 찾아야 하므로 추론 능력이 핵심이다.",
+    "behavior_area": "이해 능력",
+    "behavior_reason": "이 문항은 삼각비의 정의와 0°, 45°, 90°에서의 값, 예각에서의 삼각비의 범위와 변화 성질을 이해하고 있는지를 묻는다. 복잡한 계산보다 각 선택지의 내용을 성질에 비추어 올바르게 해석하여 참·거짓을 판단하는 것이 핵심이므로 이해 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 447,
         "confidence_score": 0.9999520778656006,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1449,
+            "category_name": "30º, 45º, 60º의 삼각비의 값"
+          },
+          {
+            "category_id": 1454,
+            "category_name": "0º, 90º의 삼각비의 값"
+          },
+          {
+            "category_id": 1455,
+            "category_name": "각의 크기에 따른 삼각비의 값의 대소 관계"
+          },
+          {
+            "category_id": 1459,
+            "category_name": "삼각비의 값의 대소 관계를 이용한 식의 계산"
+          }
+        ]
       }
     ]
   },
@@ -2437,18 +2914,36 @@
     "solution": "그림에서 $AB=100$m이고, $AB$는 강변에 수직이다.\n\n배가 $C$에 있을 때 점 $A$에서의 내려다본 각이 $60^\\circ$이므로\n$$\\tan 60^\\circ=\\frac{AB}{BC}=\\frac{100}{BC}$$\n따라서\n$$BC=\\frac{100}{\\sqrt3}=\\frac{100\\sqrt3}{3}.$$ \n\n배가 $D$에 있을 때 점 $A$에서의 내려다본 각이 $30^\\circ$이므로\n$$\\tan 30^\\circ=\\frac{AB}{BD}=\\frac{100}{BD}$$\n따라서\n$$BD=100\\sqrt3.$$ \n\n그러므로\n$$CD=BD-BC=100\\sqrt3-\\frac{100\\sqrt3}{3}=\\frac{200\\sqrt3}{3}.$$ \n\n$C$에서 $D$까지 가는 데 20분 걸렸으므로 분속은\n$$\\frac{CD}{20}=\\frac{\\frac{200\\sqrt3}{3}}{20}=\\frac{10\\sqrt3}{3}.$$",
     "answer": "①",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "사인함수의 그래프, 절댓값 변환, 주기와 최댓값·최솟값을 종합하여 직선 y=1과의 교점 개수를 판단해야 한다. 단순한 계산보다 그래프의 성질을 해석하고 가능한 a, b의 조건을 논리적으로 따지는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "주어진 상황을 강과 강변에 대한 직각삼각형으로 바꾸어 해석하고, 두 시점의 관측각에서 각각의 거리를 구해야 한다. 그런 다음 이동거리와 시간을 연결해 분속을 구하므로, 실생활 상황에 삼각비를 적용하는 문제 해결 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 448,
         "confidence_score": 0.8175744414329529,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1460,
+            "category_name": "직각삼각형의 변의 길이 구하기"
+          },
+          {
+            "category_id": 1462,
+            "category_name": "실생활에서의 직각삼각형의 변의 길이"
+          }
+        ]
       },
       {
         "unit_id": 447,
         "confidence_score": 0.18242551386356354,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1449,
+            "category_name": "30º, 45º, 60º의 삼각비의 값"
+          },
+          {
+            "category_id": 1451,
+            "category_name": "특수한 각의 삼각비의 값을 이용하여 변의 길이 구하기"
+          }
+        ]
       }
     ]
   },
@@ -2479,13 +2974,22 @@
     "solution": "\\(\\tan 45^\\circ=1\\)이다. 각 선택지를 계산하면\n① \\(\\sin 90^\\circ-\\tan 0^\\circ=1-0=1\\)\n② \\(\\sin 60^\\circ\\times\\tan 30^\\circ=\\frac{\\sqrt3}{2}\\times\\frac{1}{\\sqrt3}=\\frac12\\)\n③ \\(\\cos 30^\\circ\\div\\tan 30^\\circ=\\frac{\\sqrt3}{2}\\div\\frac{1}{\\sqrt3}=\\frac32\\)\n④ \\(\\cos 90^\\circ\\div\\tan 60^\\circ=0\\)\n⑤ \\(\\tan 0^\\circ\\times\\sin 45^\\circ-\\cos 45^\\circ=0-\\frac{\\sqrt2}{2}=-\\frac{\\sqrt2}{2}\\)\n따라서 \\(\\tan 45^\\circ\\)와 같은 값은 ①이다.",
     "answer": "①",
     "difficulty": 1,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항의 문제 본문과 해설 정보가 비어 있어 구체적인 풀이 절차를 직접 확인할 수는 없습니다. 다만 제공된 단원 후보가 삼각비의 개념과 성질 이해에 집중되어 있으므로, 핵심 행동 영역은 개념을 파악하는 이해 능력으로 판단하는 것이 가장 보수적입니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 0°, 30°, 45°, 60°, 90°의 삼각비 값을 이용해 각 식의 값을 직접 계산해야 한다. 계산한 값을 \\(\\tan 45^\\circ=1\\)과 비교하여 같은 것을 찾는 과정이 핵심이므로 계산 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 447,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1449,
+            "category_name": "30º, 45º, 60º의 삼각비의 값"
+          },
+          {
+            "category_id": 1454,
+            "category_name": "0º, 90º의 삼각비의 값"
+          }
+        ]
       }
     ]
   },
@@ -2510,13 +3014,22 @@
     "solution": "\\angle C=90^\\circ이므로 A+B=90^\\circ, 따라서 \\cos A=\\sin B이다.\\n\\tan B=\\frac{\\sqrt7}{5}이므로, 직각삼각형에서 변의 비를 AC:BC=\\sqrt7:5로 둘 수 있다. 그러면 빗변 AB=\\sqrt{(\\sqrt7)^2+5^2}=\\sqrt{7+25}=\\sqrt{32}=4\\sqrt2.\\n따라서 \\sin B=\\frac{AC}{AB}=\\frac{\\sqrt7}{4\\sqrt2}=\\frac{\\sqrt{14}}{8}.\\n그러므로 \\cos A=\\frac{\\sqrt{14}}{8}이다.",
     "answer": "\\frac{\\sqrt{14}}{8}",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설이 제공되지 않아 구체적인 계산 과정이나 추론 과정을 확인하기 어렵다. 따라서 현재 정보만으로는 특정 절차 수행보다 관련 개념의 이해 여부를 중심으로 판단하는 것이 가장 타당하다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "직각삼각형에서 A+B=90^irc임을 이용해 \\(\\cos A=\\sin B\\)로 바꾸는 추론이 필요하다. 또한 \\(\\tan B\\)의 값으로 변의 비를 정하고 피타고라스 정리를 거쳐 다른 삼각비를 구해야 하므로, 주어진 정보를 연결해 결론을 이끌어내는 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 446,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1442,
+            "category_name": "삼각비의 값"
+          },
+          {
+            "category_id": 1444,
+            "category_name": "한 삼각비의 값을 알 때, 다른 삼각비의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -2548,12 +3061,17 @@
     "answer": "③",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수 \\(|2\\sin ax+b|\\)의 그래프와 직선 \\(y=1\\)의 교점 개수를 구하려면 사인함수의 주기, 최댓값·최솟값, 절댓값에 따른 그래프 변화를 종합해 판단해야 한다. 단순 계산보다 그래프의 성질을 바탕으로 가능한 \\(a, b\\)를 추론하는 과정이 핵심이므로 추론 능력이 중심이다.",
+    "behavior_reason": "주어진 도형에서 점 E가 만드는 직각삼각형 ADE를 찾아내고, angle EAD=50^circ와 AD=1임을 연결해 tan50^circ를 변의 길이로 해석해야 한다. 단순 계산보다 도형의 조건을 해석하여 알맞은 삼각비 관계를 추론하는 것이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 447,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1453,
+            "category_name": "사분원을 이용하여 삼각비의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -2584,8 +3102,8 @@
     "solution": "부채꼴의 중심은 A이므로 반지름에서 \\(AB=AC=1\\), 또 중심각 \\(\\angle CAB=38^\\circ\\)이다.\\n\\n점 D는 \\(C\\)에서 \\(AB\\)에 내린 수선의 발이므로, 직각삼각형 \\(ACD\\)에서\\n\\n\\(AD=AC\\cos38^\\circ=1\\cdot\\cos38^\\circ=\\cos38^\\circ\\)\\n\\n이다. 따라서\\n\\n\\(DB=AB-AD=1-\\cos38^\\circ\\).\\n\\n따라서 옳은 것은 ③이다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수의 그래프와 절댓값이 결합된 형태를 해석하고, 직선 y=1과의 교점 개수로부터 자연수 a, b의 조건을 추론해야 한다. 단순 계산보다 주기, 최댓값·최솟값, 그래프의 개형을 바탕으로 가능한 경우를 논리적으로 좁혀 가는 과정이 핵심이므로 추론 능력이 중심이다.",
+    "behavior_area": "이해 능력",
+    "behavior_reason": "이 문제는 부채꼴의 중심이 A이므로 AB=AC=1임을 이해하고, D가 수선의 발이어서 △ACD가 직각삼각형이 된다는 점을 파악하는 것이 핵심이다. 이후 코사인의 뜻을 이용해 AD를 구하고 DB=AB-AD로 연결해야 하므로, 도형과 삼각비의 의미를 정확히 이해하는 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 447,
@@ -2615,13 +3133,22 @@
     "solution": "자료 $10,\\ x,\\ y,\\ 2,\\ 7$의 평균이 6이므로\n$10+x+y+2+7=30 \\Rightarrow x+y=11$.\n\n분산이 $9.2$이므로\n\\[\n\\frac{(10-6)^2+(x-6)^2+(y-6)^2+(2-6)^2+(7-6)^2}{5}=9.2\n\\]\n따라서\n\\[\n16+(x-6)^2+(y-6)^2+16+1=46\n\\]\n이므로\n\\[\n(x-6)^2+(y-6)^2=13.\n\\]\n\n이제 자료 $x,\\ 8,\\ 5,\\ 6,\\ y$의 평균은\n\\[\n\\frac{x+8+5+6+y}{5}=\\frac{x+y+19}{5}=\\frac{11+19}{5}=6\n\\]\n이다.\n\n따라서 분산은\n\\[\n\\frac{(x-6)^2+(8-6)^2+(5-6)^2+(6-6)^2+(y-6)^2}{5}\n=\\frac{13+4+1+0}{5}\n=\\frac{18}{5}=3.6\n\\]\n이다.",
     "answer": "3.6",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 JSON에는 문제 본문과 해설이 비어 있어 구체적인 계산 절차나 추론 과정을 직접 확인하기 어렵습니다. 다만 후보 범주가 평균, 분산, 표준편차의 개념 이해를 중심으로 구성되어 있으므로, 이 문항은 통계 개념을 이해하는 능력과 가장 가깝다고 판단했습니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "주어진 평균과 분산 조건에서 식을 세워 x+y와 편차제곱합을 구한 뒤, 이를 새로운 자료의 분산 계산에 적용해야 한다. 문제 해결의 핵심이 평균과 분산 공식을 바탕으로 한 정확한 식 정리와 수치 계산이므로 계산 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1518,
+            "category_name": "분산과 표준편차"
+          },
+          {
+            "category_id": 1519,
+            "category_name": "평균과 분산을 이용하여 식의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -2652,13 +3179,18 @@
     "solution": "삼각형의 넓이는\n\\[\n\\frac12 \\cdot \\overline{AB} \\cdot \\overline{AC} \\cdot \\sin \\angle A\n\\]\n이다.\n\n\\(\\overline{AC}=x\\)라 두면 \\(\\overline{AB}=2x\\).\n따라서 넓이 18에 대해\n\\[\n\\frac12 \\cdot 2x \\cdot x \\cdot \\sin 30^\\circ = 18\n\\]\n\\[\nx^2 \\cdot \\frac12 = 18\n\\]\n\\[\n\\frac{x^2}{2}=18 \\Rightarrow x^2=36 \\Rightarrow x=6\n\\]\n그러므로\n\\[\n\\overline{AB}=2x=12\n\\]\n이다.",
     "answer": "④",
     "difficulty": 1,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적인 내용이 제공되지 않아 계산이나 추론 과정을 특정하기 어렵습니다. 따라서 현재 정보로는 어떤 개념이 필요한지 이해하고 관련성을 판단하는 수준의 능력이 가장 적절합니다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "주어진 삼각형의 넓이 공식을 정확히 적용하고, AB=2AC라는 관계를 식으로 세워 계산하는 문제가 핵심입니다. 이후 간단한 방정식을 풀어 변의 길이를 구해야 하므로 계산 수행 능력이 직접적으로 요구됩니다.",
     "unit_candidates": [
       {
         "unit_id": 449,
         "confidence_score": 0.9998358488082886,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1468,
+            "category_name": "삼각형의 넓이 - 예각이 주어진 경우"
+          }
+        ]
       }
     ]
   },
@@ -2690,12 +3222,17 @@
     "answer": "④",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적인 내용이 제공되지 않아 계산 과정이나 추론 구조를 명확히 확인할 수 없다. 따라서 특정 절차를 수행하는 능력보다는 관련 개념을 파악하는 수준의 이해 능력으로 판단하는 것이 가장 보수적이다.",
+    "behavior_reason": "이 문항은 자료가 크기순으로 정리되어 있을 때 짝수 개 자료의 중앙값을 어떻게 정하는지 이해하는지가 핵심이다. 가운데 두 값인 4번째와 5번째 값을 찾고 그 평균을 구하는 중앙값의 정의를 정확히 적용해야 하므로 이해 능력이 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 455,
         "confidence_score": 0.9999990463256836,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1513,
+            "category_name": "중앙값"
+          }
+        ]
       }
     ]
   },
@@ -2727,12 +3264,21 @@
     "answer": "⑤",
     "difficulty": 2,
     "behavior_area": "이해 능력",
-    "behavior_reason": "이 문항은 모비율과 표본비율의 관계를 이해하고, 표본비율의 표준편차가 어떻게 결정되는지 파악해야 해결할 수 있다. 단순 계산보다 통계적 추정의 개념과 표본비율의 의미를 정확히 이해하는 것이 핵심이므로 이해 능력이 가장 적절하다.",
+    "behavior_reason": "이 문항은 편차의 합이 0이라는 성질을 이해하여 미지수 x를 먼저 구해야 한다. 또한 편차들의 제곱의 평균의 제곱근이 표준편차라는 개념을 정확히 알고 적용해야 하므로, 핵심은 통계 개념의 이해에 있다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1517,
+            "category_name": "편차"
+          },
+          {
+            "category_id": 1518,
+            "category_name": "분산과 표준편차"
+          }
+        ]
       }
     ]
   },
@@ -2763,13 +3309,22 @@
     "solution": "지면의 삼각형 $\\triangle ACB$에서 $\\angle ACB=90^\\circ$, $AB=100$m, $\\angle CAB=65^\\circ$이므로\n\\[\n\\sin 65^\\circ=\\frac{BC}{AB}\n\\]\n따라서\n\\[\nBC=100\\times 0.91=91\\text{ m}\n\\]\n이제 직각삼각형 $\\triangle BCQ$에서, $B$에서의 올려다본 각이 $42^\\circ$이므로\n\\[\n\\tan 42^\\circ=\\frac{CQ}{BC}\n\\]\n따라서 탑의 높이 $CQ$는\n\\[\nCQ=BC\\times \\tan 42^\\circ=91\\times 0.90=81.9\\text{ m}\n\\]\n따라서 정답은 $81.9$m이다.",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 실제 내용이 제공되지 않아 구체적인 계산 과정이나 해결 전략을 확인할 수 없습니다. 따라서 현재 정보만으로는 특정 절차 수행보다 관련 개념을 이해하고 있는지가 가장 직접적으로 판단 가능한 행동 영역입니다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "지면의 상황과 탑의 높이 문제를 두 개의 직각삼각형으로 해석하고, 각 삼각형에서 알맞은 삼각비를 선택해 길이를 구해야 한다. 단순한 계산만이 아니라 실제 측정 상황을 수학적으로 모델링하여 해결하는 과정이 핵심이므로 문제 해결 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 448,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1460,
+            "category_name": "직각삼각형의 변의 길이 구하기"
+          },
+          {
+            "category_id": 1462,
+            "category_name": "실생활에서의 직각삼각형의 변의 길이"
+          }
+        ]
       }
     ]
   },
@@ -2801,17 +3356,31 @@
     "answer": "③",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 함수 y=|2sin(ax)+b|의 그래프와 직선 y=1의 교점 개수를 주기, 최댓값, 최솟값과 연결하여 분석해야 한다. 단순 계산보다 그래프의 성질을 해석하고 가능한 a, b를 논리적으로 추론하는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "그림자와 경사면의 상황을 햇빛 방향을 포함하는 단면으로 바꾸어 해석하고, 30°, 45°의 성질을 이용해 길이 관계를 추론해야 한다. 단순 계산보다 각 구간의 의미를 파악하여 높이와 수평거리를 연결하는 과정이 핵심이므로 추론 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 448,
         "confidence_score": 0.7431562542915344,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1460,
+            "category_name": "직각삼각형의 변의 길이 구하기"
+          }
+        ]
       },
       {
         "unit_id": 447,
         "confidence_score": 0.2568279206752777,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1449,
+            "category_name": "30º, 45º, 60º의 삼각비의 값"
+          },
+          {
+            "category_id": 1451,
+            "category_name": "특수한 각의 삼각비의 값을 이용하여 변의 길이 구하기"
+          }
+        ]
       }
     ]
   },
@@ -2843,12 +3412,25 @@
     "answer": "②",
     "difficulty": 2,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설 정보가 비어 있어 구체적인 풀이 과정이나 계산 절차를 확인할 수 없다. 따라서 특정 계산이나 추론 기술보다 관련 개념을 파악하는 수준에서 판단하는 것이 적절하므로 이해 능력을 선택한다.",
+    "behavior_reason": "이 문항은 평균, 중앙값, 최빈값의 뜻을 정확히 이해하고 자료에 적용할 수 있는지를 묻는다. 특히 평균이 실제 측정값 중 하나일 필요는 없다는 성질까지 해석해야 하므로 개념 이해가 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 455,
         "confidence_score": 0.9999994039535522,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1512,
+            "category_name": "평균"
+          },
+          {
+            "category_id": 1513,
+            "category_name": "중앙값"
+          },
+          {
+            "category_id": 1514,
+            "category_name": "최빈값"
+          }
+        ]
       }
     ]
   },
@@ -2880,17 +3462,31 @@
     "answer": "②",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 함수 y=|2sin(ax)+b|의 그래프를 해석하여 직선 y=1과 만나는 점의 개수가 10이 되도록 하는 조건을 추론해야 한다. 주기, 최댓값과 최솟값, 절댓값에 따른 그래프의 변화까지 종합해 가능한 a, b를 판단해야 하므로 핵심은 계산보다 추론에 있다.",
+    "behavior_reason": "호의 비로부터 각 호의 크기를 구하고, 원주각의 성질을 이용해 삼각형의 세 각을 추론해야 한다. 이어서 외접반지름과 변의 길이, 삼각형의 넓이 공식을 연결해 답을 구하므로 단순 계산보다 관계를 논리적으로 이어 가는 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 449,
         "confidence_score": 0.9866482615470886,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1468,
+            "category_name": "삼각형의 넓이 - 예각이 주어진 경우"
+          }
+        ]
       },
       {
         "unit_id": 452,
         "confidence_score": 0.013221094384789467,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1492,
+            "category_name": "원주각과 중심각의 크기"
+          },
+          {
+            "category_id": 1496,
+            "category_name": "원주각의 성질과 삼각비의 값"
+          }
+        ]
       }
     ]
   },
@@ -2922,7 +3518,7 @@
     "answer": "⑤",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수의 그래프와 절댓값이 반영된 함수의 성질을 해석한 뒤, 직선 y=1과 만나는 점의 개수를 조건에 맞게 추론해야 한다. 단순 계산보다는 주기, 최댓값과 최솟값, 그래프의 개형을 종합하여 가능한 a, b의 경우를 판단하는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "이 문항은 원 밖의 한 점에서 그은 접선의 접현을 해석하고, 현의 중점과 중심을 잇는 선의 성질을 연결해 좌표를 찾아야 한다. 주어진 식과 도형의 성질 사이의 관계를 논리적으로 이어 가는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 285,
@@ -2958,13 +3554,26 @@
     "solution": "직선 y=2x+k를 직선 y=x에 대하여 대칭이동하면 x와 y를 바꾸어 x=2y+k, 즉 y=\\frac{x-k}{2}가 된다. 이를 다시 x축에 대하여 대칭이동하면 y값의 부호가 바뀌므로 y=-\\frac{x-k}{2}=-\\frac{x}{2}+\\frac{k}{2}이다. 이 직선이 점 \\left(2,\\frac{1}{2}\\right)를 지나므로 \\frac{1}{2}=-\\frac{2}{2}+\\frac{k}{2}=-1+\\frac{k}{2}. 따라서 \\frac{k}{2}=\\frac{3}{2}이므로 k=3이다.",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수의 그래프에서 주기, 최댓값·최솟값, 절댓값에 따른 그래프 변화를 바탕으로 직선 y=1과의 교점 개수를 추론해야 한다. 단순 계산보다 그래프의 성질을 해석하여 가능한 a, b를 논리적으로 좁혀 가는 과정이 핵심이므로 추론 능력이 요구된다.",
+    "behavior_area": "이해 능력",
+    "behavior_reason": "이 문제는 직선의 방정식을 직선 y=x와 x축에 대하여 대칭이동할 때 식이 어떻게 바뀌는지를 이해하는 것이 핵심이다. 대칭이동 후의 직선이 주어진 점을 지난다는 조건을 적용해 k를 구하므로, 개념과 성질을 정확히 파악하는 이해 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 287,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 198,
+            "category_name": "도형의 대칭이동-직선"
+          },
+          {
+            "category_id": 201,
+            "category_name": "도형의 평행이동과 대칭이동"
+          },
+          {
+            "category_id": 205,
+            "category_name": "도형 f(x, y)=0의 평행이동과 대칭이동"
+          }
+        ]
       }
     ]
   },
@@ -2995,13 +3604,18 @@
     "solution": "x축과 y축에 모두 접하는 원의 반지름을 $r$라 하면, 원의 중심은 접하는 위치에 따라 $(\\pm r,\\pm r)$ 꼴이다. 점 $(1,-2)$를 지나야 하므로 점의 위치상 중심은 제4사분면의 $(r,-r)$이어야 한다.\n\n따라서 원의 중심이 $(r,-r)$일 때,\n$$(1-r)^2+(-2+r)^2=r^2$$\n$$(r-1)^2+(r-2)^2=r^2$$\n$$r^2-2r+1+r^2-4r+4=r^2$$\n$$r^2-6r+5=0$$\n$$(r-1)(r-5)=0$$\n따라서 반지름은 $r=1,\\ 5$ 이다.\n\n큰 원과 작은 원의 넓이의 차는\n$$\\pi(5^2-1^2)=\\pi(25-1)=24\\pi$$\n이다.",
     "answer": "②",
     "difficulty": 3,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적인 내용이 제공되지 않아 어떤 계산이나 추론이 실제로 요구되는지 확인할 수 없다. 따라서 주어진 정보만으로는 특정 개념의 적용 여부를 먼저 파악하는 이해 능력 중심으로 판단하는 것이 가장 보수적이다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 원이 x축과 y축에 동시에 접할 때 중심의 좌표가 어떤 형태가 되는지 파악하고, 점의 위치를 이용해 중심이 어느 사분면에 있어야 하는지를 추론해야 한다. 이후 그 추론을 바탕으로 반지름의 가능한 값을 구해 두 원의 넓이 차를 구하므로 추론 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 284,
         "confidence_score": 0.9999967813491821,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 177,
+            "category_name": "x축, y축에 동시에 접하는 원의 방정식"
+          }
+        ]
       }
     ]
   },
@@ -3032,13 +3646,18 @@
     "solution": "평행사변형에서 두 대각선의 중점이 같으므로\n\\[\nA+C=B+D\n\\]\n가 성립한다.\n\n좌표를 대입하면\n\\[\n(2,4)+(c,0)=(1,8)+(3,d)\n\\]\n이므로\n\\[\n(2+c,4)=(4,8+d)\n\\]\n이다.\n\n따라서\n\\[\n2+c=4 \\Rightarrow c=2,\n\\]\n\\[\n4=8+d \\Rightarrow d=-4\n\\]\n이다.\n\n그러므로\n\\[\nc+d=2+(-4)=-2\n\\]\n이다.",
     "answer": "②",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항의 구체적인 문제 진술과 해설 정보가 제공되지 않아 특정 계산이나 추론 과정을 확인하기 어렵다. 따라서 주어진 후보 단원과 개념을 실제로 적용할 수 있는지보다 관련 개념을 이해하고 있는지가 중심이라고 보는 것이 가장 타당하다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "평행사변형의 성질을 좌표식으로 바꾸어 \\(A+C=B+D\\)를 세우는 과정이 핵심이다. 주어진 좌표에서 대각선의 중점이 같다는 사실을 이용해 미지수 \\(c, d\\)를 추론해야 하므로 추론 능력이 요구된다.",
     "unit_candidates": [
       {
         "unit_id": 280,
         "confidence_score": 0.9999631643295288,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 152,
+            "category_name": "사각형에서 중점의 활용"
+          }
+        ]
       }
     ]
   },
@@ -3070,12 +3689,17 @@
     "answer": "③",
     "difficulty": 2,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설 HTML이 모두 비어 있어 구체적인 계산 절차나 추론 구조를 확인할 수 없다. 따라서 특정 풀이 기술보다 제시된 개념을 이해하는 수준에서만 판단할 수 있으므로 '이해 능력'으로 보는 것이 가장 타당하다.",
+    "behavior_reason": "이 문제는 이차부등식이 모든 실수에서 항상 양수가 되는 조건을 이해하고, 이를 문자 a가 포함된 식에 적용하는 문제이다. 위로 열린 포물선과 판별식의 의미를 바르게 해석한 뒤 a의 범위를 구하고 정수의 개수를 판단해야 하므로 이해 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 277,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 128,
+            "category_name": "이차부등식이 항상 성립할 조건"
+          }
+        ]
       }
     ]
   },
@@ -3106,13 +3730,18 @@
     "solution": "이차부등식\n\\[(x-a)(x-a^2+4a)<0\\]\n의 해는 두 근 \\(a\\), \\(a^2-4a\\) 사이이므로\n\\[\n\\alpha=\\min(a,a^2-4a),\\quad \\beta=\\max(a,a^2-4a)\n\\]\n이다.\n\n두 근은 자연수 \\(a\\)에 대해 모두 정수이므로, 구간 \\(\\alpha<x<\\beta\\) 안의 정수의 개수는\n\\[\n\\beta-\\alpha-1\n\\]\n이다. 조건 (나)에서 그 개수가 5이므로\n\\[\n\\beta-\\alpha-1=5 \\Rightarrow \\beta-\\alpha=6.\n\\]\n\n그런데\n\\[\n\\beta-\\alpha=|a-(a^2-4a)|=|a^2-5a|=|a(a-5)|\n\\]\n이므로\n\\[\n|a(a-5)|=6.\n\\]\n따라서\n\\[\na(a-5)=6 \\quad \\text{또는} \\quad a(a-5)=-6\n\\]\n를 푼다.\n\n1) \\(a^2-5a-6=0\\Rightarrow (a-6)(a+1)=0\\Rightarrow a=6\\)\n\n2) \\(a^2-5a+6=0\\Rightarrow (a-2)(a-3)=0\\Rightarrow a=2,3\\)\n\n가능한 자연수 \\(a\\)는 \\(2,3,6\\).\n\n각 경우의 \\(\\beta\\)를 구하면\n- \\(a=2\\): 근은 \\(2,-4\\)이므로 \\(\\beta=2\\)\n- \\(a=3\\): 근은 \\(3,-3\\)이므로 \\(\\beta=3\\)\n- \\(a=6\\): 근은 \\(6,12\\)이므로 \\(\\beta=12\\)\n\n따라서 \\(\\beta\\)가 최대가 되게 하는 값은\n\\[\nm=6,\\quad n=12\n\\]\n이므로\n\\[\nm+n=18.\n\\]",
     "answer": "⑤",
     "difficulty": 3,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제시된 문제 본문과 해설 정보가 비어 있어 구체적인 계산 과정이나 추론 구조를 확인하기 어렵다. 따라서 특정한 계산 기술보다는 관련 개념을 파악하는 이해 능력 중심으로 보수적으로 판단하는 것이 적절하다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 이차부등식의 해가 두 근 사이의 구간이라는 성질을 바탕으로, 주어진 조건을 식으로 바꾸어 가능한 자연수 a를 추려내는 과정이 핵심이다. 또한 정수의 개수 조건에서 구간의 길이를 추론하고, 그 결과로 β의 최댓값을 판단해야 하므로 단순 계산보다 수학적 관계를 논리적으로 연결하는 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 277,
         "confidence_score": 0.9999847412109375,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 122,
+            "category_name": "이차부등식의 풀이"
+          }
+        ]
       }
     ]
   },
@@ -3143,8 +3772,8 @@
     "solution": "준비한 방의 수를 $r$, 학생 수를 $s$라 하자.\n\n한 방에 4명씩 자면 학생이 16명 남으므로\n$$s=4r+16$$\n\n한 방에 5명씩 자면 방이 4개 남으므로, 사용한 방은 $r-4$개이어서\n$$s=5(r-4)$$\n\n따라서\n$$4r+16=5(r-4)$$\n$$4r+16=5r-20$$\n$$r=36$$\n\n방의 개수는 36개로 하나로 정해지므로 최소값과 최댓값은 모두 36이다.\n따라서 그 합은\n$$36+36=72$$",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수의 그래프와 직선 y=1의 교점 개수를 이용해 a, b의 조건을 거꾸로 찾아내야 하므로 단순 계산보다 성질을 연결하는 추론이 핵심이다. 특히 사인함수의 주기, 최댓값·최솟값, 절댓값에 따른 그래프 변화를 종합하여 가능한 경우를 판별해야 한다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "문장으로 주어진 두 조건을 각각 식으로 나타내고, 이를 연결하여 방의 수를 구하는 과정이 핵심이다. 단순 계산보다 상황을 수학적으로 모델링하는 능력이 더 중요하므로 문제 해결 능력에 해당한다.",
     "unit_candidates": [
       {
         "unit_id": 276,
@@ -3181,12 +3810,21 @@
     "answer": "④",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수의 그래프와 절댓값이 적용된 함수의 성질을 바탕으로 직선 y=1과의 교점 개수를 추론해야 한다. 주기, 최댓값과 최솟값, 그래프의 모양 변화를 종합하여 가능한 a, b를 판단하는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "점 P가 만족하는 거리비 조건을 식으로 옮기고, 이를 정리하여 어떤 도형이 되는지 판단해야 한다. 좌표식 변형 결과를 원의 표준형으로 해석해 반지름을 알아내는 과정이 핵심이므로 추론 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 284,
         "confidence_score": 0.9999904632568359,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 174,
+            "category_name": "원이 되기 위한 조건"
+          },
+          {
+            "category_id": 190,
+            "category_name": "자취의 방정식"
+          }
+        ]
       }
     ]
   },
@@ -3218,7 +3856,7 @@
     "answer": "①",
     "difficulty": 4,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문제는 좌표와 도형의 조건을 식으로 바꾸고, 점·직선·원의 관계를 연결해 결론을 얻는 과정이 핵심이다. 단순한 계산보다 주어진 조건에서 필요한 성질을 선택하고 관계를 추론하는 비중이 크므로 추론 능력이 중심이다.",
+    "behavior_reason": "직각이등변삼각형의 조건에서 직각이 C에 있음을 파악하고, 점 C의 위치를 선분 AB의 중점과 그에 수직인 방향으로 추론해야 한다. 또한 b의 범위에 따라 두 경우의 OC 값을 식으로 나타내고 최댓값과 최솟값을 판단하는 과정이 중심이므로 추론 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 283,
@@ -3233,7 +3871,12 @@
       {
         "unit_id": 280,
         "confidence_score": 0.11181552708148956,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1897,
+            "category_name": "선분의 내분점"
+          }
+        ]
       },
       {
         "unit_id": 286,
@@ -3274,13 +3917,22 @@
     "solution": "점 $B$를 지나는 직선이 삼각형 $ABC$를 넓이가 같은 두 삼각형으로 나누려면, 그 직선은 꼭짓점 $B$에서 변 $AC$의 중점을 지나는 중선이어야 한다. \n\n변 $AC$의 중점 $M$은\n$$M\\left(\\frac{-3+(-1)}{2},\\frac{2+8}{2}\\right)=(-2,5)$$\n이다.\n\n직선 $BM$의 기울기는\n$$\\frac{5-3}{-2-3}=\\frac{2}{-5}=-\\frac25$$\n이므로, 점 $B(3,3)$을 지나서\n$$y-3=-\\frac25(x-3)$$\n$$y=-\\frac25x+\\frac{21}{5}$$\n따라서 $y$절편은\n$$\\frac{21}{5}$$\n이므로 정답은 $④$이다.",
     "answer": "④",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "입력된 JSON에서 문제와 해설의 HTML이 모두 비어 있어 실제 풀이에 어떤 수학적 절차가 쓰였는지 확인할 수 없습니다. 따라서 특정 계산이나 추론 과정보다는, 제공된 단원 후보가 담고 있는 직선의 방정식 관련 개념을 이해하는 수준으로만 보수적으로 판단하는 것이 가장 적절합니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 넓이가 같은 두 삼각형으로 나눈다는 조건에서 그 직선이 꼭짓점에서 대변의 중점을 지나는 중선임을 추론해야 한다. 이후 중점의 좌표와 직선의 기울기를 구해 방정식을 세우고 y절편을 판단하므로, 조건을 연결해 결론을 이끌어 내는 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 281,
         "confidence_score": 0.9993834495544434,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 155,
+            "category_name": "기울기와 한 점이 주어진 직선의 방정식"
+          },
+          {
+            "category_id": 159,
+            "category_name": "도형의 넓이를 이등분하는 직선의 방정식"
+          }
+        ]
       }
     ]
   },
@@ -3306,15 +3958,19 @@
     "answer": "\\frac{1}{2}, \\frac{3}{2}, 2",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 직선의 식이나 계수 사이의 관계를 바탕으로 평행, 수직, 일치 여부를 판단해야 하므로 성질을 연결하는 추론이 핵심이다. 단순 계산보다 직선의 위치 관계를 논리적으로 해석하여 결론을 도출하는 과정이 필요하다.",
+    "behavior_reason": "세 직선이 삼각형을 만들지 못하는 경우를 평행한 경우와 한 점에서 만나는 경우로 나누어 판단해야 한다. 또 각 경우에 대해 기울기 비교와 교점 대입을 통해 가능한 k값을 논리적으로 찾아야 하므로 추론 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 282,
         "confidence_score": 0.981663167476654,
         "valid_categories": [
           {
-            "category_id": 163,
-            "category_name": "두 직선의 위치 관계"
+            "category_id": 164,
+            "category_name": "한 직선에 평행 또는 수직인 직선의 방정식"
+          },
+          {
+            "category_id": 166,
+            "category_name": "세 직선의 위치 관계"
           }
         ]
       },
@@ -3353,12 +4009,17 @@
     "answer": "④",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수의 그래프에서 절댓값과 사인함수의 주기, 최댓값·최솟값을 함께 해석하고, 직선 y=1과의 교점 개수가 10개가 되도록 하는 a, b의 관계를 추론해야 한다. 단순 계산보다 그래프의 성질을 바탕으로 가능한 경우를 나누어 판단하는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "지름의 양 끝점으로부터 원의 중심과 반지름을 추론하고, 이를 바탕으로 원의 방정식을 세워 y축과의 교점을 구해야 한다. 주어진 좌표 조건을 여러 단계로 연결해 교점 사이의 거리를 도출하는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
     "unit_candidates": [
       {
         "unit_id": 284,
         "confidence_score": 0.9999501705169678,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 173,
+            "category_name": "두 점을 지름의 양 끝 점으로 하는 원의 방정식"
+          }
+        ]
       }
     ]
   },
@@ -3390,7 +4051,7 @@
     "answer": "①",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 함수 \\(y=|2\\sin ax+b|\\)의 그래프 성질을 바탕으로 직선 \\(y=1\\)과의 교점 개수를 조건에 맞게 추론해야 한다. 주기, 최댓값과 최솟값, 절댓값에 따른 그래프 변화까지 종합적으로 해석하여 가능한 \\(a, b\\)를 판단하므로 단순 계산보다 추론이 핵심이다.",
+    "behavior_reason": "주어진 두 직선의 식을 k값에 따라 해석하고, 각 경우에 점을 대입하거나 기울기를 비교하여 명제의 참거짓을 판단해야 한다. 평행, 수직, 일치, 교점의 존재를 식의 형태에서 논리적으로 이끌어내는 과정이 핵심이므로 추론 능력이 요구된다.",
     "unit_candidates": [
       {
         "unit_id": 281,
@@ -3400,7 +4061,12 @@
       {
         "unit_id": 282,
         "confidence_score": 0.25672647356987,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 163,
+            "category_name": "두 직선의 위치 관계"
+          }
+        ]
       }
     ]
   },
@@ -3425,13 +4091,18 @@
     "solution": "점 P는 선분 OB 위에 있으므로 OP는 y축, OA는 x축 위에 있어 \\(\\angle AOP=90^\\circ\\)이다. 따라서 세 점 O, A, P를 지나는 원에서 \\(AP\\)는 지름이다. 또 Q도 같은 원 위에 있으므로 \\(\\angle AQP=90^\\circ\\)이다.\n\n그런데 Q는 선분 AB 위에 있으므로 \\(AQ\\)는 직선 AB와 같은 방향이다. 따라서 \\(QP\\)는 직선 AB에 수직이다. 즉, 점 C를 지나는 직선 PQ는 AB에 수직이다.\n\n직선 AB의 기울기는\n\\[\n\\frac{10-0}{0-5}=-2\n\\]\n이므로, 이에 수직인 직선의 기울기는 \\(\\frac12\\)이다.\n점 C(14,12)를 지나므로 직선 PQ의 방정식은\n\\[\ny-12=\\frac12(x-14)\n\\]\n즉\n\\[\ny=\\frac12x+5\n\\]\n이다.\n\n1) 점 Q는 AB 위에 있으므로\n\\[\ny=-2x+10\n\\]\n과 연립하면\n\\[\n\\frac12x+5=-2x+10\n\\]\n\\[\n\\frac52x=5 \\Rightarrow x=2,\n\\]\n\\[\ny=6.\n\\]\n따라서\n\\[\nQ=(2,6).\n\\]\n\n2) 점 P는 OB 위에 있으므로 \\(x=0\\). 직선 \\(y=\\frac12x+5\\)에 대입하면\n\\[\nP=(0,5).\n\\]\n이제 원의 지름은 AP이므로\n\\[\nAP=\\sqrt{(5-0)^2+(0-5)^2}=\\sqrt{25+25}=5\\sqrt2.\n\\]\n반지름은\n\\[\nr=\\frac{AP}{2}=\\frac{5\\sqrt2}{2}\n\\]\n이므로 원의 넓이는\n\\[\n\\pi r^2=\\pi\\left(\\frac{5\\sqrt2}{2}\\right)^2=\\frac{25\\pi}{2}.\n\\]\n\n따라서 점 Q의 좌표는 \\((2,6)\\), 원의 넓이는 \\(\\frac{25\\pi}{2}\\)이다.",
     "answer": "Q=(2,6), \\frac{25\\pi}{2}",
     "difficulty": 4,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제시된 JSON에는 문제 본문과 해설이 비어 있어 구체적인 계산 절차나 추론 과정을 확인하기 어렵다. 따라서 현재 정보만으로는 개념과 조건을 해석하는 이해 능력을 중심으로 판단하는 것이 가장 타당하다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "네 점이 한 원 위에 있다는 조건에서 ∠AOP=90°를 이용해 AP가 지름임을 알아내고, 다시 ∠AQP=90°로부터 PQ가 AB에 수직임을 추론해야 한다. 이후 직선의 기울기와 교점을 이용해 Q, P를 구하고 원의 넓이까지 연결하므로, 핵심은 성질을 논리적으로 이어 가는 추론에 있다.",
     "unit_candidates": [
       {
         "unit_id": 284,
         "confidence_score": 0.960997998714447,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 173,
+            "category_name": "두 점을 지름의 양 끝 점으로 하는 원의 방정식"
+          }
+        ]
       },
       {
         "unit_id": 285,
@@ -3441,7 +4112,12 @@
       {
         "unit_id": 282,
         "confidence_score": 0.01653488352894783,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 164,
+            "category_name": "한 직선에 평행 또는 수직인 직선의 방정식"
+          }
+        ]
       }
     ]
   },
@@ -3473,12 +4149,25 @@
     "answer": "①",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수의 그래프와 절댓값의 영향을 해석하여 직선과의 교점 개수를 경우에 따라 따져야 한다. 또한 주기, 최댓값과 최솟값을 바탕으로 자연수 a, b의 가능한 값을 추론해 a+b의 최댓값과 최솟값을 결정해야 하므로 추론 능력이 핵심이다.",
+    "behavior_reason": "이 문제는 원의 중심이 원점과 직선 y=x에 대하여 대칭이동될 때 좌표가 어떻게 변하는지 추론하는 과정이 핵심이다. 또한 대칭이동한 원의 방정식을 세운 뒤, 주어진 점이 그 원 위에 있다는 조건을 이용해 a의 값을 찾아야 하므로 도형의 성질과 식을 연결하는 추론이 필요하다.",
     "unit_candidates": [
       {
         "unit_id": 287,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 197,
+            "category_name": "점의 대칭이동"
+          },
+          {
+            "category_id": 199,
+            "category_name": "도형의 대칭이동-포물선, 원"
+          },
+          {
+            "category_id": 201,
+            "category_name": "도형의 평행이동과 대칭이동"
+          }
+        ]
       }
     ]
   },
@@ -3509,13 +4198,17 @@
     "solution": "두 직선의 교점을 먼저 구한다.\n첫째 직선에서 y=4-x, 둘째 직선에서 y=2x-6 이므로\n4-x=2x-6\n10=3x\nx=\\frac{10}{3}, \\quad y=4-\\frac{10}{3}=\\frac{2}{3}\n따라서 교점은 \\left(\\frac{10}{3},\\frac{2}{3}\\right)이다.\n\n이 점과 (3,2)를 지나는 직선의 기울기는\nm=\\frac{2-\\frac{2}{3}}{3-\\frac{10}{3}}=\\frac{\\frac{4}{3}}{-\\frac{1}{3}}=-4\n\n점 (3,2)를 지나므로\ny-2=-4(x-3)\n정리하면\n4x+y-14=0\n따라서 정답은 ③이다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "주어진 함수와 직선의 관계를 정확히 해석하고, 점의 좌표와 직선의 식이 도형의 넓이와 어떻게 연결되는지 이해해야 한다. 특히 두 점을 지나는 직선의 방정식을 세우고 교점을 파악하는 과정에서 그래프와 식의 의미를 올바르게 이해하는 것이 핵심이다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "이 문항은 먼저 두 직선의 교점을 구한 뒤, 그 점과 주어진 한 점을 이용해 새로운 직선의 방정식을 구하는 과정을 요구한다. 즉, 여러 정보를 순서대로 연결하여 적절한 방법을 선택하고 적용해야 하므로 문제 해결 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 281,
         "confidence_score": 0.9999871253967285,
         "valid_categories": [
+          {
+            "category_id": 155,
+            "category_name": "기울기와 한 점이 주어진 직선의 방정식"
+          },
           {
             "category_id": 156,
             "category_name": "두 점을 지나는 직선의 방정식"
@@ -3545,13 +4238,26 @@
     "solution": "직선 $x-y+1=0$ 위의 점 $P$를 $P(t,\\,t+1)$이라 두면\n\\[\nAP^2=(t-3)^2+(t+2)^2,\n\\quad BP^2=(t-1)^2+(t+4)^2\n\\]\n이므로\n\\[\nAP^2+BP^2=(t-3)^2+(t+2)^2+(t-1)^2+(t+4)^2\n=4t^2+4t+30.\n\\]\n완전제곱식을 만들면\n\\[\n4t^2+4t+30=4\\left(t+\\frac12\\right)^2+29.\n\\]\n따라서 최솟값은 $29$이고, 이때\n\\[\nt=-\\frac12\n\\]\n이므로\n\\[\nP\\left(-\\frac12,\\,\\frac12\\right).\n\\]\n즉,\n(1) 최솟값은 $29$\n(2) 점 $P$의 좌표는 $\\left(-\\frac12,\\,\\frac12\\right)$이다.",
     "answer": "(1) 29, (2) \\left(-\\frac{1}{2},\\ \\frac{1}{2}\\right)",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문제 본문과 해설 정보가 제공되지 않아 특정 계산 절차나 복합적인 해결 전략을 확인하기는 어렵습니다. 따라서 주어진 후보 단원에서 다루는 좌표와 거리의 개념을 정확히 파악하는지가 우선이므로 이해 능력으로 판단하는 것이 가장 적절합니다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "직선 위의 점을 매개변수로 나타내고, 거리의 제곱의 합을 이차식으로 바꾸어 최솟값을 구하는 해결 전략이 필요하다. 단순 계산만으로는 어렵고, 주어진 조건을 식으로 모델링한 뒤 완전제곱식을 이용해 결론을 얻어야 하므로 문제 해결 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 279,
         "confidence_score": 0.999434769153595,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 142,
+            "category_name": "두 점 사이의 거리"
+          },
+          {
+            "category_id": 143,
+            "category_name": "같은 거리에 있는 점의 좌표"
+          },
+          {
+            "category_id": 146,
+            "category_name": "거리의 제곱의 합의 최솟값"
+          }
+        ]
       }
     ]
   },
@@ -3583,12 +4289,17 @@
     "answer": "⑤",
     "difficulty": 4,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수의 주기, 최댓값과 최솟값, 절댓값에 따른 그래프의 형태를 바탕으로 직선 y=1과의 교점 개수를 추론해야 한다. 주어진 조건에서 가능한 자연수 a, b를 경우 나누어 판단한 뒤 a+b의 최댓값과 최솟값을 찾아야 하므로, 단순 계산보다 그래프 해석과 논리적 추론이 핵심이다.",
+    "behavior_reason": "주어진 두 이차부등식의 해를 각각 구한 뒤, 연립부등식의 해가 정확히 \\(4\\le x<5\\)가 되도록 매개변수 \\(a\\)의 경우를 나누어 판단해야 한다. 해집합의 공통부분이 어떻게 달라지는지를 논리적으로 분석하는 과정이 핵심이므로 추론 능력이 요구된다.",
     "unit_candidates": [
       {
         "unit_id": 278,
         "confidence_score": 0.9999963045120239,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 136,
+            "category_name": "해가 주어진 연립이차부등식"
+          }
+        ]
       }
     ]
   },
@@ -3619,13 +4330,18 @@
     "solution": "주어진 두 직선은 원 \\(x^2+y^2=1\\)과 원 \\((x+b)^2+(y+6)^2=9\\)의 공통접선이다. 이 공통접선의 교점 \\(P=(3,a)\\)는 두 원의 외심상사점이므로, 두 원의 중심 \\(O=(0,0)\\), \\(C=(-b,-6)\\), 점 \\(P\\)는 일직선 위에 있고 반지름의 비만큼\n\\[\nPO:PC=1:3\n\\]\n이다.\n\n반지름이 각각 \\(1,3\\)이므로 \\(O\\)는 \\(P\\)와 \\(C\\) 사이에 있고,\n\\[\n\\overrightarrow{PC}=3\\overrightarrow{PO}.\n\\]\n따라서\n\\[\nC=P+3(O-P)=3O-2P=-2(3,a)=(-6,-2a).\n\\]\n그런데 \\(C=(-b,-6)\\)이므로\n\\[\n(-b,-6)=(-6,-2a).\n\\]\n따라서\n\\[\nb=6,\\quad a=3.\n\\]\n그러므로\n\\[\na+b=3+6=9.\n\\]",
     "answer": "③",
     "difficulty": 4,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적 내용이 제공되지 않아 특정한 계산 절차나 추론 단계를 확인하기 어렵습니다. 따라서 우선적으로 필요한 것은 관련 개념을 파악하고 해석하는 이해 능력이라고 보는 것이 가장 타당합니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 두 원의 공통접선의 교점이 외심상사점이라는 성질을 떠올리고, 그로부터 중심과 점의 위치관계 및 거리비를 추론하는 것이 핵심이다. 단순한 계산보다 원의 접선과 닮음 관계를 연결하여 a와 b를 결정해야 하므로 추론 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 285,
         "confidence_score": 0.998924195766449,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 182,
+            "category_name": "원과 직선이 접할 때"
+          }
+        ]
       }
     ]
   },
@@ -3657,12 +4373,21 @@
     "answer": "③",
     "difficulty": 2,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설이 비어 있어 구체적인 계산 절차나 추론 과정을 확인할 수는 없다. 다만 제공된 후보 범주가 평균, 분산, 표준편차의 개념 이해를 중심으로 구성되어 있어 가장 직접적으로는 이해 능력과 관련된다고 판단하였다.",
+    "behavior_reason": "이 문항은 편차의 뜻과 성질, 표준편차의 계산 방법을 이해하고 표에 나타난 정보를 해석할 수 있는지를 묻는다. 특히 편차가 0이면 평균과 같고, 편차의 대소에 따라 기록의 빠르고 느림을 판단해야 하므로 개념 이해가 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1517,
+            "category_name": "편차"
+          },
+          {
+            "category_id": 1518,
+            "category_name": "분산과 표준편차"
+          }
+        ]
       }
     ]
   },
@@ -3694,12 +4419,17 @@
     "answer": "④",
     "difficulty": 2,
     "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설이 비어 있어 구체적인 풀이 과정을 확인할 수는 없습니다. 다만 제시된 후보들이 평균, 분산, 표준편차의 개념 이해를 중심으로 한 내용이므로 핵심 행동 영역은 이해 능력으로 판단했습니다.",
+    "behavior_reason": "이 문항은 표에 제시된 수가 각 학생의 점수와 분당이의 점수 차이라는 의미를 정확히 해석하는 것이 핵심이다. 또한 차이 자료의 평균이 실제 평균과 분당이 점수의 관계를 어떻게 나타내는지 이해해야 옳은 설명을 판단할 수 있다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 0.9999752044677734,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1522,
+            "category_name": "변화된 변량의 평균, 분산, 표준편차"
+          }
+        ]
       }
     ]
   },
@@ -3730,13 +4460,22 @@
     "solution": "주어진 6개의 변량은 $9, 2, a^2, 1, 4, a$이다. 6개의 변량의 중앙값은 크기순으로 나열했을 때 3번째와 4번째 수의 평균이다.\n\n$a$는 자연수이므로 경우를 보면,\n- $a=1,2,3$일 때 중앙값은 각각 $1.5, 3, 3.5$로 4가 아니다.\n- $a=4$일 때 변량은 $9,2,16,1,4,4$이고, 크기순으로 나열하면 $1,2,4,4,9,16$이므로 중앙값은 $\\frac{4+4}{2}=4$이다.\n- $a\\ge 5$이면 크기순으로 나열했을 때 3번째 수는 4, 4번째 수는 5 이상이므로 중앙값이 4보다 커진다.\n\n따라서 $a=4$이고,\n$$2a+3=2\\times 4+3=11$$",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 실제 내용이 제공되지 않아 어떤 계산이나 추론이 필요한지 구체적으로 판단하기 어렵습니다. 따라서 현재 정보만으로는 특정 개념을 알고 있는지의 수준, 즉 이해 능력 중심으로만 가장 보수적으로 분류하는 것이 적절합니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 중앙값의 정의를 이해한 뒤, 자연수인 a의 값에 따라 자료의 순서를 나누어 생각해야 한다. 특히 a=1,2,3,4, a≥5의 경우를 비교하여 중앙값이 4가 되는 경우를 논리적으로 판단하는 추론 과정이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 455,
         "confidence_score": 0.9999960660934448,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1513,
+            "category_name": "중앙값"
+          },
+          {
+            "category_id": 1516,
+            "category_name": "대푯값이 주어졌을 때, 변량 구하기"
+          }
+        ]
       }
     ]
   },
@@ -3768,12 +4507,21 @@
     "answer": "①",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 JSON에는 문항 본문과 해설이 비어 있어 구체적인 풀이 과정은 확인되지 않습니다. 다만 후보 단원이 평균, 중앙값, 최빈값 등 대푯값의 개념 중심이므로, 각 개념의 의미를 구분하고 해석하는 이해 능력이 가장 적절합니다.",
+    "behavior_reason": "이 문항은 자료를 크기순으로 정리한 뒤 중앙값과 최빈값의 뜻을 정확히 이해해야 해결할 수 있다. 계산 자체는 간단하지만, 짝수 개 자료에서 중앙값을 구하는 방법과 가장 많이 나타난 값을 찾는 개념 이해가 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 455,
         "confidence_score": 0.9999998807907104,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1513,
+            "category_name": "중앙값"
+          },
+          {
+            "category_id": 1514,
+            "category_name": "최빈값"
+          }
+        ]
       }
     ]
   },
@@ -3804,23 +4552,27 @@
     "solution": "처음 30명의 몸무게 총합은\n\\(30\\times 54=1620\\text{ kg}\\)이다.\n\n한 학생이 전학 간 뒤 29명의 몸무게 총합은\n\\(29\\times 53.5=1551.5\\text{ kg}\\)이다.\n\n따라서 전학 간 학생의 몸무게는\n\\(1620-1551.5=68.5\\text{ kg}\\)이다.\n\n그러므로 정답은 ③이다.",
     "answer": "③",
     "difficulty": 1,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "이 문항은 평균, 분산, 표준편차의 뜻과 관계를 이해하고 이를 자료 해석에 연결할 수 있는지가 핵심인 유형으로 보인다. 단순한 계산 절차보다 개념을 정확히 파악하는 것이 우선이므로 이해 능력이 중심이다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문제는 평균과 인원수를 이용해 전체 몸무게를 계산한 뒤, 그 차이로 전학 간 학생의 몸무게를 구하는 계산 중심의 문제이다. 평균의 공식을 알고 있어야 하지만, 해결의 핵심은 수치를 정확하게 계산하는 데 있다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 0.6513547897338867,
-        "valid_categories": [
-          {
-            "category_id": 1518,
-            "category_name": "분산과 표준편차"
-          }
-        ]
+        "valid_categories": []
       },
       {
         "unit_id": 455,
         "confidence_score": 0.34864506125450134,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1512,
+            "category_name": "평균"
+          },
+          {
+            "category_id": 1516,
+            "category_name": "대푯값이 주어졌을 때, 변량 구하기"
+          }
+        ]
       }
     ]
   },
@@ -3851,13 +4603,34 @@
     "solution": "변량은 $3,6,3,a,3,11,5$ 이므로 최빈값은 항상 $3$이다.\n\n정렬했을 때 중앙값을 구하면\n- $a\\le 3$이면 중앙값은 $3$\n- $a=4$이면 중앙값은 $4$\n- $a\\ge 5$이면 중앙값은 $5$\n\n평균은\n\\[\n\\frac{3+6+3+a+3+11+5}{7}=\\frac{31+a}{7}\n\\]\n이다.\n\n문제에서 평균, 중앙값, 최빈값이 모두 다르고, 작은 값부터 나열했을 때 가운데 값이 나머지 두 값의 평균이므로 세 값은 등차수열을 이뤄야 한다.\n\n최빈값이 $3$이므로 이를 이용해 경우를 나눈다.\n\n1) $a\\le 3$이면 중앙값이 $3$이어서 최빈값과 같으므로 불가능.\n\n2) $a=4$이면\n- 최빈값 $=3$\n- 중앙값 $=4$\n- 평균 $=\\frac{35}{7}=5$\n\n즉 $3,4,5$가 되어 조건 만족.\n\n3) $a\\ge 5$이면 중앙값 $=5$.\n이때 세 값은 $3,5,\\frac{31+a}{7}$ 이고 등차수열이어야 하므로\n\\[\n5=\\frac{3+\\frac{31+a}{7}}{2}\n\\]\n또는 평균이 가운데 값이어야 한다. 하지만 $a\\ge 5$이면 평균은 $5$보다 크므로 평균이 가운데 값일 수 없다.\n따라서 $5$가 가운데 값이어야 하여\n\\[\n5=\\frac{3+\\frac{31+a}{7}}{2}\n\\Rightarrow \\frac{31+a}{7}=7\n\\Rightarrow a=18\n\\]\n\n따라서 가능한 자연수 $a$는 $4,18$이고, 그 합은\n\\[\n4+18=22\n\\]\n이다.",
     "answer": "①",
     "difficulty": 3,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설 정보가 제공되지 않아 구체적인 계산 절차나 문제 해결 전략을 확인하기 어렵습니다. 따라서 제시된 후보 단원이 대푯값의 개념 이해 중심이라는 점을 고려하여, 가장 보수적으로 이해 능력에 해당한다고 판단했습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 평균, 중앙값, 최빈값의 정의를 바탕으로 a의 범위에 따라 경우를 나누어 판단해야 한다. 또 세 대표값의 크기 관계와 등차수열 조건을 연결하여 가능한 a를 논리적으로 추론하는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 455,
         "confidence_score": 0.9999935626983643,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1512,
+            "category_name": "평균"
+          },
+          {
+            "category_id": 1513,
+            "category_name": "중앙값"
+          },
+          {
+            "category_id": 1514,
+            "category_name": "최빈값"
+          },
+          {
+            "category_id": 1515,
+            "category_name": "여러 가지 자료에서 대푯값 구하기"
+          },
+          {
+            "category_id": 1516,
+            "category_name": "대푯값이 주어졌을 때, 변량 구하기"
+          }
+        ]
       }
     ]
   },
@@ -3889,12 +4662,17 @@
     "answer": "⑤",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 함수 \\(y=|2\\sin ax+b|\\)의 그래프를 해석하여 주기, 최댓값·최솟값, 직선 \\(y=1\\)과의 교점 개수를 종합적으로 판단해야 한다. 단순 계산보다 그래프의 성질을 바탕으로 가능한 \\(a, b\\)를 추론하는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "주어진 두 원주각으로 각각의 호의 크기를 추론하고, 이를 합쳐 중심각의 크기를 결정해야 한다. 원주각과 중심각의 관계를 적용한 뒤 호의 연결 관계를 논리적으로 이어 판단하는 과정이 핵심이므로 추론 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 452,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1492,
+            "category_name": "원주각과 중심각의 크기"
+          }
+        ]
       }
     ]
   },
@@ -3926,12 +4704,25 @@
     "answer": "④",
     "difficulty": 2,
     "behavior_area": "이해 능력",
-    "behavior_reason": "제시된 문항과 해설의 실제 내용이 없어 구체적인 계산 절차나 추론 과정을 확인하기는 어렵다. 따라서 보수적으로 판단하면 특정 기술의 직접 활용 여부보다 개념 이해 수준에서만 관련성을 검토하는 것이 타당하다.",
+    "behavior_reason": "이 문항은 평균, 중앙값, 최빈값의 뜻을 이해하고 자료에 알맞은 대푯값을 판단하는 것이 핵심이다. 특히 한 값이 다른 값들보다 매우 커서 평균이 적절하지 않음을 해석해야 하므로 단순 계산보다 자료와 개념에 대한 이해가 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 455,
         "confidence_score": 0.9999996423721313,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1512,
+            "category_name": "평균"
+          },
+          {
+            "category_id": 1513,
+            "category_name": "중앙값"
+          },
+          {
+            "category_id": 1514,
+            "category_name": "최빈값"
+          }
+        ]
       }
     ]
   },
@@ -3962,13 +4753,22 @@
     "solution": "평균은\n\\[\n\\frac{(a+2)+(a-1)+(a-5)+(a+3)+(a+6)}{5}=a+1\n\\]\n이다.\n\n각 값의 편차는\n\\[\n1,\\, -2,\\, -6,\\, 2,\\, 5\n\\]\n이므로, 편차의 제곱의 평균은\n\\[\n\\frac{1^2+(-2)^2+(-6)^2+2^2+5^2}{5}\n=\\frac{1+4+36+4+25}{5}\n=\\frac{70}{5}=14\n\\]\n이다.\n\n따라서 표준편차는\n\\[\n\\sqrt{14}\n\\]\n이므로 정답은 ①이다.",
     "answer": "①",
     "difficulty": 1,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "이 문항은 표본비율의 표준편차가 모비율과 표본의 크기와 어떤 관계를 가지는지 이해해야 해결할 수 있다. 단순한 수치 계산보다 주어진 통계적 관계를 해석하고 식에 맞게 적용하는 것이 핵심이다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "주어진 다섯 수의 평균을 구하고, 각 변량의 편차와 편차 제곱의 평균을 계산한 뒤 표준편차를 구하는 문제이다. 표준편차의 정의를 바탕으로 수치를 정확하게 계산하는 과정이 중심이므로 계산 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1517,
+            "category_name": "편차"
+          },
+          {
+            "category_id": 1518,
+            "category_name": "분산과 표준편차"
+          }
+        ]
       }
     ]
   },
@@ -4000,12 +4800,17 @@
     "answer": "①",
     "difficulty": 2,
     "behavior_area": "이해 능력",
-    "behavior_reason": "이 문항은 표본비율과 모비율의 관계, 그리고 표본비율의 표준편차가 무엇을 의미하는지 이해하고 적용하는 것이 핵심이다. 단순 계산보다 주어진 통계적 개념과 공식을 정확히 해석해 표본의 크기를 구하는 과정이 중심이므로 이해 능력이 가장 적절하다.",
+    "behavior_reason": "이 문항은 두 집단의 평균과 분산이 전체 집단의 평균과 분산에 어떻게 반영되는지를 이해해야 해결할 수 있다. 특히 두 집단의 평균이 같을 때 전체 평균이 같아지고, 전체 분산을 가중평균으로 구할 수 있음을 파악하는 것이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1521,
+            "category_name": "두 집단 전체의 평균, 분산, 표준편차"
+          }
+        ]
       }
     ]
   },
@@ -4036,13 +4841,18 @@
     "solution": "전체 평균은 가중평균으로 구한다.\n남학생의 총점은 $20\\times 70=1400$, 여학생의 총점은 $30\\times 80=2400$이다.\n따라서 전체 총점은 $1400+2400=3800$, 전체 학생 수는 $20+30=50$명이므로\n$$\\frac{3800}{50}=76$$\n따라서 이 반 전체 학생의 수학 점수의 평균은 76점이다.",
     "answer": "②",
     "difficulty": 1,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적인 내용이 제공되지 않아 실제 풀이에 필요한 계산이나 추론 과정을 특정하기 어렵다. 따라서 주어진 정보의 의미를 파악하는 수준에서 가장 보수적으로 '이해 능력'을 선택한다.",
+    "behavior_area": "계산 능력",
+    "behavior_reason": "이 문항은 남학생과 여학생의 인원수와 평균 점수를 이용해 각 집단의 총점을 계산한 뒤, 전체 평균을 구하는 문제이다. 핵심은 가중평균의 아이디어를 바탕으로 수치를 정확하게 계산하는 데 있으므로 계산 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 0.9988991022109985,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1521,
+            "category_name": "두 집단 전체의 평균, 분산, 표준편차"
+          }
+        ]
       }
     ]
   },
@@ -4074,7 +4884,7 @@
     "answer": "②",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 함수 y=|2sin(ax)+b|의 그래프 성질을 바탕으로 직선 y=1과의 교점 개수가 10개가 되도록 하는 a, b의 조건을 논리적으로 따져야 한다. 주기, 최댓값과 최솟값, 절댓값에 따른 그래프 변화를 종합하여 가능한 경우를 나누고 결론을 도출하는 과정이 핵심이므로 추론 능력이 요구된다.",
+    "behavior_reason": "이 문항은 반지름의 성질로 이등변삼각형을 파악하고, 각의 관계를 추론하여 중심각의 크기를 구하는 과정이 핵심이다. 또한 점의 위치 관계를 이용해 angle BOC를 다른 중심각의 차로 연결해야 하므로 단순 계산보다 추론이 더 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 452,
@@ -4111,12 +4921,17 @@
     "answer": "④",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 절댓값이 포함된 사인함수의 그래프를 해석하여 주기, 최댓값과 최솟값을 파악하고, 직선과의 교점 개수를 조건에 맞게 추론해야 한다. 단순 계산보다 그래프의 성질을 이용해 가능한 자연수 a, b의 경우를 논리적으로 따지는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "이 문제는 원 안에서 두 현이 만날 때 생기는 각과 관련된 성질을 이용해, 주어진 호의 길이를 중심각과 연결하여 반지름을 추론하는 과정이 핵심이다. 단순 계산보다 원의 성질 사이의 관계를 해석하고 식으로 세우는 사고가 필요하므로 추론 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 452,
         "confidence_score": 0.9999974966049194,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1492,
+            "category_name": "원주각과 중심각의 크기"
+          }
+        ]
       }
     ]
   },
@@ -4147,13 +4962,22 @@
     "solution": "반지름 $OT$는 접선 $TC$와 수직이므로\n$\\angle ATO=90^\\circ-75^\\circ=15^\\circ$이다.\n또한 $OA=OT$이므로 $\\triangle AOT$는 이등변삼각형이라서\n$\\angle OAT=15^\\circ$.\n점 $P,O,A$가 일직선이므로 $\\angle PAT=15^\\circ$이다. 따라서 ㄱ은 참.\n\n$P,T,C$가 일직선이므로\n$\\angle ATP=180^\\circ-75^\\circ=105^\\circ$.\n그래서 $\\triangle APT$에서\n$\\angle APT=180^\\circ-15^\\circ-105^\\circ=60^\\circ$.\n따라서 ㄴ은 참.\n\n또 $AB$는 지름이므로 $\\angle ATB=90^\\circ$.\n$\\angle BAT=\\angle PAT=15^\\circ$이므로\n$\\angle ABT=75^\\circ$.\n점 $A,B,P$가 일직선이어서\n$\\angle PBT=180^\\circ-75^\\circ=105^\\circ$.\n한편 접선과 현의 성질에 의해\n$\\angle PTB=\\angle BAT=15^\\circ$.\n따라서 $\\triangle PBT$의 각은 $(60^\\circ,105^\\circ,15^\\circ)$이고,\n$\\triangle PTA$의 각도 역시 $(60^\\circ,105^\\circ,15^\\circ)$이므로\n$\\triangle PBT \\sim \\triangle PTA$.\n따라서 ㄷ은 참.\n\n이제 닮음에서\n$\\dfrac{BT}{TA}=\\dfrac{PT}{PA}$.\n$\\triangle PTA$에서 사인법칙을 쓰면\n$\\dfrac{PT}{PA}=\\dfrac{\\sin 15^\\circ}{\\sin 105^\\circ}=\\dfrac{\\sin 15^\\circ}{\\sin 75^\\circ}=2-\\sqrt3$.\n따라서\n$\\dfrac{TA}{BT}=\\dfrac{1}{2-\\sqrt3}=2+\\sqrt3 \\neq 5$.\n즉 ㄹ은 거짓.\n\n따라서 옳은 것은 ㄱ, ㄴ, ㄷ이다.",
     "answer": "⑤",
     "difficulty": 4,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항의 문제 본문과 해설이 모두 비어 있어 특정한 계산 과정이나 추론 과정을 확인할 수 없다. 따라서 주어진 정보의 범위와 단원 후보의 내용을 정확히 이해하고, 명시적으로 근거가 있는 범주만 선별하는 판단이 중요하다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 접선과 반지름의 수직, 지름이 만드는 직각, 접선과 현이 이루는 각의 성질을 연결하여 각의 크기와 삼각형의 닮음을 차례로 추론해야 한다. 단순 계산보다 도형의 성질을 근거로 옳고 그름을 논리적으로 판단하는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 454,
         "confidence_score": 0.9999768733978271,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1507,
+            "category_name": "접선과 현이 이루는 각"
+          },
+          {
+            "category_id": 1509,
+            "category_name": "접선과 현이 이루는 각의 활용 - 할선이 원의 중심을 지날 때"
+          }
+        ]
       }
     ]
   },
@@ -4185,22 +5009,22 @@
     "answer": "③",
     "difficulty": 5,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 도형에서 각의 성질을 바로 계산하는 것이 아니라, 중심각과 원주각 사이의 관계를 이용해 숨은 관계를 찾아내야 하는 유형으로 보인다. 조건들을 연결하여 결론을 이끌어내는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "조건에서 이등변삼각형의 성질, 점의 멱, 사인법칙을 차례로 연결하여 중심각과 반지름을 추론해야 한다. 단순 계산보다 도형의 여러 관계를 논리적으로 이어 결론을 도출하는 과정이 핵심이므로 추론 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 452,
         "confidence_score": 0.9826080203056335,
-        "valid_categories": [
-          {
-            "category_id": 1492,
-            "category_name": "원주각과 중심각의 크기"
-          }
-        ]
+        "valid_categories": []
       },
       {
         "unit_id": 447,
         "confidence_score": 0.016906704753637314,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1458,
+            "category_name": "특수한 각의 삼각비를 이용하여 다른 삼각비의 값 구하기"
+          }
+        ]
       }
     ]
   },
@@ -4232,12 +5056,17 @@
     "answer": "②",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "이 문항은 표본비율의 표준편차가 모비율과 표본의 크기와 어떤 관계를 가지는지 이해해야 해결할 수 있다. 복잡한 추론보다 주어진 관계식을 정확히 파악하고 이를 적용하는 것이 핵심이므로 이해 능력이 중심이 된다.",
+    "behavior_reason": "이 문항은 편차의 핵심 성질인 '편차의 합은 0'이라는 개념을 이해하고 있는지가 중요하다. 이를 바탕으로 식을 세운 뒤 간단히 값을 구하면 되므로, 복잡한 계산보다 개념 이해가 중심이 되는 문항이다.",
     "unit_candidates": [
       {
         "unit_id": 456,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1517,
+            "category_name": "편차"
+          }
+        ]
       }
     ]
   },
@@ -4269,27 +5098,36 @@
     "answer": "②",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 원에서 접선과 현, 그리고 각의 관계를 파악하여 주어진 조건들을 연결해 결론을 도출하는 과정이 핵심이다. 단순한 계산보다는 도형의 성질을 근거로 논리적으로 판단해야 하므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "이 문항은 원주각이 보는 호의 크기, 중심각의 크기, 두 접선이 이루는 각의 관계를 차례로 연결하여 판단해야 한다. 주어진 116°를 바로 계산하는 것이 아니라 호의 크기와 중심각을 거쳐 최종 각을 논리적으로 이끌어내는 과정이 핵심이므로 추론 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 454,
         "confidence_score": 0.4284340739250183,
-        "valid_categories": [
-          {
-            "category_id": 1507,
-            "category_name": "접선과 현이 이루는 각"
-          }
-        ]
+        "valid_categories": []
       },
       {
         "unit_id": 452,
         "confidence_score": 0.35518431663513184,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1492,
+            "category_name": "원주각과 중심각의 크기"
+          },
+          {
+            "category_id": 1493,
+            "category_name": "두 접선이 주어진 경우 원주각과 중심각의 크기"
+          }
+        ]
       },
       {
         "unit_id": 451,
         "confidence_score": 0.21543018519878387,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1481,
+            "category_name": "원의 접선의 길이 (2)"
+          }
+        ]
       }
     ]
   },
@@ -4321,15 +5159,15 @@
     "answer": "③",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문제는 원의 성질을 바탕으로 각의 관계를 연결하고, 어떤 성질을 적용해야 하는지를 논리적으로 판단하는 과정이 핵심이다. 단순한 계산보다 원주각의 성질을 이용해 결론을 이끌어내는 추론이 중심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "이 문항은 원주각과 호의 관계, 지름이 만드는 반원의 성질을 연결하여 보이지 않는 호의 크기를 차례로 추론해야 한다. 단순 계산보다 주어진 조건들 사이의 관계를 해석하고 논리적으로 이어서 결론을 얻는 과정이 핵심이므로 추론 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 452,
         "confidence_score": 0.9465903639793396,
         "valid_categories": [
           {
-            "category_id": 1494,
-            "category_name": "원주각의 성질"
+            "category_id": 1492,
+            "category_name": "원주각과 중심각의 크기"
           }
         ]
       },
@@ -4368,7 +5206,7 @@
     "answer": "③",
     "difficulty": 4,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 함수 y=|2sin(ax)+b|의 그래프 성질을 바탕으로 직선 y=1과 만나는 점의 개수를 경우에 따라 추론해야 한다. 주기, 최댓값과 최솟값, 절댓값에 의한 그래프 변화까지 종합하여 자연수 a, b의 조건을 찾아야 하므로 단순 계산보다 추론이 핵심이다.",
+    "behavior_reason": "주어진 조건을 보고 점 P의 자취가 각 꼭짓점쌍을 지름으로 하는 원 위의 점이라는 사실을 떠올려야 한다. 또 변의 쌍과 대각선의 쌍으로 경우를 나누어 자취에 포함되는 호를 판단하고, 이를 합쳐 전체 길이를 구하는 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 453,
@@ -4378,7 +5216,12 @@
       {
         "unit_id": 452,
         "confidence_score": 0.30992811918258667,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1495,
+            "category_name": "반원에 대한 원주각의 크기"
+          }
+        ]
       },
       {
         "unit_id": 447,
@@ -4414,13 +5257,22 @@
     "solution": "평행사변형이 원에 내접하려면 대각의 합이 180°여야 한다. 그런데 평행사변형은 대각이 서로 같으므로 각이 모두 90°, 즉 직사각형이어야 한다. 따라서\n평행사변형이 원에 내접 ⇔ 직사각형.\n\nㄱ. AC ⟂ BD\n평행사변형에서 대각선이 수직이면 보통 마름모가 되는 경우가 많고, 직사각형이 되는 조건은 아니다. 따라서 조건이 아니다.\n\nㄴ. AO=BO\nO는 대각선의 교점이므로 AO=AC/2, BO=BD/2. 따라서 AO=BO ⇔ AC=BD.\n평행사변형에서 대각선의 길이가 같으면 직사각형이므로, 원에 내접할 조건이다.\n\nㄷ. ∠BCD=90°\n평행사변형에서 한 각이 90°이면 모두 90°이므로 직사각형이다. 따라서 원에 내접할 조건이다.\n\nㄹ. ∠ADB=∠ACB\n원에 내접한 사각형에서는 같은 현 AB에 대한 원주각이 같으므로 성립한다. 반대로 ∠ADB=∠ACB이면 같은 선분 AB를 보는 각이 같으므로 A, B, C, D는 한 원 위에 있다. 따라서 조건이다.\n\n따라서 옳은 것은 ㄴ, ㄷ, ㄹ이다.",
     "answer": "⑤",
     "difficulty": 4,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항과 해설의 구체적 내용이 제공되지 않아 어떤 계산이나 추론이 실제로 요구되었는지 확인할 수 없습니다. 따라서 현재 정보만으로는 특정 개념을 이해하고 있는지 여부를 중심으로만 제한적으로 판단할 수 있어 이해 능력으로 분류했습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "평행사변형이 원에 내접하는 경우를 직사각형과 연결하고, 각 조건이 이에 대한 필요충분조건인지 하나씩 논리적으로 판단해야 한다. 원에 내접하는 사각형의 성질과 평행사변형의 성질을 결합해 결론을 이끌어내는 과정이 핵심이므로 추론 능력이 요구된다.",
     "unit_candidates": [
       {
         "unit_id": 453,
         "confidence_score": 0.9999380111694336,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1501,
+            "category_name": "원에 내접하는 사각형의 성질 (1)"
+          },
+          {
+            "category_id": 1506,
+            "category_name": "사각형이 원에 내접하기 위한 조건"
+          }
+        ]
       }
     ]
   },
@@ -4451,13 +5303,18 @@
     "solution": "원주각의 성질에 의해 \\(\\angle ADB\\)가 보는 호 \\(\\overset{\\frown}{AB}\\)의 크기는\n\\[\n\\overset{\\frown}{AB}=2\\times 29^\\circ=58^\\circ\n\\]\n이다. 또 \\(\\overset{\\frown}{AB}=\\overset{\\frown}{BC}\\) 이므로\n\\[\n\\overset{\\frown}{BC}=58^\\circ\n\\]\n이다.\n\n\\(AD\\)는 지름이므로 호 \\(\\overset{\\frown}{AD}\\) (아래쪽 반원)의 크기는 \\(180^\\circ\\)이다. 따라서\n\\[\n\\overset{\\frown}{CD}=180^\\circ-58^\\circ-58^\\circ=64^\\circ\n\\]\n이다.\n\n원주각 \\(\\angle DBC\\)는 호 \\(\\overset{\\frown}{DC}\\)를 보므로\n\\[\n\\angle DBC=\\frac{1}{2}\\times 64^\\circ=32^\\circ\n\\]\n이다.",
     "answer": "④",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 문제 본문과 해설이 없어 구체적인 계산 절차나 추론 구조를 확인하기 어렵다. 따라서 현재 자료만으로는 특정 개념의 의미와 성질을 파악하는 이해 능력이 가장 적절하다고 보았다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 원의 성질과 원주각의 성질을 이용해 호의 크기를 차례로 추론해야 하는 문제이다. ∠ADB에서 호 AB를 구하고, 같은 호의 조건과 반원의 크기를 이용해 호 CD를 구한 뒤 다시 원주각 ∠DBC의 크기를 판단하는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 452,
         "confidence_score": 0.9998360872268677,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 1492,
+            "category_name": "원주각과 중심각의 크기"
+          }
+        ]
       }
     ]
   },
@@ -4482,23 +5339,36 @@
     "solution": "이차함수의 그래프와 \\(x\\)축이 만난다는 것은 방정식 \\(5x^2-2x+k=0\\)이 실근을 가진다는 뜻이다. 따라서 판별식을 이용하면 된다.\n\n\\[\nD=b^2-4ac=(-2)^2-4\\cdot 5\\cdot k=4-20k\n\\]\n\n그래프와 \\(x\\)축이 한 점 또는 두 점에서 만나려면 실근이 1개 이상이어야 하므로\n\\[\nD\\ge 0\n\\]\n이어야 한다.\n\n따라서\n\\[\n4-20k\\ge 0\n\\]\n\\[\n-20k\\ge -4\n\\]\n\\[\nk\\le \\frac{1}{5}\n\\]\n\n그러므로 실수 \\(k\\)의 값의 범위는 \\(k\\le \\frac{1}{5}\\)이다.",
     "answer": "k\\le \\frac{1}{5}",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "이 문항은 이차함수의 그래프와 직선의 교점을 방정식의 해와 연결하여 해석하는 이해가 핵심이다. 그래프의 의미를 식으로 옮기고, 교점의 좌표가 만족하는 조건을 정확히 파악해야 해결할 수 있다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "그래프가 x축과 만난다는 조건을 이차방정식의 실근 존재 조건으로 바꾸고, 이를 판별식의 부등식으로 연결해 k의 범위를 추론해야 한다. 단순 계산보다 그래프와 방정식의 관계를 해석하여 조건을 수식화하는 과정이 핵심이므로 추론 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 271,
         "confidence_score": 0.9889152646064758,
         "valid_categories": [
           {
-            "category_id": 82,
-            "category_name": "이차함수의 그래프와 직선의 교점"
+            "category_id": 78,
+            "category_name": "이차함수의 그래프와 x축의 교점"
+          },
+          {
+            "category_id": 79,
+            "category_name": "이차함수의 그래프와 x축의 위치 관계"
           }
         ]
       },
       {
         "unit_id": 269,
         "confidence_score": 0.01098585594445467,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 63,
+            "category_name": "이차방정식의 근의 판별"
+          },
+          {
+            "category_id": 64,
+            "category_name": "계수가 문자인 이차방정식의 근의 판별"
+          }
+        ]
       }
     ]
   },
@@ -4529,13 +5399,22 @@
     "solution": "주어진 식\n\\[\\sqrt{a}\\sqrt{b}=-\\sqrt{ab}\\]\n이 성립하려면 부호를 따져 보면 된다.\n- \\(a,b>0\\)이면 \\(\\sqrt{a}\\sqrt{b}=\\sqrt{ab}\\)이므로 불가\n- 하나만 음수이면 양변의 부호(허수부)가 맞지 않아 불가\n- 따라서 가능한 경우는 \\(a<0,\\ b<0\\)뿐이다.\n\n이제 각 식의 판별식을 본다.\n\nㄱ. \\(ax^2-bx+1=0\\)\n\\[\n\\Delta=(-b)^2-4a\\cdot1=b^2-4a\n\\]\n그런데 \\(a<0\\)이므로 \\(-4a>0\\). 따라서\n\\[\n\\Delta=b^2-4a>0\n\\]\n항상 서로 다른 두 실근을 갖는다.\n\nㄴ. \\(x^2-ax-b=0\\)\n\\[\n\\Delta=(-a)^2-4(1)(-b)=a^2+4b\n\\]\n여기서 \\(b<0\\)이므로 항상 양수라고 할 수 없다.\n예를 들어 \\(a=-1, b=-1\\)이면\n\\[\n\\Delta=1+4(-1)=-3<0\n\\]\n따라서 항상 두 실근을 갖는 것은 아니다.\n\nㄷ. \\(x^2+2(a+b)x+(a^2+b^2)=0\\)\n\\[\n\\Delta=[2(a+b)]^2-4(a^2+b^2)\n=4\\{(a+b)^2-(a^2+b^2)\\}=8ab\n\\]\n\\(a<0, b<0\\)이므로 \\(ab>0\\). 따라서\n\\[\n\\Delta=8ab>0\n\\]\n항상 서로 다른 두 실근을 갖는다.\n\n따라서 정답은 ㄱ, ㄷ이다.",
     "answer": "③",
     "difficulty": 4,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설 정보가 비어 있어 구체적인 풀이 절차를 확인할 수는 없습니다. 다만 제시된 후보 범주가 이차방정식의 근의 판별과 조건 해석에 집중되어 있으므로, 판별식의 의미와 근의 개수·형태의 관계를 이해하는 능력이 중심이라고 판단했습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 식에서 a, b의 부호가 어떤 경우에 가능한지 먼저 따져서 a<0, b<0임을 추론해야 한다. 그다음 이 조건을 각 이차방정식의 판별식에 연결하여 항상 서로 다른 두 실근을 갖는지 판단해야 하므로, 핵심은 조건 해석과 논리적 추론이다.",
     "unit_candidates": [
       {
         "unit_id": 269,
         "confidence_score": 0.9999608993530273,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 63,
+            "category_name": "이차방정식의 근의 판별"
+          },
+          {
+            "category_id": 64,
+            "category_name": "계수가 문자인 이차방정식의 근의 판별"
+          }
+        ]
       }
     ]
   },
@@ -4566,13 +5445,18 @@
     "solution": "$t=x-1$로 두면 $x=t+1$이므로\n\\[\n x^3-4x^2+6x-5=(t+1)^3-4(t+1)^2+6(t+1)-5\n\\]\n이다. 전개하면\n\\[\n(t+1)^3=t^3+3t^2+3t+1,\n\\]\n\\[\n-4(t+1)^2=-4(t^2+2t+1)=-4t^2-8t-4\n\\]\n이므로\n\\[\n(t+1)^3-4(t+1)^2+6(t+1)-5\n= t^3+3t^2+3t+1-4t^2-8t-4+6t+6-5\n\\]\n\\[\n= t^3-t^2+t-2.\n\\]\n따라서\n\\[\na=1,\\quad b=-1,\\quad c=1,\\quad d=-2\n\\]\n이고,\n\\[\nad+bc=1\\cdot(-2)+(-1)\\cdot1=-2-1=-3.\n\\]",
     "answer": "①",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수와 절댓값이 결합된 그래프의 성질을 해석하고, 직선과 만나는 점의 개수로부터 자연수 a, b의 조건을 추론해야 한다. 단순 계산보다 주기, 최댓값·최솟값, 교점 개수의 관계를 논리적으로 연결하는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_area": "이해 능력",
+    "behavior_reason": "이 문항은 다항식을 (x-1)의 거듭제곱 꼴로 다시 표현하는 의미를 이해하는 것이 핵심이다. t=x-1로 치환한 뒤 식을 전개하여 각 계수를 대응시키는 과정을 알아야 하므로, 항등식의 구조에 대한 이해가 필요하다.",
     "unit_candidates": [
       {
         "unit_id": 263,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 15,
+            "category_name": "항등식에서 미정계수 구하기-계수비교법"
+          }
+        ]
       }
     ]
   },
@@ -4603,13 +5487,18 @@
     "solution": "$f(x)=x^3+ax^2+bx+c$라 하자.\n\n(가)에서\n$$f(x-3)-f(x)$$\n는 $x^2-x-2=(x-2)(x+1)$의 인수이므로, 이 식은 2차식이고 최고차항 계수는\n$$(x-3)^3-x^3=-9x^2+\r$$\n이므로\n$$f(x-3)-f(x)=-9(x^2-x-2)$$\n와 같아야 한다.\n\n직접 계산하면\n$$f(x-3)-f(x)=-9x^2+(27-6a)x+(-27+9a-3b).$$\n이를\n$$-9x^2+9x+18$$\n과 비교하면\n$$27-6a=9 \\Rightarrow a=3,$$\n$$-27+9a-3b=18 \\Rightarrow b=-6.$$\n따라서\n$$f(x)=x^3+3x^2-6x+c.$$\n\n(나)에서 $f(x)$를 $x^2+3x-5$로 나눈 나머지가 $-x-4$이다.\n$x^2\\equiv -3x+5$를 이용해 나머지를 구하면\n$$x^3=x\\cdot x^2 \\equiv x(-3x+5)=-3x^2+5x \\equiv 14x-15,$$\n$$3x^2 \\equiv -9x+15.$$\n따라서\n$$f(x)\\equiv (14x-15)+(-9x+15)-6x+c=-x+c.$$\n이 나머지가 $-x-4$이므로\n$$c=-4.$$\n\n따라서\n$$f(3)=3^3+3\\cdot 3^2-6\\cdot 3-4=27+27-18-4=32.$$",
     "answer": "③",
     "difficulty": 3,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 입력에서 문항 본문과 해설이 비어 있어 구체적인 풀이 과정이나 계산 절차를 확인할 수 없다. 따라서 주어진 정보만으로는 특정 알고리즘보다 문항에 필요한 개념을 정확히 파악하는 이해 능력을 중심으로 보는 것이 가장 적절하다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 인수 조건과 나머지 조건을 각각 다항식의 식으로 해석하고, 이를 바탕으로 계수를 추론해야 하는 문제이다. 특히 f(x-3)-f(x)의 차수와 최고차항 계수를 이용해 전체 식의 형태를 정하고, 이후 계수 비교와 나머지 비교로 값을 결정하는 과정이 핵심이므로 추론 능력이 요구된다.",
     "unit_candidates": [
       {
         "unit_id": 264,
         "confidence_score": 0.9999103546142578,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 22,
+            "category_name": "나머지정리-이차식으로 나누는 경우"
+          }
+        ]
       }
     ]
   },
@@ -4635,27 +5524,45 @@
     "answer": "7",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문제는 이차방정식의 근과 계수 사이의 관계를 파악하고, 주어진 조건을 식으로 연결하여 필요한 값을 도출하는 과정이 핵심이다. 단순 계산만으로 해결되기보다 조건들 사이의 수학적 관계를 해석하고 결론을 이끌어내야 하므로 추론 능력이 중심이 된다.",
+    "behavior_reason": "실수계수 이차방정식의 한 복소근이 주어졌을 때 켤레근을 추론하고, 이를 이용해 근과 계수의 관계로 a, b를 구해야 한다. 또 중근 조건에서 판별식을 0으로 두어 k를 찾고 중근 m을 구하는 과정까지 조건들을 논리적으로 연결해야 하므로 추론 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 270,
         "confidence_score": 0.7104310393333435,
         "valid_categories": [
           {
-            "category_id": 67,
-            "category_name": "근과 계수의 관계를 이용하여 식의 값 구하기(2)"
+            "category_id": 68,
+            "category_name": "근과 계수의 관계를 이용하여 미정계수 구하기"
+          },
+          {
+            "category_id": 72,
+            "category_name": "이차방정식의 켤레근의 성질"
           }
         ]
       },
       {
         "unit_id": 268,
         "confidence_score": 0.19120992720127106,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 59,
+            "category_name": "이차방정식의 풀이"
+          }
+        ]
       },
       {
         "unit_id": 269,
         "confidence_score": 0.09614638984203339,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 63,
+            "category_name": "이차방정식의 근의 판별"
+          },
+          {
+            "category_id": 64,
+            "category_name": "계수가 문자인 이차방정식의 근의 판별"
+          }
+        ]
       }
     ]
   },
@@ -4687,7 +5594,7 @@
     "answer": "④",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "문항 해결에는 식의 형태와 조건 사이의 관계를 분석하여 어떤 풀이가 가능한지 논리적으로 판단하는 과정이 핵심이다. 단순한 계산보다 방정식의 구조를 파악하고 가능한 경우를 추론하는 능력이 더 직접적으로 요구된다.",
+    "behavior_reason": "직각삼각형의 넓이와 빗변에 내린 높이의 성질을 연결하여 식을 세우고, 그 식으로부터 미지수의 값을 논리적으로 추론해야 하는 문제이다. 단순 계산보다 주어진 조건들 사이의 관계를 파악하여 이차방정식을 만들고, 다시 식을 변형해 값을 구하는 과정이 핵심이므로 추론 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 273,
@@ -4723,13 +5630,22 @@
     "solution": "주어진 식을 묶어 보면\n\\[\na^3+b^3+ab^2+a^2b-bc^2-ac^2=0\n\\]\n\\[\n(a^3+a^2b+ab^2+b^3)-c^2(a+b)=0\n\\]\n첫 네 항은\n\\[\na^3+a^2b+ab^2+b^3=(a+b)(a^2+b^2)\n\\]\n이므로,\n\\[\n(a+b)(a^2+b^2)-c^2(a+b)=0\n\\]\n\\[\n(a+b)(a^2+b^2-c^2)=0\n\\]\n삼각형의 변의 길이는 모두 양수이므로 \\(a+b>0\\). 따라서\n\\[\na^2+b^2-c^2=0 \\quad\\Rightarrow\\quad a^2+b^2=c^2\n\\]\n즉, 빗변의 길이가 \\(c\\)인 직각삼각형이다.",
     "answer": "⑤",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 JSON에는 문항 본문과 해설이 비어 있어 구체적인 계산 과정이나 추론 절차를 확인할 수 없습니다. 따라서 현재로서는 어떤 개념이 필요한지 자료를 해석하고 파악하는 수준의 이해 능력이 가장 적절합니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 다항식을 적절히 묶어 인수분해하고, 그 결과로 얻은 식에서 삼각형의 성질을 논리적으로 이끌어내야 한다. 특히 a^2+b^2=c^2를 발견한 뒤 빗변이 c인 직각삼각형임을 판단하는 과정이 핵심이므로 추론 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 265,
         "confidence_score": 1.0,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 34,
+            "category_name": "공통부분이 있는 다항식의 인수분해"
+          },
+          {
+            "category_id": 43,
+            "category_name": "인수분해를 이용한 삼각형 모양의 판단"
+          }
+        ]
       }
     ]
   },
@@ -4760,13 +5676,18 @@
     "solution": "함수 $f(x)=-x^2+2x+14$는 $x^2$의 계수가 음수이므로 아래로 열린 포물선이다. 따라서 구간 $0\\le x\\le 3$에서 최소값은 양 끝점에서 비교하면 된다.\n\n$f(0)=14$, $f(3)=-9+6+14=11$\n\n따라서 최소값은 $11$이므로 정답은 ①이다.",
     "answer": "①",
     "difficulty": 1,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 문제 본문과 해설 정보가 비어 있어 구체적인 풀이 절차를 확인하기는 어렵다. 다만 후보 단원이 이차함수의 최대·최소 개념에 집중되어 있으므로, 조건과 그래프의 의미를 파악하는 이해 능력이 우선적으로 요구된다고 판단했다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 이차함수의 계수 부호로 포물선의 개형을 파악하고, 닫힌구간에서 최소값이 어디에서 나타나는지를 추론해야 한다. 단순 계산보다 함수의 성질을 근거로 끝점 비교가 필요하므로 추론 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 272,
         "confidence_score": 0.9999997615814209,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 85,
+            "category_name": "제한된 범위에서의 이차함수의 최대 · 최소"
+          }
+        ]
       }
     ]
   },
@@ -4798,12 +5719,21 @@
     "answer": "④",
     "difficulty": 4,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수의 그래프와 직선의 교점 개수를 파악하려면 사인함수의 주기, 최댓값과 최솟값, 절댓값에 따른 그래프 변화를 종합하여 경우를 나누어 판단해야 한다. 단순 계산보다 그래프의 성질을 해석하고 조건에 맞는 자연수 a, b를 추론하는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "이 문제는 이차함수의 꼭짓점과 구간의 위치관계를 바탕으로 최댓값이 꼭짓점에서 나오는지, 끝점에서 나오는지를 경우 나누어 판단해야 한다. 단순 계산보다 함수의 그래프 성질을 해석하고 조건에 맞는 경우를 추론하는 과정이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 272,
         "confidence_score": 0.9999998807907104,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 83,
+            "category_name": "이차함수의 최대 · 최소"
+          },
+          {
+            "category_id": 85,
+            "category_name": "제한된 범위에서의 이차함수의 최대 · 최소"
+          }
+        ]
       }
     ]
   },
@@ -4835,12 +5765,21 @@
     "answer": "①",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이차방정식의 조건에서 근과 계수 사이의 관계를 찾아 식으로 연결하는 과정이 핵심이다. 주어진 정보를 그대로 계산하기보다 관계를 해석하고 필요한 결론을 이끌어내야 하므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "두 근에 대한 조건을 근과 계수의 관계로 바꾸어 p와 q에 관한 식을 세워야 하므로 추론이 핵심이다. 주어진 식을 α+β, αβ 형태로 변형한 뒤 두 식을 연립하여 값을 결정하는 과정이 요구된다.",
     "unit_candidates": [
       {
         "unit_id": 270,
         "confidence_score": 0.9999923706054688,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 66,
+            "category_name": "근과 계수의 관계를 이용하여 식의 값 구하기(1)"
+          },
+          {
+            "category_id": 68,
+            "category_name": "근과 계수의 관계를 이용하여 미정계수 구하기"
+          }
+        ]
       }
     ]
   },
@@ -4871,13 +5810,18 @@
     "solution": "\\(\\dfrac{1+i}{\\sqrt2}=\\cos\\frac\\pi4+i\\sin\\frac\\pi4=e^{i\\pi/4}\\), \\(\\dfrac{1-i}{\\sqrt2}=e^{-i\\pi/4}\\) 이므로\n\\[\n\\left(\\left(\\frac{1+i}{\\sqrt2}\\right)^n+\\left(\\frac{1-i}{\\sqrt2}\\right)^n\\right)^2\n=\\left(e^{in\\pi/4}+e^{-in\\pi/4}\\right)^2\n=(2\\cos\\tfrac{n\\pi}{4})^2=4\\cos^2\\tfrac{n\\pi}{4}.\n\\]\n따라서 부등식은\n\\[\n4\\cos^2\\frac{n\\pi}{4}>0\n\\]\n와 같고, 이는 \\(\\cos\\frac{n\\pi}{4}\\neq 0\\) 일 때 성립한다.\n\n\\(\\cos\\frac{n\\pi}{4}=0\\) 이려면\n\\[\n\\frac{n\\pi}{4}=\\frac\\pi2+k\\pi\n\\]\n이므로\n\\[\nn=2+4k.\n\\]\n즉, \\(n\\equiv 2\\pmod 4\\) 인 경우만 제외하면 된다.\n\n1부터 100까지 중 \\(n\\equiv 2\\pmod 4\\) 인 수는\n\\(2,6,10,\\dots,98\\) 로 모두\n\\[\n\\frac{98-2}{4}+1=25\n\\]\n개이다.\n따라서 조건을 만족하는 자연수의 개수는\n\\[\n100-25=75\n\\]\n이다.",
     "answer": "⑤",
     "difficulty": 3,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항 본문과 해설 정보가 비어 있어 구체적인 계산 절차나 추론 과정을 확인하기는 어렵습니다. 다만 제공된 후보 범주가 복소수의 성질과 표현에 대한 개념 이해를 중심으로 구성되어 있으므로, 이 문항은 이해 능력에 더 가깝다고 판단했습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 복소수의 거듭제곱을 삼각함수 형태로 바꾸고, 식이 0이 되는 경우를 추론하여 제외할 수 있어야 한다. 또한 0 이하 자연수 중 특정 합동조건을 만족하는 수만 골라 개수를 세는 과정이 필요하므로 단순 계산보다 규칙을 파악하는 추론이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 267,
         "confidence_score": 0.9981365203857422,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 54,
+            "category_name": "복소수의 거듭제곱"
+          }
+        ]
       }
     ]
   },
@@ -4903,15 +5847,19 @@
     "answer": "㉠ y=0, ㉡ b^2-4ac, ㉢ 아래로 열린 포물선이 x축과 두 점에서 만남, ㉣ 아래로 열린 포물선이 x축에 한 점에서 접함, ㉤ 아래로 열린 포물선이 x축과 만나지 않음(전체가 x축 아래)",
     "difficulty": 1,
     "behavior_area": "이해 능력",
-    "behavior_reason": "주어진 극한의 존재 조건이 의미하는 바를 정확히 해석하고, 이를 함수의 식과 공통교점 조건으로 연결해야 한다. 단순 계산보다 조건이 나타내는 함수의 성질을 파악하는 과정이 핵심이므로 이해 능력이 중심이다.",
+    "behavior_reason": "이 문항은 이차방정식의 실근의 개수와 이차함수의 그래프가 x축과 만나는 관계를 이해하는지가 핵심이다. 단순 계산보다 판별식의 부호와 그래프의 위치 관계를 연결하여 그래프의 개형을 판단해야 하므로 이해 능력이 중심이다.",
     "unit_candidates": [
       {
         "unit_id": 271,
         "confidence_score": 0.9992313385009766,
         "valid_categories": [
           {
-            "category_id": 82,
-            "category_name": "이차함수의 그래프와 직선의 교점"
+            "category_id": 78,
+            "category_name": "이차함수의 그래프와 x축의 교점"
+          },
+          {
+            "category_id": 79,
+            "category_name": "이차함수의 그래프와 x축의 위치 관계"
           }
         ]
       }
@@ -4944,13 +5892,22 @@
     "solution": "실수부를 $x=a-2b$, 허수부를 $y=a+b-6$라 두면\n$z=x+yi$ 이므로\n\\[\nz^2=(x^2-y^2)+2xyi\n\\]\n이다. $z^2$가 실수가 되려면 허수부가 $0$이어야 하므로\n\\[\n2xy=0 \\quad\\Rightarrow\\quad x=0 \\text{ 또는 } y=0\n\\]\n이다.\n\n즉,\n1) $a-2b=0 \\Rightarrow a=2b$\n\n$a,b$가 $1$ 이상 $6$ 이하의 자연수이므로 가능한 순서쌍은\n$(2,1),(4,2),(6,3)$의 3개.\n\n2) $a+b-6=0 \\Rightarrow a+b=6$\n\n가능한 순서쌍은\n$(1,5),(2,4),(3,3),(4,2),(5,1)$의 5개.\n\n두 경우에 공통인 것은\n$a=2b$, $a+b=6$을 동시에 만족하는 $(4,2)$ 1개이다.\n\n따라서 전체 개수는\n\\[\n3+5-1=7\n\\]\n이다.",
     "answer": "③",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "제공된 JSON에는 문항 본문과 해설이 비어 있어 구체적인 계산 절차나 추론 과정을 확인할 수 없다. 따라서 현재 정보만으로는 특정 해결 전략보다 주어진 내용의 관련성을 파악하는 수준의 판단이 적절하므로 이해 능력으로 분류한다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "복소수 $z=x+yi$의 제곱이 실수가 되기 위한 조건을 식으로 바꾸어 $xy=0$을 추론해야 한다. 이후 $a=2b$와 $a+b=6$의 두 경우를 나누고 공통해를 제외하여 개수를 구하므로, 단순 계산보다 조건 해석과 경우 분류에 대한 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 266,
         "confidence_score": 0.9997904896736145,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 47,
+            "category_name": "복소수의 사칙연산"
+          },
+          {
+            "category_id": 49,
+            "category_name": "복소수가 실수 또는 순허수가 되는 조건"
+          }
+        ]
       }
     ]
   },
@@ -4981,13 +5938,22 @@
     "solution": "이차방정식 \n\\[-x^2+4x+5=0\\]\n의 근은 \\(x^2-4x-5=0\\)의 근이므로 \\(\\alpha=-1,\\ \\beta=5\\)이다.\n\n따라서\n\\[f(x)=-x^2+4x+5\\]\n이고, 근 사이에서는 \\(f(x)\\ge 0\\), 바깥에서는 \\(f(x)\\le 0\\)이므로\n\\[g(x)=|f(x)|\\]\n의 그래프가 된다.\n\n직선 \\(y=-x+2k\\)와의 교점 개수는\n\\[g(x)=-x+2k\\iff g(x)+x=2k\\]\n를 만족하는 \\(x\\)의 개수와 같다.\n\n\\[h(x)=g(x)+x\\]라 두면\n\\[\nh(x)=\n\\begin{cases}\n-x^2+5x+5 & (-1\\le x\\le 5)\\\\\nx^2-3x-5 & (x\\le -1\\ 또는\\ x\\ge 5)\n\\end{cases}\n\\]\n이다.\n\n1) \\(x\\le -1\\)에서\n\\[h(x)=x^2-3x-5\\]\n는 감소하여 \\(x=-1\\)에서 최소값 \\(-1\\)을 가지므로, \\(2k=c\\)와는 \\(c\\ge -1\\)일 때 1점에서 만난다.\n\n2) \\(-1\\le x\\le 5\\)에서\n\\[h(x)=-x^2+5x+5\\]\n는 아래로 볼록한 포물선이고, 꼭짓점은 \\(x=\\frac52\\), 최댓값은\n\\[h\\left(\\frac52\\right)=-\\frac{25}{4}+\\frac{25}{2}+5=\\frac{45}{4}\\]\n이다. 또\n\\[h(-1)=-1,\\quad h(5)=5\\]\n이므로\n- \\(c=-1\\): 1개\n- \\(-1<c<5\\): 1개\n- \\(c=5\\): 2개\n- \\(5<c<\\frac{45}{4}\\): 2개\n- \\(c=\\frac{45}{4}\\): 1개\n\n3) \\(x\\ge 5\\)에서\n\\[h(x)=x^2-3x-5\\]\n는 증가하여 \\(x=5\\)에서 최소값 5를 가지므로, \\(c\\ge 5\\)일 때 1점에서 만난다.\n\n이를 합치면 전체 교점 개수는\n- \\(2k=-1\\)일 때: 1개\n- \\(2k=5\\)일 때: 3개\n- \\(2k=\\frac{45}{4}\\)일 때: 3개\n이다.\n\n따라서\n\\[\n\\text{㉠ }k=-\\frac12,\n\\qquad\n\\text{㉡의 합 }=\\frac52+\\frac{45}{8}=\\frac{65}{8}.\n\\]\n따라서 옳은 것은 ②이다.",
     "answer": "②",
     "difficulty": 4,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문제 본문과 해설이 제공되지 않아 세부 풀이 과정을 특정하기는 어렵습니다. 다만 제시된 후보 단원이 이차함수의 그래프와 위치 관계에 관한 개념들로 구성되어 있으므로, 조건이 뜻하는 그래프의 성질을 정확히 이해하는 능력이 중심이 되는 문항으로 보는 것이 가장 자연스럽습니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 주어진 조각함수를 절댓값 형태의 그래프로 해석한 뒤, 직선과의 교점 개수를 구간별로 나누어 추론해야 한다. 단순 계산보다 이차함수의 부호, 꼭짓점의 값, 구간에서의 증감과 경계값을 종합하여 경우를 판단하는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 271,
         "confidence_score": 0.9999901056289673,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 78,
+            "category_name": "이차함수의 그래프와 x축의 교점"
+          },
+          {
+            "category_id": 82,
+            "category_name": "이차함수의 그래프와 직선의 교점"
+          }
+        ]
       }
     ]
   },
@@ -5019,15 +5985,19 @@
     "answer": "④",
     "difficulty": 3,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 이차함수의 그래프 성질을 바탕으로 직선과의 위치 관계나 가능한 조건을 논리적으로 판단해야 하는 유형이다. 단순 계산보다 그래프의 성질과 최댓값·최솟값을 연결하여 결론을 도출하는 추론이 핵심이다.",
+    "behavior_reason": "두 근의 거리, 직선과 포물선의 교점, 제한된 구간에서의 최솟값 조건을 차례로 연결하여 상수와 점의 좌표를 추론해야 한다. 단순 계산보다 이차함수의 그래프 성질과 구간에서의 변화 양상을 해석해 삼각형의 넓이로 이어가는 과정이 핵심이므로 추론 능력이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 271,
         "confidence_score": 0.5147205591201782,
         "valid_categories": [
           {
-            "category_id": 80,
-            "category_name": "이차함수의 그래프와 직선의 위치 관계"
+            "category_id": 78,
+            "category_name": "이차함수의 그래프와 x축의 교점"
+          },
+          {
+            "category_id": 82,
+            "category_name": "이차함수의 그래프와 직선의 교점"
           }
         ]
       },
@@ -5036,8 +6006,8 @@
         "confidence_score": 0.48353520035743713,
         "valid_categories": [
           {
-            "category_id": 83,
-            "category_name": "이차함수의 최대 · 최소"
+            "category_id": 85,
+            "category_name": "제한된 범위에서의 이차함수의 최대 · 최소"
           }
         ]
       }
@@ -5070,13 +6040,22 @@
     "solution": "식의 형태를 바꾸면\n\\[\nf(n)=(n+2)^4-10(n+2)^2+16\n=\\big((n+2)^2-2\\big)\\big((n+2)^2-8\\big)\n=(n^2+4n+2)(n^2+4n-4).\n\\]\n\nㄱ. \\(n=4\\)이면\n\\[\nf(4)=(16+16+2)(16+16-4)=34\\cdot 28=952=2^3\\cdot 7\\cdot 17.\n\\]\n따라서 약수의 개수는\n\\[\n(3+1)(1+1)(1+1)=16\n\\]\n이므로 참.\n\nㄴ. \\(g(n)=2\\)이면 \\(f(n)\\)는 소수이다. 그런데\n\\[\nf(n)=(n^2+4n-4)(n^2+4n+2).\n\\]\n자연수 \\(n\\ge 2\\)이면 두 인수는 모두 1보다 크므로 \\(f(n)\\)는 합성수이다. \n\\(n=1\\)일 때만\n\\[\nf(1)=(1+4-4)(1+4+2)=1\\cdot 7=7\n\\]\n로 소수이다. 따라서 그런 \\(n\\)의 개수는 1이므로 참.\n\nㄷ. \\(n^2+4n-4\\)는 \\(n\\)이 커질수록 증가하므로\n\\[\nf(n)=(n^2+4n-4)(n^2+4n+2)\n\\]\n도 자연수 \\(n\\)에서 증가한다. 따라서 작은 \\(n\\)부터 보면 된다.\n\n\\(n=1\\): \\(f(1)=7\\), \\(g(1)=2\\)\n\n\\(n=2\\): \\(f(2)=8\\cdot 14=112=2^4\\cdot 7\\), \\(g(2)=(4+1)(1+1)=10\\)\n\n\\(n=3\\):\n\\[\nf(3)=(9+12-4)(9+12+2)=17\\cdot 23=391\n\\]\n이고 17, 23은 서로 다른 소수이므로 \\(g(3)=4\\).\n따라서 \\(g(n)=4\\)를 만족하는 \\(f(n)\\)의 최솟값은 391이므로 참.\n\n따라서 ㄱ, ㄴ, ㄷ이 모두 옳다.",
     "answer": "⑤",
     "difficulty": 4,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "문항의 질문, 선택지, 해설 HTML이 모두 비어 있어 실제로 어떤 수학적 개념과 풀이가 사용되는지 확인할 수 없습니다. 따라서 특정 계산이나 추론 절차를 판정하기보다, 제공된 정보의 한계를 파악하는 이해 능력 관점에서 판단하는 것이 가장 적절합니다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "주어진 사차식을 적절히 인수분해한 뒤, 약수의 개수와 소수 여부를 경우에 따라 판단해야 한다. 또한 \\(g(n)=4\\)인 경우의 최솟값을 찾기 위해 식의 증가성을 바탕으로 가능한 \\(n\\)을 좁혀 결론을 이끌어내야 하므로 추론 능력이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 265,
         "confidence_score": 0.9999921321868896,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 32,
+            "category_name": "인수분해 공식을 이용한 인수분해(1)"
+          },
+          {
+            "category_id": 35,
+            "category_name": "x^4+ax^2+b의 꼴의 다항식의 인수분해"
+          }
+        ]
       }
     ]
   },
@@ -5107,13 +6086,22 @@
     "solution": "할인율을 $x\\%$라 하면\n- 판매 가격: $20000\\left(1-\\frac{x}{100}\\right)=20000-200x$\n- 판매 개수: $600+10x$\n\n따라서 일주일 총 판매 금액 $R(x)$는\n$$R(x)=(20000-200x)(600+10x)$$\n$$R(x)=-2000x^2+80000x+12000000$$\n이다.\n\n이 식은 아래로 열린 이차식이므로 최댓값은 꼭짓점에서 생긴다.\n$$x=\\frac{-b}{2a}=\\frac{-80000}{2(-2000)}=20$$\n\n즉, 할인율이 $20\\%$일 때 총 판매 금액이 최대이고,\n이때 판매 개수는\n$$600+10\\cdot 20=800$$\n이다.",
     "answer": "④",
     "difficulty": 2,
-    "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 삼각함수의 그래프와 성질을 이해한 뒤, 직선과 만나는 점의 개수가 10이 되도록 하는 조건을 논리적으로 따져야 한다. 특히 주기, 최댓값과 최솟값, 절댓값의 효과를 종합하여 가능한 a, b를 추론하는 과정이 핵심이므로 추론 능력이 가장 중요하다.",
+    "behavior_area": "문제 해결 능력",
+    "behavior_reason": "문장으로 주어진 가격 할인 상황을 변수로 두고, 판매 금액을 이차함수로 모델링해야 하므로 문제 해결 능력이 핵심이다. 이후 세운 함수를 이용해 꼭짓점에서 최댓값을 구하고, 그 결과를 다시 판매 개수로 해석하는 과정이 필요하다.",
     "unit_candidates": [
       {
         "unit_id": 272,
         "confidence_score": 0.9999958276748657,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 83,
+            "category_name": "이차함수의 최대 · 최소"
+          },
+          {
+            "category_id": 89,
+            "category_name": "이차함수의 최대 · 최소의 활용"
+          }
+        ]
       }
     ]
   },
@@ -5138,13 +6126,21 @@
     "solution": "$P(x)$를 $(x+2)(x-3)$으로 나눈 나머지를 $R(x)$라 하면, $R(x)$는 1차식이므로\n$R(x)=ax+b$로 둘 수 있다.\n\n먼저, $x^2P(x)$를 $x+2$로 나눈 나머지가 20이므로 나머지정리에 의해\n$(-2)^2P(-2)=20$.\n즉,\n$4P(-2)=20 \\Rightarrow P(-2)=5$.\n따라서\n$R(-2)=P(-2)=5$ 이므로\n$-2a+b=5$.\n\n또, $P(2x-1)$가 $x-2$를 인수로 가지므로\n$x=2$를 대입하면\n$P(2\\cdot 2-1)=P(3)=0$.\n따라서\n$R(3)=P(3)=0$ 이므로\n$3a+b=0$.\n\n이제 연립하면\n$(3a+b)-(-2a+b)=0-5$\n$5a=-5 \\Rightarrow a=-1$.\n이를 $3a+b=0$에 대입하면\n$-3+b=0 \\Rightarrow b=3$.\n\n따라서 나머지는\n$R(x)=-x+3=3-x$이다.",
     "answer": "3-x",
     "difficulty": 2,
-    "behavior_area": "이해 능력",
-    "behavior_reason": "두 함수가 직선 y=x 위의 공통점을 지난다는 조건과 두 극한의 존재를 다항식의 인수 구조로 해석해야 한다. 즉, f(x)-x와 g(x)-x의 공통근과 x=0에서의 차수를 이해하여 식을 세우는 과정이 핵심이므로 이해 능력이 중심이다.",
+    "behavior_area": "추론 능력",
+    "behavior_reason": "이 문항은 주어진 조건을 나머지정리와 인수정리로 해석하여 각각 P(-2)와 P(3)의 값을 추론하는 과정이 핵심이다. 또 (x+2)(x-3)으로 나눈 나머지를 일차식으로 두고 두 조건을 연결해 계수를 결정해야 하므로, 단순 계산보다 관계를 논리적으로 이끌어내는 추론이 중요하다.",
     "unit_candidates": [
       {
         "unit_id": 264,
         "confidence_score": 0.9999997615814209,
         "valid_categories": [
+          {
+            "category_id": 21,
+            "category_name": "나머지정리-일차식으로 나누는 경우"
+          },
+          {
+            "category_id": 22,
+            "category_name": "나머지정리-이차식으로 나누는 경우"
+          },
           {
             "category_id": 26,
             "category_name": "인수정리-일차식으로 나누는 경우"
@@ -5175,12 +6171,21 @@
     "answer": "서로 만나지 않는다.",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 삼각함수의 그래프를 해석하고, 주기와 최댓값·최솟값을 바탕으로 직선과의 교점 개수를 추론해야 해결할 수 있다. 단순 계산만으로는 부족하고, 교점의 개수가 10이 되도록 하는 자연수 a, b의 조건을 논리적으로 찾아내는 과정이 핵심이므로 추론 능력이 요구된다.",
+    "behavior_reason": "두 그래프의 위치 관계를 직접 확인하는 것이 아니라, 두 식을 같게 하여 만든 이차방정식의 판별식으로 교점의 존재 여부를 판단해야 한다. 즉 계산한 판별식의 부호를 그래프가 만나지 않는다는 사실과 직선의 상대적 위치로 연결하는 추론이 핵심이다.",
     "unit_candidates": [
       {
         "unit_id": 271,
         "confidence_score": 0.999966025352478,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 80,
+            "category_name": "이차함수의 그래프와 직선의 위치 관계"
+          },
+          {
+            "category_id": 82,
+            "category_name": "이차함수의 그래프와 직선의 교점"
+          }
+        ]
       }
     ]
   },
@@ -5212,17 +6217,39 @@
     "answer": "③",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "이 문항은 사인함수의 주기, 최댓값과 최솟값, 절댓값이 그래프에 미치는 영향을 바탕으로 직선 y=1과의 교점 개수를 추론해야 한다. 단순 계산보다 그래프의 성질을 해석하고 가능한 a, b의 경우를 논리적으로 좁혀 가는 과정이 핵심이므로 추론 능력이 가장 적절하다.",
+    "behavior_reason": "이 문제는 허근의 켤레근 성질, 이차방정식의 근과 계수의 관계, 판별식의 부호를 차례로 연결하여 m, n의 조건을 추론하는 과정이 핵심이다. 단순 계산보다 주어진 조건을 해석하고 여러 성질을 논리적으로 결합하는 능력이 더 중요하므로 추론 능력에 해당한다.",
     "unit_candidates": [
       {
         "unit_id": 269,
         "confidence_score": 0.7797973155975342,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 63,
+            "category_name": "이차방정식의 근의 판별"
+          },
+          {
+            "category_id": 64,
+            "category_name": "계수가 문자인 이차방정식의 근의 판별"
+          }
+        ]
       },
       {
         "unit_id": 270,
         "confidence_score": 0.16345439851284027,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 66,
+            "category_name": "근과 계수의 관계를 이용하여 식의 값 구하기(1)"
+          },
+          {
+            "category_id": 68,
+            "category_name": "근과 계수의 관계를 이용하여 미정계수 구하기"
+          },
+          {
+            "category_id": 72,
+            "category_name": "이차방정식의 켤레근의 성질"
+          }
+        ]
       },
       {
         "unit_id": 268,
@@ -5232,7 +6259,12 @@
       {
         "unit_id": 278,
         "confidence_score": 0.014282486401498318,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 138,
+            "category_name": "이차방정식의 근의 판별과 이차부등식"
+          }
+        ]
       },
       {
         "unit_id": 273,
@@ -5269,12 +6301,21 @@
     "answer": "②",
     "difficulty": 2,
     "behavior_area": "추론 능력",
-    "behavior_reason": "주어진 함수의 식을 단순히 계산하는 것이 아니라 사인함수의 그래프와 절댓값이 적용된 형태를 해석해야 한다. 또한 주기, 최댓값·최솟값, 직선 y=1과의 교점 개수를 바탕으로 가능한 a, b의 조건을 판단해야 하므로 추론 능력이 핵심이다.",
+    "behavior_reason": "주어진 두 식을 그대로 계산하는 것이 아니라, (x-y)^2와 x^3-y^3의 관계식을 이용해 먼저 xy를 추론해야 한다. 이후 구한 값을 바탕으로 원하는 식의 값을 연결해 구하는 과정이 핵심이므로 추론 능력이 중심이 된다.",
     "unit_candidates": [
       {
         "unit_id": 261,
         "confidence_score": 0.9999861717224121,
-        "valid_categories": []
+        "valid_categories": [
+          {
+            "category_id": 3,
+            "category_name": "곱셈 공식을 이용한 다항식의 전개"
+          },
+          {
+            "category_id": 5,
+            "category_name": "곱셈 공식의 변형-문자가 2개"
+          }
+        ]
       }
     ]
   }
