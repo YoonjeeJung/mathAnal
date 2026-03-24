@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import { Problem } from '../types';
+import KatexText from './KatexText';
 
 interface Props {
   problem: Problem | null;
@@ -65,7 +66,7 @@ export default function UnitTypeInfo({ problem, csvRaw }: Props) {
           {problem.behavior_area}
         </span>
         {problem.behavior_reason && (
-          <p className="mt-2 text-xs text-gray-500 leading-relaxed">{problem.behavior_reason}</p>
+          <KatexText text={problem.behavior_reason} className="mt-2 text-xs text-gray-500 leading-relaxed" />
         )}
       </div>
 
@@ -86,9 +87,10 @@ export default function UnitTypeInfo({ problem, csvRaw }: Props) {
                         {meta.curriculum_name} · {meta.unit_name_1} · {meta.unit_name_2}
                       </div>
                     )}
-                    <div className="text-sm font-medium text-gray-800 truncate">
-                      {meta?.unit_name_3 ?? `unit #${uc.unit_id}`}
-                    </div>
+                    <KatexText
+                      text={meta?.unit_name_3 ?? `unit #${uc.unit_id}`}
+                      className="text-sm font-medium text-gray-800"
+                    />
                   </div>
                   <span className="shrink-0 text-xs bg-indigo-50 text-indigo-600 px-1.5 py-0.5 rounded">
                     {(uc.confidence_score * 100).toFixed(1)}%
@@ -99,9 +101,9 @@ export default function UnitTypeInfo({ problem, csvRaw }: Props) {
                     {uc.valid_categories.map((cat, j) => (
                       <span
                         key={j}
-                        className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full"
+                        className="inline-flex items-center text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full"
                       >
-                        {cat.category_name}
+                        <KatexText text={cat.category_name} />
                       </span>
                     ))}
                   </div>
@@ -125,7 +127,7 @@ export default function UnitTypeInfo({ problem, csvRaw }: Props) {
         <div className="space-y-1 text-sm text-gray-600">
           <div className="flex gap-2">
             <span className="text-gray-400 w-14 shrink-0">정답</span>
-            <span className="font-medium">{problem.answer}</span>
+            <KatexText text={`$${String(problem.answer)}$`} className="font-medium" />
           </div>
           <div className="flex gap-2">
             <span className="text-gray-400 w-14 shrink-0">배점</span>
