@@ -48,7 +48,7 @@ export default function MainLayout({ problems, csvRaw, exams }: Props) {
     return result;
   }, [exams, curriIdToName]);
 
-  const [selectedExamId, setSelectedExamId] = useState<string | null>(null);
+  const [selectedExamIds, setSelectedExamIds] = useState<string[]>([]);
   const [selectedCurriculum, setSelectedCurriculum] = useState<string>(curricula[0] ?? '');
   const [selectedNode, setSelectedNode] = useState<TreeNode | null>(null);
   const [selectedProblem, setSelectedProblem] = useState<Problem | null>(null);
@@ -67,32 +67,41 @@ export default function MainLayout({ problems, csvRaw, exams }: Props) {
   }, [selectedCurriculum, problems, csvRaw]);
 
   const examFilteredProblems = useMemo(() => {
-    if (!selectedExamId) return curriculumProblems;
-    return curriculumProblems.filter((p) => p.exam_id === selectedExamId);
-  }, [curriculumProblems, selectedExamId]);
+    if (selectedExamIds.length === 0) return curriculumProblems;
+    return curriculumProblems.filter((p) => selectedExamIds.includes(p.exam_id));
+  }, [curriculumProblems, selectedExamIds]);
 
   const filteredProblems = useMemo(
     () => filterProblems(examFilteredProblems, selectedNode),
     [examFilteredProblems, selectedNode]
   );
 
-  const handleSelectExam = (examId: string | null) => {
-    setSelectedExamId(examId);
-    // Auto-select curriculum from exam
-    if (examId) {
-      const exam = examMap.get(examId);
-      if (exam) {
-        const cname = curriIdToName.get(exam.curriculum_id);
-        if (cname) setSelectedCurriculum(cname);
+  const handleToggleExam = (examId: string) => {
+    setSelectedExamIds((prev) => {
+      const next = prev.includes(examId) ? prev.filter((id) => id !== examId) : [...prev, examId];
+      // Auto-select curriculum from first selected exam
+      if (next.length > 0) {
+        const exam = examMap.get(next[0]);
+        if (exam) {
+          const cname = curriIdToName.get(exam.curriculum_id);
+          if (cname) setSelectedCurriculum(cname);
+        }
       }
-    }
+      return next;
+    });
+    setSelectedNode(null);
+    setSelectedProblem(null);
+  };
+
+  const handleClearExams = () => {
+    setSelectedExamIds([]);
     setSelectedNode(null);
     setSelectedProblem(null);
   };
 
   const handleSelectCurriculum = (c: string) => {
     setSelectedCurriculum(c);
-    setSelectedExamId(null);
+    setSelectedExamIds([]);
     setSelectedNode(null);
     setSelectedProblem(null);
   };
@@ -115,8 +124,9 @@ export default function MainLayout({ problems, csvRaw, exams }: Props) {
       <div className="w-96 shrink-0 border-r border-gray-200 flex flex-col overflow-hidden">
         <TreeSidebar
           exams={exams}
-          selectedExamId={selectedExamId}
-          onSelectExam={handleSelectExam}
+          selectedExamIds={selectedExamIds}
+          onToggleExam={handleToggleExam}
+          onClearExams={handleClearExams}
           curricula={curricula}
           selectedCurriculum={selectedCurriculum}
           onSelectCurriculum={handleSelectCurriculum}

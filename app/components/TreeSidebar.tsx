@@ -5,8 +5,9 @@ import { TreeNode, ExamInfo } from '../types';
 
 interface Props {
   exams: ExamInfo[];
-  selectedExamId: string | null;
-  onSelectExam: (examId: string | null) => void;
+  selectedExamIds: string[];
+  onToggleExam: (examId: string) => void;
+  onClearExams: () => void;
   curricula: string[];
   selectedCurriculum: string;
   onSelectCurriculum: (c: string) => void;
@@ -98,8 +99,9 @@ function DropdownToggle({
 
 export default function TreeSidebar({
   exams,
-  selectedExamId,
-  onSelectExam,
+  selectedExamIds,
+  onToggleExam,
+  onClearExams,
   curricula,
   selectedCurriculum,
   onSelectCurriculum,
@@ -112,14 +114,24 @@ export default function TreeSidebar({
   const [showExamMenu, setShowExamMenu] = useState(false);
   const [showCurriculumMenu, setShowCurriculumMenu] = useState(false);
 
-  const selectedExam = exams.find((e) => e.exam_id === selectedExamId);
+  // curriculum_id of selected exams (all same once locked)
+  const lockedCurriculumId = selectedExamIds.length > 0
+    ? exams.find((e) => e.exam_id === selectedExamIds[0])?.curriculum_id ?? null
+    : null;
+
+  const examLabel =
+    selectedExamIds.length === 0
+      ? '시험지 선택'
+      : selectedExamIds.length === 1
+      ? (exams.find((e) => e.exam_id === selectedExamIds[0])?.exam_name ?? '시험지 선택')
+      : `시험지 ${selectedExamIds.length}개 선택`;
 
   return (
     <div className="flex flex-col h-full overflow-hidden">
       {/* Exam selector */}
       <div className="shrink-0 border-b border-gray-200">
         <DropdownToggle
-          label={selectedExam?.exam_name ?? '시험지 선택'}
+          label={examLabel}
           isOpen={showExamMenu}
           onClick={() => {
             setShowExamMenu((v) => !v);
@@ -130,29 +142,39 @@ export default function TreeSidebar({
           <div className="border-t border-gray-100 max-h-52 overflow-y-auto">
             <button
               className={`w-full text-left px-4 py-1.5 text-sm hover:bg-gray-50 ${
-                selectedExamId === null ? 'text-indigo-600 font-medium bg-indigo-50' : 'text-gray-400'
+                selectedExamIds.length === 0 ? 'text-indigo-600 font-medium bg-indigo-50' : 'text-gray-400'
               }`}
               onClick={() => {
-                onSelectExam(null);
-                setShowExamMenu(false);
+                onClearExams();
               }}
             >
               전체
             </button>
-            {exams.map((e) => (
-              <button
-                key={e.exam_id}
-                className={`w-full text-left px-4 py-1.5 text-sm hover:bg-gray-50 ${
-                  e.exam_id === selectedExamId ? 'text-indigo-600 font-medium bg-indigo-50' : 'text-gray-600'
-                }`}
-                onClick={() => {
-                  onSelectExam(e.exam_id);
-                  setShowExamMenu(false);
-                }}
-              >
-                {e.exam_name}
-              </button>
-            ))}
+            {exams.map((e) => {
+              const isChecked = selectedExamIds.includes(e.exam_id);
+              const isDisabled = lockedCurriculumId !== null && e.curriculum_id !== lockedCurriculumId;
+              return (
+                <label
+                  key={e.exam_id}
+                  className={`flex items-center gap-2 px-4 py-1.5 text-sm cursor-pointer ${
+                    isDisabled
+                      ? 'text-gray-300 cursor-not-allowed'
+                      : isChecked
+                      ? 'text-indigo-600 font-medium bg-indigo-50 hover:bg-indigo-50'
+                      : 'text-gray-600 hover:bg-gray-50'
+                  }`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    disabled={isDisabled}
+                    onChange={() => !isDisabled && onToggleExam(e.exam_id)}
+                    className="shrink-0 accent-indigo-600"
+                  />
+                  {e.exam_name}
+                </label>
+              );
+            })}
           </div>
         )}
       </div>
