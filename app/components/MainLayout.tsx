@@ -103,9 +103,16 @@ export default function MainLayout({ problems, csvRaw, exams }: Props) {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden bg-gray-50">
+    <div className="flex flex-col h-screen overflow-hidden bg-gray-50 px-5 pt-4">
+      {/* Header */}
+      <div className="shrink-0 pb-3">
+        <h1 className="text-lg font-semibold text-gray-800 tracking-tight">내신기출 유형 분석</h1>
+      </div>
+
+      {/* Main content */}
+      <div className="flex flex-1 min-h-0 overflow-hidden rounded-t-xl border border-gray-200 bg-white">
       {/* Col 1: Tree sidebar */}
-      <div className="w-96 shrink-0 bg-white border-r border-gray-200 flex flex-col overflow-hidden">
+      <div className="w-96 shrink-0 border-r border-gray-200 flex flex-col overflow-hidden">
         <TreeSidebar
           exams={exams}
           selectedExamId={selectedExamId}
@@ -139,6 +146,7 @@ export default function MainLayout({ problems, csvRaw, exams }: Props) {
       <div className="w-72 shrink-0 bg-white overflow-hidden">
         <UnitTypeInfo problem={selectedProblem} csvRaw={csvRaw} />
       </div>
+    </div>
     </div>
   );
 }

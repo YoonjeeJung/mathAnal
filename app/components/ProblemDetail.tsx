@@ -1,8 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import { Problem } from '../types';
 import KatexText from './KatexText';
+
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
 interface Props {
   problem: Problem | null;
@@ -25,9 +26,8 @@ export default function ProblemDetail({ problem }: Props) {
     );
   }
 
-  const imagePath = problem.images?.[0]
-    ? `/images/${problem.images[0].replace('images/', '')}`
-    : null;
+  const imageFile = problem.images?.[0]?.replace('images/', '');
+  const imageSrc = imageFile ? `${BASE_PATH}/images/${imageFile}` : null;
 
   return (
     <div className="flex flex-col h-full overflow-hidden gap-3 p-3">
@@ -36,16 +36,13 @@ export default function ProblemDetail({ problem }: Props) {
         className="shrink-0 bg-gray-50 rounded-lg border border-gray-200 overflow-hidden flex items-center justify-center"
         style={{ flex: '0.9' }}
       >
-        {imagePath ? (
-          <div className="relative w-full h-full">
-            <Image
-              src={imagePath}
-              alt={`문제 ${problem.problem_name}`}
-              fill
-              className="object-contain p-2"
-              unoptimized
-            />
-          </div>
+        {imageSrc ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={imageSrc}
+            alt={`문제 ${problem.problem_name}`}
+            className="object-contain p-2 w-full h-full"
+          />
         ) : (
           <span className="text-gray-400 text-sm">이미지 없음</span>
         )}
